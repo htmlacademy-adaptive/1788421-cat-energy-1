@@ -6,5 +6,13 @@
 @import "./base/mixins.scss";
 @import "./base/fonts.scss";
 @import "./base/base.scss";
-@import "./base/visually-hidden"
+@import "./base/visually-hidden";
+@import "./base/container.scss";
 
+
+// BLOCKS
+
+@import "./blocks/page__body.scss";
+@import "./blocks/logo-link.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
