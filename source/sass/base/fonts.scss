@@ -19,7 +19,7 @@
 }
 
 .basic-text {
-	font-family:"Lato", "PT Sans", sans-serif;
+  font-family: "Lato", "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -27,18 +27,88 @@
 
 .main-title {
   /* h1 */
-	font-family:"Oswald", "PT Sans", sans-serif;
+  font-family: "Oswald", "PT Sans", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-transform: uppercase;
+
   color: #000000;
 
   &--mobile {
     color: #ffffff;
-    background-color: ;
+    background-color: #68B738;
 
   }
 }
 
+.section-title {
+  /* h2 */
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subtitle {
+  /* h3 */
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.nav-text {
+  /* ссылки в меню */
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.slogan {
+  /* слоган в Hero */
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000000;
+
+  &.slogan--mobile {
+    color: #ffffff;
+    background-color: #68B738;
+  }
+}
+
+.btn-text {
+  /* слоган в Hero */
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  color: #ffffff;
+  background-color: #68B738;
+
+  &.btn--secondary {
+    color: #444444;
+    background-color: #b2b2b2;
+  }
+}
 
 
+.link-text {
+  font-family: "Oswald", "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
