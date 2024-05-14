@@ -1,0 +1,10 @@
+@mixin font ($family: $font-secondary, $size, $line-height, $weight: 400, $color: $color-black, $upper: uppercase) {
+  margin: 0;
+
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $upper;
+}
