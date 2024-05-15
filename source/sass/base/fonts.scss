@@ -43,8 +43,6 @@
 
   &--mobile {
     color: #ffffff;
-    background-color: #68B738;
-
   }
 }
 
@@ -101,11 +99,10 @@
 
   &.slogan--mobile {
     color: #ffffff;
-    background-color: #68B738;
   }
 }
 
-.btn-text {
+.button-text {
   /* слоган в Hero */
 
   @include font ($size: 16px, $line-height: 20px, $color: $color-white);
@@ -120,7 +117,7 @@
 
   background-color: #68B738;
 
-  &.btn--secondary {
+  &.button--secondary {
     color: #444444;
     background-color: #b2b2b2;
   }

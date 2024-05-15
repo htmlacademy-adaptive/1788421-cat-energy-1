@@ -1,0 +1,22 @@
+.hero {
+  background-image:linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85), rgba(255, 255, 255, 0.85)),
+  url(../../img/tmp/index-background-mob.jpg);
+background-repeat:repeat, no-repeat;
+background-position:center;
+background-size:auto, contain;
+}
+
+.hero__container {
+  padding-top: 27px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  margin-bottom: 29px;
+
+}

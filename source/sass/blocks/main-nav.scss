@@ -1,3 +1,9 @@
+.main-nav__wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main-nav__list {
 @include list-reset;
 }

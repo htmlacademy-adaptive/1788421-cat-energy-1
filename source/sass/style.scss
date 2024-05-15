@@ -8,7 +8,10 @@
 @import "./base/base.scss";
 @import "./base/visually-hidden";
 @import "./base/container.scss";
+@import "./base/button.scss";
 
+
+@import "./base/outlines.scss";
 
 // BLOCKS
 
@@ -16,3 +19,12 @@
 @import "./blocks/logo-link.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/results.scss";
+@import "./blocks/result-item.scss";
+@import "./blocks/features.scss";
+@import "./blocks/examples.scss";
+@import "./blocks/property.scss";
+@import "./blocks/slider__button.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/contacts.scss";
