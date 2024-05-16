@@ -4,6 +4,27 @@
 }
 
 .main-footer__wrapp {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+
 	background-color: $color-bg-grey;
+}
+
+.main-footer__logo-text {
+  margin-bottom: 20px;
+}
+
+.main-footer__social {
+  display: block;
+}
+
+.main-footer__htmlacademy-logo {
+  display: flex;
+  justify-content: space-between;
+
+  @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-base, $upper: none);
+
+  margin-top: 20px;
+  text-decoration: none;
 }

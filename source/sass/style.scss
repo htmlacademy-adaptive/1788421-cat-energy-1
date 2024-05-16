@@ -9,6 +9,7 @@
 @import "./base/visually-hidden";
 @import "./base/container.scss";
 @import "./base/button.scss";
+@import "./base/transfer-block.scss";
 
 
 @import "./base/outlines.scss";
@@ -29,3 +30,10 @@
 @import "./blocks/main-footer.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/social.scss";
+
+
+// BLOCKS catalog
+
+@import "./blocks/catalog-main.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/main-products.scss";

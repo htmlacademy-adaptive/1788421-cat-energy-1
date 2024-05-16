@@ -1,0 +1,38 @@
+.product-card {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-top: 1px solid $color-border-catalog;
+}
+
+.product-card__wrapp-flex {
+  display: flex;
+}
+
+.product-card__title {
+margin-right: 70px;
+}
+
+.product-card__property {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__link-img {
+  width: 140px;
+  height: 107px;
+  display: flex;
+  align-items: center;
+justify-content: center;
+}
+
+.main-products__still {
+padding-top: 25px;
+padding-bottom: 24px;
+text-align: center;
+
+}
+
+.product-card__still {
+  margin-top: 53px;
+margin-bottom: 8px;
+}

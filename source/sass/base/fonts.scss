@@ -31,7 +31,7 @@
 .main-title {
   /* h1 */
 
-  @include font ($size: 36px, $line-height:36px);
+  @include font ($size: 36px, $line-height:36px,$upper: none);
 
   // font-family: "Oswald", "PT Sans", sans-serif;
   // font-size: 36px;
@@ -44,6 +44,7 @@
   &--mobile {
     color: #ffffff;
   }
+
 }
 
 .section-title {
@@ -89,7 +90,7 @@
 .slogan {
   /* слоган в Hero */
 
-  @include font ($size: 14px, $line-height: 14px);
+  @include font ($size: 14px, $line-height: 20px);
 
   // font-family: "Oswald", "PT Sans", sans-serif;
   // font-size: 14px;
@@ -99,6 +100,7 @@
 
   &.slogan--mobile {
     color: #ffffff;
+    line-height: 14px;
   }
 }
 
@@ -114,12 +116,12 @@
   // color: #ffffff;
 
   text-decoration: none;
-
+text-align: center;
   background-color: #68B738;
 
   &.button--secondary {
-    color: #444444;
-    background-color: #b2b2b2;
+    color: $color-base;
+    background-color: $color-bg-grey;
   }
 }
 
@@ -135,3 +137,7 @@
   // text-transform: uppercase;
   // color: #000000;
 }
+
+.product-title {
+  @include font ($size: 16px, $line-height: 20px);
+  }

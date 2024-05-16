@@ -1,5 +1,6 @@
 @mixin font ($family: $font-secondary, $size, $line-height, $weight: 400, $color: $color-black, $upper: uppercase) {
-  margin: 0;
+
+  margin-top: 0;
 
   font-family: $family;
   font-size: $size;
@@ -11,7 +12,11 @@
 
 
 @mixin list-reset {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
+
+
+// border-top: 1px solid $color-border-catalog;
