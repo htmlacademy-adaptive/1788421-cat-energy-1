@@ -1,9 +1,10 @@
 .hero {
-  background-image:linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85), rgba(255, 255, 255, 0.85)),
+  background-image:linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
   url(../../img/tmp/index-background-mob.jpg);
-background-repeat:repeat, no-repeat;
-background-position:center;
-background-size:auto, contain;
+background-repeat: no-repeat;
+background-position:top, top center;
+background-size:auto 302px, 320px 302px;
+// background-clip: border-box;
 }
 
 .hero__container {
