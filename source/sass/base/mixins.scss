@@ -11,10 +11,10 @@
 }
 
 
-@mixin list-reset {
+@mixin list-reset ($padd-left:0) {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: $padd-left;
   list-style: none;
 }
 

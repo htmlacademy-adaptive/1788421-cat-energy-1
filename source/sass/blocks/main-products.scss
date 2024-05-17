@@ -3,4 +3,17 @@
   padding-bottom: 24px;
   text-align: center;
 
-  }
+  border-bottom: 1px solid $color-border-catalog;
+}
+
+
+.main-products__title {
+  margin-bottom: 41px;
+  margin-left: 20px;
+}
+
+
+.main-products__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}

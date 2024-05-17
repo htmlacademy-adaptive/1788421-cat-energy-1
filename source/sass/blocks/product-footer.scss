@@ -1,0 +1,36 @@
+.product-footer {
+  // height: 290px;
+
+  padding-top: 59px;
+  padding-bottom: 58px;
+
+  text-align: center;
+
+  // background-color: $color-bg-base;
+// background-clip: padding-box;
+
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url(../../img/tmp/catalog_bg-present.jpg);
+  background-repeat:no-repeat, no-repeat;
+  background-position:center, center;
+  background-size: 280px 290px, 280px 290px;
+}
+
+.product-footer__lid {
+  margin-left: 58px;
+  margin-right: 61px;
+}
+
+.product-footer__lid::before {
+  display: block;
+  content: "";
+  width: 78px;
+  height: 80px;
+
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url(../../img/tmp/icon_gift.svg);
+
+}

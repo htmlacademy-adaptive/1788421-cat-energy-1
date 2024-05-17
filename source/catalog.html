@@ -8,7 +8,7 @@
 </head>
 
 <body class="page__body basic-text">
-  <header class="main-header container">
+  <header class="main-header container inner">
     <nav class="main-nav main-header__mav">
       <div class="main-nav__wrapp">
         <a class="logo-link" href="#">
@@ -30,12 +30,10 @@
     </nav>
   </header>
 
-  <main class="catalog-main">
-    <div class="catalog-main__container container">
+  <main class="catalog-main container">
+      <section class="catalog-main__container main-products">
+<h1 class="main-products__title main-title">Каталог продукции</h1>
 
-      <h1 class="catalog-main__title main-title">Каталог продукции</h1>
-
-      <section class="main-products">
         <h2 class="visually-hidden">Основные товары</h2>
 
         <div class="main-products__list">
@@ -282,10 +280,10 @@
       </section>
 
       <section class="additional-products">
-        <h2 class="second-page-title">Дополнительные товары</h2>
+        <h2 class="additional-products__title second-page-title">Дополнительные товары</h2>
 
-        <ul class="additional-products__list">
-          <li class="additional-products__card product-card">
+        <ul class="additional-products__list inner">
+          <li class="additional-products__card product-card ">
             <h3 class="product-card__title product-title">
               Сахарозаменитель
             </h3>
@@ -347,23 +345,22 @@
           </li>
         </ul>
 
-        <footer class="additional-products__card product-footer">
-          <h3 class="product-footer__title product-title">
+        <footer class="additional-products__lid product-footer inner">
+          <h3 class="visually-hidden">
             Подарок
           </h3>
 
-          <p class="product-footer__lid">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="product-footer__lid product-lid-txt">Закажите все и получите чехол для кота в подарок!</p>
         </footer>
       </section>
-    </div>
   </main>
 
   <footer class="main-footer">
-    <div class="container">
+    <div class="main-footer__container container">
       <div class="main-footer__contacts contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
 
-        <div class="contacts__wrapp">
+        <div class="contacts__wrapp inner">
           <p class="contacts__slogan slogan">Приглашаем к сотрудничеству дилеров!</p>
 
           <address class="contacts__address">
@@ -375,31 +372,32 @@
         <img class="contacts__map" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
       </div>
 
-      <div class="main-footer__wrapp">
-        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128" height="24">
+      <div class="main-footer__wrapp inner">
+        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
+          height="24">
 
-        <ul class="main-footer__sotial social">
+        <ul class="main-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="#">
-              <span class="visually-hidden">ВК</span>
+              <span class="visually-hidden-">ВК</span>
             </a>
           </li>
 
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#">
-              <span class="visually-hidden">youtube</span>
+              <span class="visually-hidden-">youtube</span>
             </a>
           </li>
 
           <li class="social__item">
             <a class="social__link social__link--telegramm" href="#">
-              <span class="visually-hidden">telegramm</span>
+              <span class="visually-hidden-">telegramm</span>
             </a>
           </li>
         </ul>
 
         <a class="main-footer__htmlacademy-logo" href="#">
-          <p>HTML Academy</p>
+          <span>HTML Academy</span>
           <img class="main-footer__htmlacademy-img" src="./img/htmlacademy.svg" alt="htmlacademy logo" width="27"
             height="34">
         </a>
