@@ -143,9 +143,18 @@ text-align: center;
   }
 
 .second-page-title {
-  @include font ($size: 24px, $line-height: 24px);
+  @include font ($size: 24px, $line-height: 26px);
 }
 
 .product-lid-txt  {
   @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-white, $upper: none);
 }
+
+.form-lid-text {
+  @include font ($size: 14px, $line-height: 18px, $color: $color-black);
+}
+
+.form-txt {
+  @include font ($size: 16px, $line-height: 18px, $color: $color-base);
+}
+

@@ -32,39 +32,43 @@
   </header>
 
   <main class="form-main">
-    <div class="container">
+    <section class="container">
 
-      <h1 class="main-title">Подбор программы</h1>
-      <p class="lead-form-text">
+      <h1 class="form-main__title main-title">Подбор программы</h1>
+      <p class="form-main__lid form-lid-text">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset>
+
+        <fieldset class="form__fildset form__fildset--no-label inner">
           <legend class="visually-hidden">Основные данные</legend>
-          <div class="wrapp">
-            <label class="" for="name">Имя:*
-              <input class="field input-name" placeholder="Барсик" type="text" name="name" id="name" required>
+
+          <div class="form__wrapp">
+            <label class="form__label form-txt" for="name">
+              <span class="form__name">Имя:*</span>
+              <input class="form__field form-txt" placeholder="Барсик" type="text" name="name" id="name" required>
             </label>
 
-            <label class="" for="weight">Вес (кг):*
-              <input class="field input-name" placeholder="7" type="number" name="weight" id="weight" required>
+            <label class="form__label form-txt" for="weight">
+              <span class="form__name">Вес (кг):*</span>
+              <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
             </label>
 
-            <label class="" for="age">Возраст (лет):
-              <input class="field input-name" placeholder="7" type="number" name="age" id="age">
+            <label class="form__label form-txt" for="age">
+              <span class="form__name">Возраст (лет):</span>
+              <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
             </label>
-
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form__fildset form__fildset--no-label inner">
           <legend class="visually-hidden">Программа</legend>
 
           <ul>
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="radio" name="program" value="Похудение" checked>
+                <input class="control__input visually-hidden-" type="radio" name="program" value="Похудение" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Похудение</span>
               </label>
@@ -72,7 +76,7 @@
 
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="radio" name="program" value="Набор массы">
+                <input class="control__input visually-hidden-" type="radio" name="program" value="Набор массы">
                 <span class="control__mark"></span>
                 <span class="control__label"> Набор массы</span>
               </label>
@@ -80,7 +84,7 @@
 
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="radio" name="program" value="Нужен совет">
+                <input class="control__input visually-hidden-" type="radio" name="program" value="Нужен совет">
                 <span class="control__mark"></span>
                 <span class="control__label"> Не знаю (нужен ваш совет)</span>
               </label>
@@ -88,31 +92,39 @@
           </ul>
         </fieldset>
 
-        <fieldset>
-          <legend class="section-title section-title--second-page">Контактные данные (владельца кота)</legend>
-          <label class="" for="email">E-mail:*
-            <input class="field input-name" placeholder="кuklachev@gmail.com" type="email" name="email" id="email"
-              required>
-          </label>
+        <fieldset class="form__fildset">
 
-          <label class="" for="phone">Телефон:*
-            <input class="field input-name" placeholder="8 (960) 900-60-90" type="tel" name="phone" id="phone" required>
-          </label>
+          <legend class="form__title  second-page-title ">Контактные данные (владельца кота)</legend>
+
+          <div class="form__wrapp">
+            <label class="form__label form-txt" for="email">
+              <span class="form__name">E-mail:*</span>
+              <input class="form__field form-txt" placeholder="кuklachev@gmail.com" type="email" name="email" id="email"
+                required>
+            </label>
+
+            <label class="form__label form-txt" for="phone">
+              <span class="form__name">Телефон:*</span>
+              <input class="form__field form-txt" placeholder="8 (960) 900-60-90" type="tel" name="phone" id="phone" required>
+            </label>
+          </div>
+
         </fieldset>
 
-        <fieldset>
-          <legend class="section-title section-title--second-page">Комментарий</legend>
+        <fieldset class="form__fildset">
+          <legend class="form__title second-page-title">Комментарий</legend>
           <label class="visually-hidden" for="habits">Повадки:</label>
-          <textarea name="habits" id="habits" cols="30" rows="10"
+          <textarea class="form__textarea form-txt" name="habits" id="habits" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset>
-          <legend class="section-title section-title--second-page">Дополнительно</legend>
+        <fieldset class="form__fildset">
+          <legend class="form__title second-page-title">Дополнительно</legend>
           <ul>
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="checkbox" name="addition" value="Сахарозаменитель" checked>
+                <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Сахарозаменитель"
+                  checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Сахарозаменитель</span>
               </label>
@@ -120,7 +132,7 @@
 
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="checkbox" name="addition" value="Питьевая вода">
+                <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Питьевая вода">
                 <span class="control__mark"></span>
                 <span class="control__label">Питьевая вода</span>
               </label>
@@ -128,7 +140,7 @@
 
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="checkbox" name="addition" value="Молоко">
+                <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Молоко">
                 <span class="control__mark"></span>
                 <span class="control__label">Молоко</span>
               </label>
@@ -136,7 +148,7 @@
 
             <li>
               <label class="control">
-                <input class="control__input visually-hidden" type="checkbox" name="addition" value="Витамины">
+                <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Витамины">
                 <span class="control__mark"></span>
                 <span class="control__label">Витамины</span>
               </label>
@@ -144,15 +156,17 @@
           </ul>
         </fieldset>
 
-        <button class="form__button button-text button" type="submit">отправить заявку</button>
+        <div class="inner">
+          <button class="form__button button-text button" type="submit">отправить заявку</button>
 
-        <p class="form__txet">* — Обязательные поля</p>
+        <p class="form__text">* — Обязательные поля</p>
+        </div>
       </form>
-    </div>
+    </section>
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__container container">
+    <div class="main-footer__container container container--second">
       <div class="main-footer__contacts contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
 
@@ -169,8 +183,7 @@
       </div>
 
       <div class="main-footer__wrapp inner">
-        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
-          height="24">
+        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128" height="24">
 
         <ul class="main-footer__social social">
           <li class="social__item">
