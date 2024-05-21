@@ -4,8 +4,7 @@
   padding-bottom: 24px;
 
   &--no-label {
-    border-bottom: 2px solid #ee82ee;
-    // border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid $color-border-2;
   }
 }
 
@@ -29,6 +28,7 @@
 .form__field {
   // flex-grow: 1;
   padding: 14px 10px 13px 15px;
+  border: 1px solid $color-border-field;
 }
 
 .form__title {
@@ -38,6 +38,7 @@
 
 .form__textarea {
   width: 100%;
+  border: 1px solid $color-border-field;
 }
 
 .form__button {

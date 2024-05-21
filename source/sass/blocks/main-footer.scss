@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
 
-  @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-base-text, $upper: none);
+  @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-footer-icons, $upper: none);
 
   margin-top: 20px;
   text-decoration: none;

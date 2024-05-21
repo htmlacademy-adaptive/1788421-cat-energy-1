@@ -11,9 +11,14 @@
   margin-right: 70px;
 }
 
+.product-card__title-addit {
+  margin-bottom: 13px;
+}
+
 .product-card__property {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .product-card__link-img {
@@ -24,13 +29,8 @@
   justify-content: center;
 }
 
-.main-products__still {
-  padding-top: 25px;
-  padding-bottom: 24px;
-  text-align: center;
-}
-
 .product-card__still {
   margin-top: 53px;
   margin-bottom: 8px;
+  color: $color-second-text;
 }

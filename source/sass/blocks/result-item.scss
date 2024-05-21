@@ -2,3 +2,9 @@
   padding: 21px 33px 18px 20px;
   background-color: $color-bg-grey;
 }
+
+.result-item__link {
+  padding-top: 15px;
+  display: block;
+  border-top: 1px solid  $color-border-2;
+}
