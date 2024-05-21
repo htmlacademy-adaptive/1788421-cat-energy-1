@@ -1,19 +1,20 @@
 .hero {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../img/tmp/index-background-mob.jpg");
+  background-repeat: no-repeat;
+  background-position: top, top center;
+  background-size: auto 302px, 320px 302px;
+  // background-clip: border-box;
+  // background-color: $color-bg-base;
 
-  background-image:linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-  url(../../img/tmp/index-background-mob.jpg);
-background-repeat: no-repeat;
-background-position:top, top center;
-background-size:auto 302px, 320px 302px;
-// background-clip: border-box;
-// background-color: $color-bg-base;
-
+  background-color: #ff0000;
 }
 
 .hero__container {
   padding-top: 27px;
   padding-bottom: 10px;
   text-align: center;
+  background-color: #0000ff;
 }
 
 .hero__title {
@@ -22,5 +23,4 @@ background-size:auto 302px, 320px 302px;
 
 .hero__slogan {
   margin-bottom: 29px;
-
 }

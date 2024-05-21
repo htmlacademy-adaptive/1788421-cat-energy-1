@@ -1,6 +1,6 @@
 .product-card {
 
-  border-top: 1px solid $color-border-catalog;
+  border-top: 1px solid $color-border-4;
 }
 
 .product-card__wrapp-flex {
@@ -8,7 +8,7 @@
 }
 
 .product-card__title {
-margin-right: 70px;
+  margin-right: 70px;
 }
 
 .product-card__property {
@@ -21,17 +21,16 @@ margin-right: 70px;
   height: 107px;
   display: flex;
   align-items: center;
-justify-content: center;
+  justify-content: center;
 }
 
 .main-products__still {
-padding-top: 25px;
-padding-bottom: 24px;
-text-align: center;
-
+  padding-top: 25px;
+  padding-bottom: 24px;
+  text-align: center;
 }
 
 .product-card__still {
   margin-top: 53px;
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }

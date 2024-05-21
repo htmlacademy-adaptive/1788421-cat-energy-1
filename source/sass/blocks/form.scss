@@ -4,9 +4,8 @@
   padding-bottom: 24px;
 
   &--no-label {
-    border-bottom: 2px solid violet;
+    border-bottom: 2px solid #ee82ee;
     // border-bottom: 1px solid #d9d9d9;
-
   }
 }
 
@@ -41,7 +40,6 @@
   width: 100%;
 }
 
-
 .form__button {
   width: 100%;
   border: none;
@@ -49,5 +47,5 @@
 
 .form__text {
   margin-top: 21px;
-margin-bottom: 0;
+  margin-bottom: 0;
 }

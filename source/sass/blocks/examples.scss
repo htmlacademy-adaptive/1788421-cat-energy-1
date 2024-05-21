@@ -3,8 +3,8 @@
 }
 
 .examples__container {
-padding-top: 25px;
-padding-bottom: 40px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 }
 
 .examples__title {
@@ -24,5 +24,4 @@ padding-bottom: 40px;
   text-align: center;
 
   @include font ($size: 14px, $line-height: 20px);
-
 }

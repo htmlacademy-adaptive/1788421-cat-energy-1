@@ -19,19 +19,19 @@
 }
 
 .basic-text {
-  @include font ($family: $font-base, $size: 14px, $line-height:18px, $color: $color-base-text, $upper: none);
+  @include font ($family: $font-base, $size: 14px, $line-height: 18px, $color: $color-base-text, $upper: none);
 
 
-//   font-family: "Lato", "PT Sans", sans-serif;
-//   font-size: 14px;
-//   line-height: 18px;
-//   color: #444444;
- }
+  //   font-family: "Lato", "PT Sans", sans-serif;
+  //   font-size: 14px;
+  //   line-height: 18px;
+  //   color: #444444;
+}
 
 .main-title {
   /* h1 */
 
-  @include font ($size: 36px, $line-height:36px,$upper: none);
+  @include font ($size: 36px, $line-height: 36px, $upper: none);
 
   // font-family: "Oswald", "PT Sans", sans-serif;
   // font-size: 36px;
@@ -44,7 +44,6 @@
   &--mobile {
     color: #ffffff;
   }
-
 }
 
 .section-title {
@@ -116,8 +115,8 @@
   // color: #ffffff;
 
   text-decoration: none;
-text-align: center;
-  background-color: #68B738;
+  text-align: center;
+  background-color: #68b738;
 
   &.button--secondary {
     color: $color-base-text;
@@ -127,7 +126,6 @@ text-align: center;
 
 
 .link-text {
-
   @include font ($size: 16px, $line-height: 16px);
   text-decoration: none;
 
@@ -140,13 +138,13 @@ text-align: center;
 
 .product-title {
   @include font ($size: 16px, $line-height: 20px);
-  }
+}
 
 .second-page-title {
   @include font ($size: 24px, $line-height: 26px);
 }
 
-.product-lid-txt  {
+.product-lid-txt {
   @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-white, $upper: none);
 }
 
@@ -157,4 +155,3 @@ text-align: center;
 .form-txt {
   @include font ($size: 16px, $line-height: 18px, $color: $color-base-text);
 }
-

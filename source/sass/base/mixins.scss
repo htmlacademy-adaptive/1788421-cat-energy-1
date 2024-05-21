@@ -1,7 +1,7 @@
 @mixin font ($family: $font-secondary, $size, $line-height, $weight: 400, $color: $color-black, $upper: uppercase) {
 
   margin-top: 0;
-margin-bottom: 0;
+  margin-bottom: 0;
   font-family: $family;
   font-size: $size;
   line-height: $line-height;
@@ -11,7 +11,7 @@ margin-bottom: 0;
 }
 
 
-@mixin list-reset ($padd-left:0) {
+@mixin list-reset ($padd-left: 0) {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: $padd-left;
