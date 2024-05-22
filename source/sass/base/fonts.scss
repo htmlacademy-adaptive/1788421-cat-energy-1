@@ -123,7 +123,6 @@
   }
 }
 
-
 .link-text {
   @include font ($size: 16px, $line-height: 16px);
   text-decoration: none;
@@ -153,4 +152,8 @@
 
 .form-txt {
   @include font ($size: 16px, $line-height: 18px, $color: $color-base-text);
+}
+
+.property-text {
+  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none);
 }

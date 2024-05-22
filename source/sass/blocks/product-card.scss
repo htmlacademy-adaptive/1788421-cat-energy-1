@@ -1,14 +1,15 @@
 .product-card {
-
   border-top: 1px solid $color-border-4;
 }
 
 .product-card__wrapp-flex {
   display: flex;
+  margin-bottom: 17px;
 }
 
 .product-card__title {
   margin-right: 70px;
+  margin-bottom: 14px;
 }
 
 .product-card__title-addit {
@@ -18,7 +19,10 @@
 .product-card__property {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+
+  &--addition {
+    margin-bottom: 15px;
+  }
 }
 
 .product-card__link-img {
