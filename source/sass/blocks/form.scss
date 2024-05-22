@@ -22,16 +22,14 @@
 }
 
 .form__name {
-  // flex-grow: 1;
   min-width: fit-content;
 }
 
 .form__field {
-  // flex-grow: 1;
   width: 100%;
   padding: 14px 10px 13px 15px;
   border: 1px solid $color-border-field;
-  }
+}
 
 .form__title {
   margin-top: 24px;
