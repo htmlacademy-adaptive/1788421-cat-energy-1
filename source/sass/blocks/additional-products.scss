@@ -1,0 +1,22 @@
+.additional-products {
+  padding-top: 25px;
+}
+
+.additional-products__title {
+  margin-bottom: 36px;
+  margin-left: 20px;
+}
+
+.additional-products__list {
+  @include list-reset($padd-left: 20px);
+}
+
+.additional-products__card {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $color-border-3;
+}
+
+.additional-products__lid {
+  margin-top: 35px;
+}

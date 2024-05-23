@@ -1,0 +1,52 @@
+.form__fildset {
+  border: none;
+
+  padding-bottom: 24px;
+
+  &--no-label {
+    border-bottom: 1px solid $color-border-2;
+  }
+}
+
+.form__wrapp {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+}
+
+.form__label {
+  display: flex;
+  gap: 13px;
+
+  align-items: center;
+}
+
+.form__name {
+  min-width: fit-content;
+}
+
+.form__field {
+  width: 100%;
+  padding: 14px 10px 13px 15px;
+  border: 1px solid $color-border-field;
+}
+
+.form__title {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
+.form__textarea {
+  width: 100%;
+  border: 1px solid $color-border-field;
+}
+
+.form__button {
+  width: 100%;
+  border: none;
+}
+
+.form__text {
+  margin-top: 21px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,16 @@
+.features__container {
+  padding-top: 10px;
+  padding-bottom: 49px;
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

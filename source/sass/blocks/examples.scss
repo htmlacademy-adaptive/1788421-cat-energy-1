@@ -1,0 +1,27 @@
+.examples {
+  background-color: $color-bg-examples;
+}
+
+.examples__container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.examples__title {
+  margin-bottom: 40px;
+}
+
+.examples__description {
+  margin-bottom: 20px;
+}
+
+.examples__wrapp {
+  margin-bottom: 20px;
+}
+
+.examples__costs {
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include font ($size: 14px, $line-height: 20px);
+}

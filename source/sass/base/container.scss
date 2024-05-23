@@ -1,0 +1,10 @@
+.container {
+  box-sizing: border-box;
+
+  width: 320px;
+  margin: auto;
+
+  &--second {
+    background-color: $color-bg-grey;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin font ($family: $font-secondary, $size, $line-height, $weight: 400, $color: $color-black, $upper: uppercase) {
+
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $upper;
+}
+
+
+@mixin list-reset ($padd-left: 0) {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: $padd-left;
+  list-style: none;
+}
+
+
+// border-top: 1px solid $color-border-catalog;

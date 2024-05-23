@@ -1,0 +1,18 @@
+.main-nav__wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav__list {
+  @include list-reset;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px 0 24px;
+
+  text-align: center;
+
+  border-top: 1px solid $color-border;
+}

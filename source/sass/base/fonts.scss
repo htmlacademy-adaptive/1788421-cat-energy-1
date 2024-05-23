@@ -1,0 +1,159 @@
+/*===================== шрифты ===========================*/
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"),
+    url("../../fonts/lato/Lato-Regular.woff") format("woff");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2"),
+    url("../../fonts/oswald/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+
+.basic-text {
+  @include font ($family: $font-base, $size: 14px, $line-height: 18px, $color: $color-base-text, $upper: none);
+
+
+  //   font-family: "Lato", "PT Sans", sans-serif;
+  //   font-size: 14px;
+  //   line-height: 18px;
+  //   color: #444444;
+}
+
+.main-title {
+  /* h1 */
+
+  @include font ($size: 36px, $line-height: 36px, $upper: none);
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 36px;
+  // line-height: 36px;
+  // font-weight: 400;
+  // text-transform: uppercase;
+
+  // color: #000000;
+
+  &--mobile {
+    color: #ffffff;
+  }
+}
+
+.section-title {
+  /* h2 */
+
+  @include font ($size: 36px, $line-height: 40px, $upper: none);
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 36px;
+  // line-height: 40px;
+  // font-weight: 400;
+  // text-transform: uppercase;
+  // color: #000000;
+}
+
+.subtitle {
+  /* h3 */
+
+  @include font ($size: 24px, $line-height: 37px);
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 24px;
+  // line-height: 37px;
+  // font-weight: 400;
+  // text-transform: uppercase;
+  // color: #000000;
+}
+
+.nav-text {
+  /* ссылки в меню */
+
+  @include font ($size: 20px, $line-height: 20px);
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 20px;
+  // line-height: 20px;
+  // text-transform: uppercase;
+  // color: #000000;
+
+  text-decoration: none;
+}
+
+.slogan {
+  /* слоган в Hero */
+
+  @include font ($size: 14px, $line-height: 20px, $color: $color-second-text);
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 14px;
+  // line-height: 14px;
+  // text-transform: uppercase;
+  // color: #000000;
+
+  &.slogan--mobile {
+    color: #ffffff;
+    line-height: 14px;
+  }
+}
+
+.button-text {
+  /* слоган в Hero */
+
+  @include font ($size: 16px, $line-height: 20px, $color: $color-white);
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 16px;
+  // line-height: 20px;
+  // text-transform: uppercase;
+  // color: #ffffff;
+
+  text-decoration: none;
+  text-align: center;
+  background-color: #68b738;
+
+  &.button--secondary {
+    color: $color-base-text;
+    background-color: $color-bg-grey;
+  }
+}
+
+.link-text {
+  @include font ($size: 16px, $line-height: 16px);
+  text-decoration: none;
+
+  // font-family: "Oswald", "PT Sans", sans-serif;
+  // font-size: 16px;
+  // line-height: 16px;
+  // text-transform: uppercase;
+  // color: #000000;
+}
+
+.product-title {
+  @include font ($size: 16px, $line-height: 20px, $color: $color-product-title);
+}
+
+.second-page-title {
+  @include font ($size: 24px, $line-height: 26px);
+}
+
+.product-lid-txt {
+  @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-white, $upper: none);
+}
+
+.form-lid-text {
+  @include font ($size: 14px, $line-height: 18px, $color: $color-black);
+}
+
+.form-txt {
+  @include font ($size: 16px, $line-height: 18px, $color: $color-base-text);
+}
+
+.property-text {
+  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none);
+}

@@ -1,0 +1,40 @@
+.product-card {
+  border-top: 1px solid $color-border-4;
+}
+
+.product-card__wrapp-flex {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.product-card__title {
+  margin-right: 70px;
+  margin-bottom: 14px;
+}
+
+.product-card__title-addit {
+  margin-bottom: 13px;
+}
+
+.product-card__property {
+  display: flex;
+  justify-content: space-between;
+
+  &--addition {
+    margin-bottom: 15px;
+  }
+}
+
+.product-card__link-img {
+  width: 140px;
+  height: 107px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__still {
+  margin-top: 53px;
+  margin-bottom: 8px;
+  color: $color-second-text;
+}
