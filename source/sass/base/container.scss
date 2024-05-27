@@ -7,4 +7,12 @@
   &--second {
     background-color: $color-bg-grey;
   }
+
+  @include media-tablet {
+    width: 768px;
+  }
+
+  @include media-desktop {
+    width: 1200px;
+  }
 }

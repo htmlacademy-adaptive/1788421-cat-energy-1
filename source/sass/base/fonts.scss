@@ -21,11 +21,6 @@
 .basic-text {
   @include font ($family: $font-base, $size: 14px, $line-height: 18px, $color: $color-base-text, $upper: none);
 
-  //   font-family: "Lato", "PT Sans", sans-serif;
-  //   font-size: 14px;
-  //   line-height: 18px;
-  //   color: #444444;
-
   @include media-tablet {
     @include font ($family: $font-base, $size: 16px, $line-height: 24px, $color: $color-black, $upper: none);
   }
@@ -36,16 +31,10 @@
 
   @include font ($size: 36px, $line-height: 36px, $color: $color-white, $upper: none);
 
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 36px;
-  // line-height: 36px;
-  // font-weight: 400;
-  // text-transform: uppercase;
-
-  // color: #000000;
-
   @include media-tablet {
     @include font ($size: 60px, $line-height: 60px, $color: $color-black, $upper: none);
+
+    text-align: left;
   }
 }
 
@@ -92,6 +81,8 @@
 
   @include media-tablet {
     @include font ($size: 20px, $line-height: 20px, $color: $color-second-text);
+
+    text-align: left;
   }
 }
 
