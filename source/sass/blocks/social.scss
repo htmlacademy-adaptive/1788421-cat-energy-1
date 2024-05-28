@@ -9,4 +9,9 @@
 
   border-top: 1px solid $color-border-2;
   border-bottom: 1px solid $color-border-2;
+
+  @include media-tablet {
+    border-top: none;
+    border-bottom: none;
+  }
 }

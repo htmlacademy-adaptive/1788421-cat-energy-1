@@ -1,5 +1,9 @@
 .main-footer__container {
   padding-top: 26px;
+
+  @include media-tablet {
+    padding-top: 60px;
+  }
 }
 
 .main-footer__wrapp {
@@ -8,6 +12,15 @@
   text-align: center;
 
   background-color: $color-bg-grey;
+
+  @include media-tablet {
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .main-footer__logo-text {

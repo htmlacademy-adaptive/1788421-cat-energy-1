@@ -5,6 +5,10 @@
 
 .features__title {
   margin-bottom: 40px;
+
+  @include media-tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -13,4 +17,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 37px 137px;
+  }
+}
+
+.features__item {
+  display: block;
+  width: 249px;
+  height: 280px;
+  border: 1px solid black;
 }
