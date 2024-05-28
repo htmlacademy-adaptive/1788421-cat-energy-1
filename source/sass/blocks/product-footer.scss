@@ -6,19 +6,33 @@
 
   text-align: center;
 
-  // background-color: $color-bg-base;
-  // background-clip: padding-box;
-
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
     url("../../img/tmp/catalog_bg-present.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: 280px 290px, 280px 290px;
+
+  @include media-tablet {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../img/tmp/catalog_bg-present-tabl.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 707px 200px, 707px 200px;
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  }
 }
 
 .product-footer__lid {
   margin-left: 58px;
   margin-right: 61px;
+
+  @include media-tablet {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
 }
 
 .product-footer__lid::before {

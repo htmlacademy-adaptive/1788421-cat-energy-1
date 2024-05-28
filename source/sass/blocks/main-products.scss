@@ -1,3 +1,10 @@
+.main-products {
+  @include media-tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .main-products__still {
   padding-top: 25px;
   padding-bottom: 24px;
@@ -9,9 +16,17 @@
 .main-products__title {
   margin-bottom: 41px;
   margin-left: 20px;
+
+  @include media-tablet {
+    margin-bottom: 84px;
+    margin-left: 0;
+  }
 }
 
-.main-products__item {
-  padding-top: 20px;
-  padding-bottom: 25px;
+.main-products__list {
+  @include media-tablet {
+display: flex;
+flex-wrap: wrap;
+gap: 60px 59px;
+  }
 }

@@ -82,7 +82,7 @@
   }
 }
 
-.slogan-welcome {
+.slogan-2 {
   /* слоган в examples */
 
   @include font ($size: 16px, $line-height: 20px, $color: $color-second-text);
@@ -162,5 +162,13 @@
 
   @include media-tablet {
     @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none);
+  }
+}
+
+.address-text {
+  @include font ($family: $font-base, $size: 14px, $line-height: 20px, $color: $color-base-text, $upper: none);
+
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-base-text, $upper: none);
   }
 }
