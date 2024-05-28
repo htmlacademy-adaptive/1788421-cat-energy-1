@@ -1,4 +1,9 @@
 .button {
   padding: 10px 20px;
   display: block;
+
+  @include media-tablet {
+    padding: 14px 26px;
+    display: inline-block;
+  }
 }

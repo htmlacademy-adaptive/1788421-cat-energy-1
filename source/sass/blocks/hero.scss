@@ -4,20 +4,58 @@
   background-repeat: no-repeat;
   background-position: top, top center;
   background-size: auto 302px, 320px 302px;
-  // background-clip: border-box;
-  // background-color: $color-bg-base;
+
+  @include media-tablet {
+    background-image: none;
+  }
+
 }
 
 .hero__container {
   padding-top: 27px;
   padding-bottom: 10px;
   text-align: center;
+
+  @include media-tablet {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    text-align: left;
+  }
 }
 
 .hero__title {
   margin-bottom: 25px;
+
+  @include media-tablet {
+    margin-bottom: 40px;
+    margin-left: 90px;
+  }
 }
 
 .hero__slogan {
   margin-bottom: 29px;
+
+  @include media-tablet {
+    margin-left: 90px;
+  }
+}
+
+.hero__img {
+  display: block;
+  width: 280px;
+  height: 270px;
+
+  @include media-tablet {
+    width: 708px;
+    height: 609px;
+  }
+}
+
+.hero__button {
+  @include media-tablet {
+    position: absolute;
+    top: 270px;
+    left: 120px;
+  }
 }

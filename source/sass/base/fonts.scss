@@ -33,8 +33,6 @@
 
   @include media-tablet {
     @include font ($size: 60px, $line-height: 60px, $color: $color-black, $upper: none);
-
-    text-align: left;
   }
 }
 
@@ -69,7 +67,7 @@
     @include font ($size: 18px, $line-height: 24px);
   }
 
-  @include media-tablet {
+  @include media-desktop {
     @include font ($size: 18px, $line-height: 24px, $color: $color-white);
   }
 }
@@ -81,8 +79,6 @@
 
   @include media-tablet {
     @include font ($size: 20px, $line-height: 20px, $color: $color-second-text);
-
-    text-align: left;
   }
 }
 

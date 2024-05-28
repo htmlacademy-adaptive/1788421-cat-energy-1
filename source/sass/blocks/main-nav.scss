@@ -6,6 +6,22 @@
 
 .main-nav__list {
   @include list-reset;
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    gap: 33px;
+  }
+}
+
+.main-nav__link--current::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $color-bg-base;
 }
 
 .main-nav__link {
@@ -15,4 +31,11 @@
   text-align: center;
 
   border-top: 1px solid $color-border;
+
+  @include media-tablet {
+    position: relative;
+    border-top: none;
+
+    padding: 12px 0 14px;
+  }
 }

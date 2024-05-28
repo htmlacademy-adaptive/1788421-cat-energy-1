@@ -1,10 +1,35 @@
 .result-item {
   padding: 21px 33px 18px 20px;
   background-color: $color-bg-grey;
+
+  @include media-tablet {
+    padding: 77px 316px 30px 53px;
+  }
 }
 
 .result-item__link {
   padding-top: 15px;
   display: block;
-  border-top: 1px solid  $color-border-2;
+  border-top: 1px solid $color-border-2;
+
+  @include media-tablet {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.result-item__title {
+  margin-bottom: 29px;
+
+  @include media-tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.result-item__description {
+  margin-bottom: 23px;
+
+  @include media-tablet {
+    margin-bottom: 48px;
+  }
 }
