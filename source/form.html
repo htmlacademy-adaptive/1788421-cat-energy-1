@@ -37,12 +37,14 @@
     </nav>
   </header>
 
-  <main class="form-main">
-    <section class="container">
+  <main class="form-main container inner">
+    <section class="form-main--container">
 
-      <h1 class="form-main__title main-title main-title--second-pares inner
-      ">Подбор программы</h1>
-      <p class="form-main__lid form-lid-text inner">
+      <h1 class="form-main__title main-title main-title--second-pares">
+        Подбор программы
+      </h1>
+
+      <p class="form-main__lid form-lid-text">
         Заполните анкету, и мы подберем<br>
         программу питания для вашего кота
       </p>
@@ -50,63 +52,63 @@
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
         <div class="form__wrapp-flex">
-        <fieldset class="form__fildset inner">
-          <legend class="visually-hidden">Основные данные</legend>
+          <fieldset class="form__fildset">
+            <legend class="visually-hidden">Основные данные</legend>
 
-          <div class="form__wrapp">
-            <label class="form__label form-txt" for="name">
-              <span class="form__name">Имя:*</span>
-              <input class="form__field form-txt" placeholder="Барсик" type="text" name="name" id="name" required>
-            </label>
-
-            <label class="form__label form-txt" for="weight">
-              <span class="form__name">Вес (кг):*</span>
-              <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
-            </label>
-
-            <label class="form__label form-txt" for="age">
-              <span class="form__name">Возраст (лет):</span>
-              <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset class="form__fildset form__fildset--no-label inner">
-          <legend class="visually-hidden">Программа</legend>
-
-          <ul>
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Похудение" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Похудение</span>
+            <div class="form__wrapp">
+              <label class="form__label form-txt" for="name">
+                <span class="form__name">Имя:*</span>
+                <input class="form__field form-txt" placeholder="Барсик" type="text" name="name" id="name" required>
               </label>
-            </li>
 
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Набор массы">
-                <span class="control__mark"></span>
-                <span class="control__label"> Набор массы</span>
+              <label class="form__label form-txt" for="weight">
+                <span class="form__name">Вес (кг):*</span>
+                <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
               </label>
-            </li>
 
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Нужен совет">
-                <span class="control__mark"></span>
-                <span class="control__label"> Не знаю (нужен ваш совет)</span>
+              <label class="form__label form-txt" for="age">
+                <span class="form__name">Возраст (лет):</span>
+                <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
               </label>
-            </li>
-          </ul>
-        </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__fildset form__fildset--no-label">
+            <legend class="visually-hidden">Программа</legend>
+
+            <ul>
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Похудение" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Похудение</span>
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Набор массы">
+                  <span class="control__mark"></span>
+                  <span class="control__label"> Набор массы</span>
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Нужен совет">
+                  <span class="control__mark"></span>
+                  <span class="control__label"> Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
         </div>
         <fieldset class="form__fildset">
 
-          <legend class="form__title  second-page-title ">Контактные данные (владельца кота)</legend>
+          <legend class="form__title  second-page-title">Контактные данные (владельца кота)</legend>
 
-          <div class="form__wrapp">
+          <div class="form__wrapp form__wrapp--cont">
             <label class="form__label form-txt" for="email">
               <span class="form__name">E-mail:*</span>
               <input class="form__field form-txt" placeholder="кuklachev@gmail.com" type="email" name="email" id="email"
@@ -167,8 +169,8 @@
           </ul>
         </fieldset>
 
-        <div class="inner">
-          <button class="form__button button-text button" type="submit">отправить заявку</button>
+        <div class="form--wrapp-horizon">
+          <button class="form__button button-text button button--form" type="submit">отправить заявку</button>
 
           <p class="form__text">* — Обязательные поля</p>
         </div>
