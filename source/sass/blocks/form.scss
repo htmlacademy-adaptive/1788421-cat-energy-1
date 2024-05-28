@@ -1,10 +1,19 @@
 .form__fildset {
   border: none;
+  margin-left: 0;
+  margin-right: 0;
 
   padding-bottom: 24px;
 
   &--no-label {
+    border-top: 1px solid $color-border-2;
     border-bottom: 1px solid $color-border-2;
+
+    @include media-tablet {
+      border: 1px solid $color-border-2;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
   }
 }
 
@@ -12,6 +21,14 @@
   display: flex;
   gap: 14px;
   flex-direction: column;
+
+  @include media-tablet {
+    margin-left: 40px;
+    margin-right: 40px;
+
+    gap: 20px;
+  }
+
 }
 
 .form__label {
@@ -34,6 +51,12 @@
 .form__title {
   margin-top: 24px;
   margin-bottom: 36px;
+
+  @include media-tablet {
+    margin-left: 40px;
+    margin-top: 65PX;
+    margin-bottom: 57PX;
+  }
 }
 
 .form__textarea {
@@ -50,3 +73,4 @@
   margin-top: 21px;
   margin-bottom: 0;
 }
+

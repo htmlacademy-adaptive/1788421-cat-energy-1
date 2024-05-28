@@ -2,18 +2,31 @@
   border-top: 1px solid #d9d9d9;
   padding-top: 25px;
   padding-bottom: 32px;
+
+  @include media-tablet {
+    border-top: none;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
 }
 
 .form-main__title {
   margin-bottom: 27px;
+
+  @include media-tablet {
+    margin-bottom: 54px;
+    margin-left: 40px;
+  }
 }
 
 .form-main__lid {
   padding-right: 54px;
   padding-bottom: 39px;
+
+  @include media-tablet {
+    margin-left: 40px;
+    padding-bottom: 66px;
+  }
 }
 
-.form__fildset {
-  margin-left: 0;
-  margin-right: 0;
-}
