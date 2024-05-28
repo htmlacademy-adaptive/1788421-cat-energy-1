@@ -568,7 +568,7 @@
   .hero__container {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     text-align: left;
   }
 }
@@ -701,7 +701,6 @@
   display: block;
   width: 249px;
   height: 280px;
-  border: 1px solid black;
 }
 
 .examples {
@@ -1266,8 +1265,8 @@
 @media (min-width: 768px) {
   .form__title {
     margin-left: 40px;
-    margin-top: 65PX;
-    margin-bottom: 57PX;
+    margin-top: 65px;
+    margin-bottom: 57px;
   }
 }
 
