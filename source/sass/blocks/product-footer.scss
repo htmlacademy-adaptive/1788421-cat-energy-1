@@ -14,14 +14,13 @@
 
   @include media-tablet {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/tmp/catalog_bg-present-tabl.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: 707px 200px, 707px 200px;
+      url("../../img/tmp/catalog_bg-present-tabl.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 707px 200px, 707px 200px;
 
-  padding-top: 0;
-  padding-bottom: 0;
-
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 

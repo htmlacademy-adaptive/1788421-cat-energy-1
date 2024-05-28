@@ -8,7 +8,6 @@
   @include media-tablet {
     background-image: none;
   }
-
 }
 
 .hero__container {
@@ -19,7 +18,7 @@
   @include media-tablet {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     text-align: left;
   }
 }

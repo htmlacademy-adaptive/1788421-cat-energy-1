@@ -20,7 +20,6 @@
 
   @include media-tablet {
     display: block;
-
   }
 }
 
@@ -56,10 +55,9 @@
 
 .product-card__property-addition {
   @include media-tablet {
-  display: flex;
-  gap: 49px;
+    display: flex;
+    gap: 49px;
   }
-
 }
 
 .product-card__link-img {

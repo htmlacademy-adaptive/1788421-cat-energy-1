@@ -25,8 +25,8 @@
 
 .main-products__list {
   @include media-tablet {
-display: flex;
-flex-wrap: wrap;
-gap: 60px 59px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 59px;
   }
 }
