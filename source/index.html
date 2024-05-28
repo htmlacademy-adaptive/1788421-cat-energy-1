@@ -40,20 +40,27 @@
   <main class="main">
     <section class="hero">
       <div class="hero__container container inner">
-        <h1 class="hero__title main-title main-title--mobile">
-          Функциональное <br>
-          питание для котов
-        </h1>
-        <p class="hero__slogan slogan"> Занялся собой? Займись котом!</p>
+        <div class="hero__content-wrapp">
+          <h1 class="hero__title main-title main-title--mobile">
+            Функциональное <br>
+            питание для котов
+          </h1>
+          <p class="hero__slogan slogan">
+            Занялся собой? Займись котом!
+          </p>
+
+          <a class="hero__button button-text button" href="./form.html">
+            подобрать программу
+          </a>
+        </div>
 
         <img class="hero__img" src="./img/tmp/index-can-mobile.png" alt="корм для котиков" width="280" height="270">
-        <a class="hero__button button-text button" href="./form.html">подобрать программу</a>
       </div>
     </section>
 
     <section class="results">
+      <h2 class="visually-hidden">Программы питания</h2>
       <div class="results__container container inner">
-        <h2 class="visually-hidden">Программы питания</h2>
 
         <article class="result-item result-item--icon icon icon--slim ">
           <h3 class="result-item__title subtitle">Похудение</h3>
@@ -104,37 +111,43 @@
     <section class="examples">
       <div class="examples__container container inner">
         <h2 class="examples__title section-title">Живой пример</h2>
-        <p class="examples__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
 
-        <div class="examples__packing">
-          <div class="examples__wrapp">
-            <dl class="property">
-              <dt class="property__data">5 кг</dt>
-              <dd class="property__description">снижение веса</dd>
-            </dl>
+        <div class="examples__wrap-horison">
+          <div class="examples__content-wrapp">
+            <p class="examples__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+              без
+              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
 
-            <dl class="property">
-              <dt class="property__data">60 дней</dt>
-              <dd class="property__description">затрачено времени</dd>
-            </dl>
+            <div class="examples__packing">
+              <div class="examples__wrapp">
+                <dl class="property">
+                  <dt class="property__data">5 кг</dt>
+                  <dd class="property__description">снижение веса</dd>
+                </dl>
+
+                <dl class="property">
+                  <dt class="property__data">60 дней</dt>
+                  <dd class="property__description">затрачено времени</dd>
+                </dl>
+              </div>
+
+              <p class="examples__costs">
+                <span>Затраты на питание:</span>
+                <span>15 000 РУБ.</span>
+              </p>
+            </div>
           </div>
 
-          <p class="examples__costs">
-            <span>Затраты на питание:</span>
-            <span>15 000 РУБ.</span>
-          </p>
-        </div>
+          <div class="examples__slider slider">
+            <img class="slider__img" src="./img/tmp/kat-fat.png" alt="толстый кот" width="280" height="256">
+            <img class="slider__img" src="./img/tmp/kat-slim.png" alt="отощал, бедняжка" width="280" height="256">
 
-        <div class="examples__slider slider">
-          <img class="slider__img" src="./img/tmp/kat-fat.png" alt="толстый кот" width="280" height="256">
-          <img class="slider__img" src="./img/tmp/kat-slim.png" alt="отощал, бедняжка" width="280" height="256">
-
-          <button class="slider__button" type="button">
-            <span class="visually-hidden">круглая стрелка</span>
-          </button>
+            <button class="slider__button" type="button">
+              <span class="visually-hidden">круглая стрелка</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -23,10 +23,17 @@
     flex-wrap: wrap;
     gap: 37px 137px;
   }
+
+  @include media-desktop {
+    flex-wrap: nowrap;
+    gap: 74px;
+  }
 }
 
 .features__item {
-  display: block;
-  width: 249px;
-  height: 280px;
+  @include media-tablet {
+    display: block;
+    width: 230px;
+    height: 280px;
+  }
 }

@@ -9,5 +9,13 @@
   @include media-tablet {
     padding-top: 0;
     gap: 30px;
+    padding-bottom: 45px;
+  }
+
+  @include media-desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding-bottom: 69px;
   }
 }

@@ -5,6 +5,10 @@
     background-color: $color-white;
     border-top: 1px solid $color-border;
   }
+
+  @include media-desktop {
+    border-top: none;
+  }
 }
 
 .examples__container {
@@ -22,6 +26,24 @@
 
   @include media-tablet {
     margin-bottom: 60px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 76px;
+  }
+}
+
+.examples__wrap-horison {
+  @include media-desktop {
+    display: flex;
+    background-color: $color-bg-grey;
+  }
+}
+
+.examples__content-wrapp {
+  @include media-desktop {
+    margin-top: 70px;
+    width: 436px;
   }
 }
 
@@ -62,5 +84,9 @@
 .examples__slider {
   @include media-tablet {
     background-color: $color-bg-examples;
+  }
+
+  @include media-desktop {
+    background-color: transparent;
   }
 }

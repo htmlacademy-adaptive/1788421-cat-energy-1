@@ -5,6 +5,11 @@
   @include media-tablet {
     padding: 77px 316px 30px 53px;
   }
+
+  @include media-desktop {
+    padding: 41px 61px 55px 52px;
+    width: 570px;
+  }
 }
 
 .result-item__link {
@@ -24,12 +29,21 @@
   @include media-tablet {
     margin-bottom: 24px;
   }
+
+  @include media-desktop {
+    margin-bottom: 73px;
+  }
 }
 
 .result-item__description {
+  margin-top: 0;
   margin-bottom: 23px;
 
   @include media-tablet {
     margin-bottom: 48px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 23px;
   }
 }
