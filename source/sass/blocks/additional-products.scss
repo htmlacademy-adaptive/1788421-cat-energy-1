@@ -60,4 +60,13 @@
 
 .additional-products__lid {
   margin-top: 35px;
+
+  @include media-tablet {
+  margin-top: 70px;
+}
+
+@include media-desktop {
+  margin-top: 0;
+
+}
 }

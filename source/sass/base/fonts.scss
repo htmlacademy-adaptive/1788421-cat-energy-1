@@ -67,14 +67,20 @@
 
   text-decoration: none;
 
+
+
   @include media-tablet {
     @include font ($size: 18px, $line-height: 24px);
   }
 
   @include media-desktop {
-    @include font ($size: 18px, $line-height: 24px, $color: $color-white);
+    &--index {
+    color: $color-white;
   }
 }
+
+}
+
 
 .slogan {
   /* слоган в Hero */
