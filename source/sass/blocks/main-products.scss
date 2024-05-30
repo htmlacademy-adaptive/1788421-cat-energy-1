@@ -3,6 +3,11 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  @include media-desktop {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .main-products__still {
@@ -21,6 +26,10 @@
     margin-bottom: 84px;
     margin-left: 0;
   }
+
+  @include media-desktop {
+    margin-bottom: 84px;
+  }
 }
 
 .main-products__list {
@@ -28,5 +37,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 60px 59px;
+  }
+
+  @include media-desktop {
+    gap: 63px 80px;
   }
 }

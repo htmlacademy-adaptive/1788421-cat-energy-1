@@ -8,6 +8,7 @@
 
   @include media-desktop {
     border-top: none;
+    background-color: $color-bg-grey;
   }
 }
 
@@ -36,7 +37,6 @@
 .examples__wrap-horison {
   @include media-desktop {
     display: flex;
-    background-color: $color-bg-grey;
   }
 }
 
