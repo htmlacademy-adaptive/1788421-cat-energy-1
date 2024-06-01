@@ -1,7 +1,7 @@
 .container {
   box-sizing: border-box;
 
-  width: 320px;
+  min-width: 320px;
   margin: auto;
 
   &--second {
@@ -9,10 +9,10 @@
   }
 
   @include media-tablet {
-    width: 768px;
+    min-width: 768px;
   }
 
   @include media-desktop {
-    width: 1440px;
+    min-width: 1440px;
   }
 }

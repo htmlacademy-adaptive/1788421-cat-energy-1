@@ -1,3 +1,9 @@
+.main-header {
+  @include media-desktop {
+    margin-bottom: -134px;
+  }
+}
+
 .main-header__wrapp {
   display: flex;
 }
@@ -13,10 +19,6 @@
 
   @include media-desktop {
     padding-top: 55px;
-    padding-bottom: 0;
-
-    &--index {
-      background-color: $color-bg-base;
-    }
+    padding-bottom: 29px;
   }
 }

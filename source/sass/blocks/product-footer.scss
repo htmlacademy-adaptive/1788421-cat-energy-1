@@ -24,7 +24,7 @@
     background-size: 245px 288px, 245px 288px;
 
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/tmp/catalog_bg-present.jpg");
+      url("../../img/tmp/catalog_bg-present.jpg");
 
     width: 245px;
     height: 288px;
@@ -32,7 +32,6 @@
 }
 
 .product-footer__lid {
-
   @include media-tablet {
     display: flex;
     justify-content: space-between;
@@ -61,19 +60,19 @@
   background-repeat: no-repeat;
 
   @include media-tablet {
-        // margin-right: 264px;
+    // margin-right: 264px;
     margin-bottom: 0;
     margin-left: 0;
 
     width: 80px;
-  height: 82px;
+    height: 82px;
   }
 
   @include media-desktop {
-  height: 83px;
+    height: 83px;
 
-  margin-bottom: 46px;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 46px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

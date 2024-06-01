@@ -8,6 +8,17 @@
   @include media-tablet {
     background-image: none;
   }
+
+  @include media-desktop {
+    background-image: linear-gradient(to right, #ffffff 55%, rgba(104, 183, 56, 0.85) 45%),
+      url("../../img/tmp/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: top, top right;
+    background-size: auto 694px, 720px 694px;
+
+    position: relative;
+    z-index: -10;
+  }
 }
 
 .hero__container {
@@ -71,8 +82,11 @@
 
   @include media-desktop {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 100px;
+    left: 557px;
+
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -85,7 +99,8 @@
     z-index: 10;
     width: auto;
   }
+
   @include media-desktop {
-  margin-bottom: 184px;
+    margin-bottom: 184px;
   }
 }

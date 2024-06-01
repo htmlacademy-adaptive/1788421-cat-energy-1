@@ -64,23 +64,20 @@
   /* ссылки в меню */
 
   @include font ($size: 20px, $line-height: 20px);
-
   text-decoration: none;
-
-
 
   @include media-tablet {
     @include font ($size: 18px, $line-height: 24px);
   }
 
   @include media-desktop {
+    color: $color-second-text;
+
     &--index {
-    color: $color-white;
+      color: $color-white;
+    }
   }
 }
-
-}
-
 
 .slogan {
   /* слоган в Hero */
@@ -114,10 +111,6 @@
   &.button--secondary {
     color: $color-base-text;
     background-color: $color-bg-grey;
-  }
-
-  @include media-tablet {
-    @include font ($size: 20px, $line-height: 26px, $color: $color-white);
   }
 }
 
@@ -168,10 +161,10 @@
 }
 
 .property-text {
-  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none);
+  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {
-    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none);
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none, $color: $color-base-text);
   }
 }
 

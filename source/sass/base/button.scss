@@ -10,4 +10,8 @@
       padding: 14px 65px;
     }
   }
+
+  @include media-desktop {
+    padding: 10px 26px;
+  }
 }

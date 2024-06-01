@@ -2,11 +2,13 @@
   @include media-tablet {
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 45px;
   }
 
   @include media-desktop {
     padding-left: 110px;
     padding-right: 110px;
+    padding-bottom: 51px;
   }
 }
 
@@ -33,13 +35,16 @@
 }
 
 .main-products__list {
+  display: grid;
+
   @include media-tablet {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 60px 59px;
   }
 
   @include media-desktop {
+    grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
   }
 }

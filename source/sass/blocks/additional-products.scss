@@ -1,7 +1,5 @@
 .additional-products {
   padding-top: 25px;
-
-  @include media-tablet {}
 }
 
 .additional-products__title {
@@ -14,7 +12,6 @@
 }
 
 .additional__wrapp {
-
   @include media-desktop {
     display: flex;
     gap: 80px;
@@ -32,33 +29,64 @@
 
   @include media-desktop {
     flex-grow: 1;
+    border-left: none;
+    border-right: none;
   }
 }
 
 .additional-products__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "title title"
+    "descr data"
+    "btn btn";
+  gap: 10px;
+
+  text-align: start;
+  align-items: center;
+
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid $color-border-3;
 
   @include media-tablet {
     padding: 26px 38px 28px;
+
+    grid-template-columns: 6fr 3fr 1fr;
+    grid-template-areas:
+      "title descr data"
+      "btn btn btn";
+    gap: 25px 49px;
   }
 
   @include media-desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: auto 185px 66px 244px;
 
-    padding: 15px 0 17px;
+    padding: 14px 0 17px;
 
+    grid-template-areas: "title descr data btn";
+    gap: 40px;
   }
 }
 
-.additional-products__wrapp-content {
-  @include media-tablet {
-    display: flex;
-    justify-content: space-between;
-  }
+.additional-products__title-card {
+  grid-area: title;
+  text-align: start;
+}
+
+.additional-products__description {
+  text-align: left;
+  grid-area: descr;
+}
+
+.additional-products__data {
+  text-align: right;
+  grid-area: data;
+}
+
+.additional-products__button {
+  grid-area: btn;
 }
 
 .additional-products__lid {

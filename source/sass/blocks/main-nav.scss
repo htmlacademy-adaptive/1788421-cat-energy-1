@@ -6,7 +6,7 @@
 
 .main-nav__list {
   @include list-reset;
-  display: none;
+  // display: none;
 
   @include media-tablet {
     display: flex;
@@ -22,6 +22,10 @@
   left: 0;
   bottom: 0;
   background-color: $color-bg-base;
+
+  @include media-desktop {
+    background-color: $color-white;
+  }
 }
 
 .main-nav__link {
