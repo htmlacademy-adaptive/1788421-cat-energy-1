@@ -1,18 +1,19 @@
 .container {
   box-sizing: border-box;
 
-  min-width: 320px;
+  width: 320px;
   margin: auto;
+  border: 1px solid #00ff00;
 
   &--second {
     background-color: $color-bg-grey;
   }
 
   @include media-tablet {
-    min-width: 768px;
+    width: 768px;
   }
 
   @include media-desktop {
-    min-width: 1440px;
+    width: 1440px;
   }
 }
