@@ -1,0 +1,12 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  margin: 0;
+  background-color: $color-white;
+
+  min-width: $mobile-width;
+
+  border: 1px solid #ff0000;
+}

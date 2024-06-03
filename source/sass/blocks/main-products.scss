@@ -1,13 +1,9 @@
 .main-products {
   @include media-tablet {
-    padding-left: 30px;
-    padding-right: 30px;
     padding-bottom: 45px;
   }
 
   @include media-desktop {
-    padding-left: 110px;
-    padding-right: 110px;
     padding-bottom: 51px;
   }
 }
@@ -22,11 +18,9 @@
 
 .main-products__title {
   margin-bottom: 41px;
-  margin-left: 20px;
 
   @include media-tablet {
     margin-bottom: 84px;
-    margin-left: 0;
   }
 
   @include media-desktop {

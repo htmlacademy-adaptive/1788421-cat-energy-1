@@ -1,6 +1,7 @@
 .product-card {
   box-sizing: border-box;
-  padding: 20px 20px 25px;
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   border-top: 1px solid $color-border-4;
 
@@ -16,9 +17,14 @@
   }
 }
 
+.product-card__wrapp {
+  flex-grow: 1;
+}
+
 .product-card__wrapp-flex {
   display: flex;
   margin-bottom: 17px;
+  justify-content: space-between;
 
   @include media-tablet {
     display: block;

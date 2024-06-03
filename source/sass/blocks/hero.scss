@@ -1,23 +1,43 @@
 .hero {
+  position: relative;
+}
+
+.hero::before {
+  box-sizing: border-box;
+  display: block;
+  content: "";
+  min-width: 100%;
+  min-height: 302px;
+
+  position: absolute;
+  z-index: -10;
+
+  background-color: $color-bg-base;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/tmp/index-background-mob.jpg");
+    url("../../img/tmp/index-background-mob.jpg"),
+    linear-gradient($color-base-text, $color-base-text);
   background-repeat: no-repeat;
-  background-position: top, top center;
-  background-size: auto 302px, 320px 302px;
+  background-position: center;
+  background-size: contain;
 
   @include media-tablet {
-    background-image: none;
+    display: none;
   }
 
   @include media-desktop {
-    background-image: linear-gradient(to right, #ffffff 55%, rgba(104, 183, 56, 0.85) 45%),
-      url("../../img/tmp/index-background-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: top, top right;
-    background-size: auto 694px, 720px 694px;
+    display: block;
 
-    position: relative;
-    z-index: -10;
+    min-width: 50%;
+    //  min-height: 694px;
+
+    min-height: calc(100% + 135px);
+
+    top: -135px;
+    left: 50%;
+
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/tmp/index-background-desktop.jpg");
+    background-size: cover;
   }
 }
 
@@ -39,7 +59,7 @@
 
   @include media-desktop {
     padding-top: 80px;
-    padding-bottom: 82px;
+    margin-bottom: 82px;
   }
 }
 
@@ -73,6 +93,7 @@
   display: block;
   width: 280px;
   height: 270px;
+  margin: 0 auto;
 
   @include media-tablet {
     width: 708px;
@@ -83,7 +104,7 @@
   @include media-desktop {
     position: absolute;
     top: 100px;
-    left: 557px;
+    right: 200px;
 
     width: 552px;
     height: 499px;

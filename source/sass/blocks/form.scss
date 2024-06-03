@@ -72,10 +72,22 @@
   }
 }
 
-.form--wrapp-horizon {
+.form--wrapp-horizon-1 {
+  @include media-desktop {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+.form--wrapp-horizon-2 {
   @include media-tablet {
     display: flex;
     gap: 60px;
+  }
+
+  @include media-desktop {
+    display: flex;
+    gap: 80px;
   }
 }
 
