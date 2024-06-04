@@ -8,9 +8,26 @@
   @include list-reset;
   // display: none;
 
+  display: flex;
+  flex-direction: column;
+
   @include media-tablet {
     display: flex;
+    flex-direction: row;
     gap: 33px;
+  }
+}
+
+.main-nav__item {
+  display: block;
+  padding-bottom: 16px;
+
+  text-align: center;
+
+  border-top: 1px solid $color-border;
+
+  @include media-tablet {
+    border-top: none;
   }
 }
 
@@ -22,24 +39,22 @@
   left: 0;
   bottom: 0;
   background-color: $color-bg-base;
+}
 
+.main-nav__link--index::after {
   @include media-desktop {
     background-color: $color-white;
   }
 }
 
+
 .main-nav__link {
-  display: block;
-  padding: 22px 0 24px;
+  display: inline-block;
+  position: relative;
+  padding: 22px 0 8px;
 
-  text-align: center;
-
-  border-top: 1px solid $color-border;
 
   @include media-tablet {
-    position: relative;
-    border-top: none;
-
     padding: 12px 0 14px;
   }
 }

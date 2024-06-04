@@ -26,12 +26,15 @@
   gap: 14px;
   flex-direction: column;
 
-  &--cont {
-    margin-top: 19px;
-  }
-
   @include media-tablet {
     gap: 20px;
+  }
+
+  @include media-desktop {
+    &--cont {
+      flex-direction: row;
+      gap: 81px;
+    }
   }
 }
 
@@ -40,6 +43,10 @@
   gap: 13px;
 
   align-items: center;
+
+  @include media-desktop {
+    flex-grow: 1;
+  }
 }
 
 .form__name {
@@ -50,6 +57,10 @@
   width: 100%;
   padding: 14px 10px 13px 15px;
   border: 1px solid $color-border-field;
+
+  @include media-tablet {
+    padding: 11px 20px;
+  }
 }
 
 .form__title {
@@ -60,6 +71,10 @@
     margin-top: 65px;
     margin-bottom: 57px;
   }
+
+  @include media-desktop {
+    margin-top: 70px;
+  }
 }
 
 .form__textarea {
@@ -67,8 +82,16 @@
   width: 100%;
   border: 1px solid $color-border-field;
 
+  padding: 14px 15px;
+
   @include media-tablet {
     margin-top: 30px;
+    padding: 11px 20px;
+  }
+
+  @include media-desktop {
+    margin-top: 21px;
+    padding-top: 9px;
   }
 }
 
@@ -105,4 +128,28 @@
   margin-top: 21px;
   margin-bottom: 0;
   text-align: center;
+}
+
+
+.form__habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @include media-tablet {
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  @include media-desktop {
+    gap: 80px;
+    flex-wrap: nowrap;
+  }
+}
+
+.form__habits-item {
+  @include media-tablet {
+    width: 230px;
+  }
 }
