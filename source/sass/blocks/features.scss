@@ -31,9 +31,25 @@
 }
 
 .features__item {
+  position: relative;
+
+  counter-increment: characters;
+
   @include media-tablet {
     display: block;
     width: 230px;
     height: 280px;
   }
+}
+
+
+.features__item::after {
+  content: counter(characters);
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -5;
+
+  @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
 }
