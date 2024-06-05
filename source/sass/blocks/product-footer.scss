@@ -1,6 +1,7 @@
 .product-footer {
   box-sizing: border-box;
   padding: 59px 58px 43px;
+  width: 100%;
 
   text-align: center;
 
@@ -8,21 +9,21 @@
     url("../../img/tmp/catalog_bg-present.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
-  background-size: 280px 290px, 280px 290px;
+  background-size: auto, 280px 290px;
 
   @include media-tablet {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../../img/tmp/catalog_bg-present-tabl.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
-    background-size: 707px 200px, 707px 200px;
+    background-size: auto, 707px 200px;
 
     padding: 57px 125px 60px 77px;
   }
 
   @include media-desktop {
     padding: 56px 42px 43px;
-    background-size: 245px 288px, 245px 288px;
+    background-size: auto, 245px 288px;
 
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../../img/tmp/catalog_bg-present.jpg");

@@ -1,4 +1,8 @@
 .property {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.property__description {
+  margin-left: 0;
 }

@@ -17,6 +17,7 @@
       border: 1px solid $color-border-2;
       margin-right: 0;
       margin-left: 0;
+      padding-bottom: 0;
     }
   }
 }
@@ -27,6 +28,7 @@
   flex-direction: column;
 
   @include media-tablet {
+    margin-top: 19px;
     gap: 20px;
   }
 
@@ -95,14 +97,14 @@
   }
 }
 
-.form--wrapp-horizon-1 {
+.form__wrapp-horizon-1 {
   @include media-desktop {
     display: flex;
     gap: 80px;
   }
 }
 
-.form--wrapp-horizon-2 {
+.form__wrapp-horizon-2 {
   @include media-tablet {
     display: flex;
     gap: 60px;
@@ -129,7 +131,6 @@
   margin-bottom: 0;
   text-align: center;
 }
-
 
 .form__habits-list {
   display: flex;

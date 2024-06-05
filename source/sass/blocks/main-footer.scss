@@ -3,6 +3,10 @@
 
   @include media-tablet {
     padding-top: 60px;
+
+    &--second {
+      background-color: $color-bg-grey;
+    }
   }
 }
 
@@ -11,14 +15,13 @@
   padding-bottom: 40px;
   text-align: center;
 
-  background-color: $color-bg-grey;
-
   @include media-tablet {
     padding-top: 55px;
     padding-bottom: 55px;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
     align-items: center;
   }
 }
@@ -39,4 +42,12 @@
 
   margin-top: 20px;
   text-decoration: none;
+
+  @include media-tablet {
+    gap: 23px;
+  }
+}
+
+.main-footer__map {
+  display: block;
 }

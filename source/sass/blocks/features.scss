@@ -44,12 +44,15 @@
 
 
 .features__item::after {
-  content: counter(characters);
+  @include media-tablet {
 
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -5;
+    content: counter(characters);
 
-  @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+
+    @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
+  }
 }

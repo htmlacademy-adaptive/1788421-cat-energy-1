@@ -1,4 +1,5 @@
 .result-item {
+  box-sizing: border-box;
   padding: 21px 33px 18px 20px;
   background-color: $color-bg-grey;
 
@@ -15,11 +16,10 @@
 .result-item__link {
   padding-top: 15px;
   display: block;
-  border-top: 1px solid $color-border-2;
+  width: fit-content;
 
   @include media-tablet {
     padding-top: 0;
-    border-top: none;
   }
 }
 
@@ -37,10 +37,13 @@
 
 .result-item__description {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $color-border-2;
 
   @include media-tablet {
     margin-bottom: 48px;
+    border-bottom: none;
   }
 
   @include media-desktop {

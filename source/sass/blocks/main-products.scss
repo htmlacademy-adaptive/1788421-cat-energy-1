@@ -9,11 +9,17 @@
 }
 
 .main-products__still {
+  box-sizing: border-box;
   padding-top: 25px;
   padding-bottom: 24px;
   text-align: center;
 
   border-bottom: 1px solid $color-border-4;
+
+  @include media-tablet {
+    background-color: $color-white;
+    border: 1px solid $color-border-4;
+  }
 }
 
 .main-products__title {
@@ -30,11 +36,13 @@
 
 .main-products__list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+
 
   @include media-tablet {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px 59px;
+    grid-template-columns: repeat(auto-fit, minmax(323px, 1fr));
+    gap: 60px;
   }
 
   @include media-desktop {
