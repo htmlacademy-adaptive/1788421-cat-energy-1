@@ -1,0 +1,5 @@
+.transfer-block {
+  @include media-tablet {
+    display: block;
+  }
+}

@@ -1,0 +1,20 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  margin: 0 auto;
+  background-color: $color-white;
+
+  min-width: $mobile-width;
+
+  outline: 1px solid #ff0000;
+
+  @include media-desktop {
+    max-width: $desktop-width;
+  }
+}
+
+// * {
+//   outline: 1px solid #00ffff;
+// }

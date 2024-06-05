@@ -1,9 +1,24 @@
 .contacts__wrapp {
   display: flex;
   margin-bottom: 26px;
+  justify-content: space-between;
+
+  @include media-tablet {
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 
 
 .contacts__address {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  @include media-tablet {
+    text-align: end;
+  }
 }

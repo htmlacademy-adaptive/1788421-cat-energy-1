@@ -1,10 +1,10 @@
-// fonts
+// FONTS
 
 $font-base: "Lato", "PT Sans", sans-serif;
 $font-secondary: "Oswald", "PT Sans", sans-serif;
 
 
-// colors
+// COLORS
 
 //  для текста
 $color-base-text: #444444;
@@ -30,3 +30,10 @@ $color-dop: #d3d3d3;
 //  для полей таблицы
 
 $color-border-field: #e7e7e7;
+
+
+// WIDTH
+
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 320px;

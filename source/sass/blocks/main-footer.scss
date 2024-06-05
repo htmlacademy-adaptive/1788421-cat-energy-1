@@ -1,5 +1,13 @@
 .main-footer__container {
   padding-top: 26px;
+
+  @include media-tablet {
+    padding-top: 60px;
+
+    &--second {
+      background-color: $color-bg-grey;
+    }
+  }
 }
 
 .main-footer__wrapp {
@@ -7,7 +15,15 @@
   padding-bottom: 40px;
   text-align: center;
 
-  background-color: $color-bg-grey;
+  @include media-tablet {
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 .main-footer__logo-text {
@@ -26,4 +42,12 @@
 
   margin-top: 20px;
   text-decoration: none;
+
+  @include media-tablet {
+    gap: 23px;
+  }
+}
+
+.main-footer__map {
+  display: block;
 }

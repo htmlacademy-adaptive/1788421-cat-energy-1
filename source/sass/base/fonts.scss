@@ -21,28 +21,22 @@
 .basic-text {
   @include font ($family: $font-base, $size: 14px, $line-height: 18px, $color: $color-base-text, $upper: none);
 
-
-  //   font-family: "Lato", "PT Sans", sans-serif;
-  //   font-size: 14px;
-  //   line-height: 18px;
-  //   color: #444444;
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 16px, $line-height: 24px, $color: $color-black, $upper: none);
+  }
 }
 
 .main-title {
   /* h1 */
 
-  @include font ($size: 36px, $line-height: 36px, $upper: none);
+  @include font ($size: 36px, $line-height: 36px, $color: $color-white, $upper: none);
 
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 36px;
-  // line-height: 36px;
-  // font-weight: 400;
-  // text-transform: uppercase;
+  &--second-pares {
+    color: $color-black;
+  }
 
-  // color: #000000;
-
-  &--mobile {
-    color: #ffffff;
+  @include media-tablet {
+    @include font ($size: 60px, $line-height: 60px, $color: $color-black, $upper: none);
   }
 }
 
@@ -51,12 +45,9 @@
 
   @include font ($size: 36px, $line-height: 40px, $upper: none);
 
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 36px;
-  // line-height: 40px;
-  // font-weight: 400;
-  // text-transform: uppercase;
-  // color: #000000;
+  @include media-tablet {
+    @include font ($size: 60px, $line-height: 60px, $color: $color-black, $upper: none);
+  }
 }
 
 .subtitle {
@@ -64,54 +55,54 @@
 
   @include font ($size: 24px, $line-height: 37px);
 
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 24px;
-  // line-height: 37px;
-  // font-weight: 400;
-  // text-transform: uppercase;
-  // color: #000000;
+  @include media-tablet {
+    @include font ($size: 36px, $line-height: 36px);
+  }
 }
 
 .nav-text {
   /* ссылки в меню */
 
   @include font ($size: 20px, $line-height: 20px);
-
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 20px;
-  // line-height: 20px;
-  // text-transform: uppercase;
-  // color: #000000;
-
   text-decoration: none;
+
+  @include media-tablet {
+    @include font ($size: 18px, $line-height: 24px);
+  }
+
+  @include media-desktop {
+    color: $color-second-text;
+
+    &--index {
+      color: $color-white;
+    }
+  }
 }
 
 .slogan {
   /* слоган в Hero */
 
-  @include font ($size: 14px, $line-height: 20px, $color: $color-second-text);
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 14px;
-  // line-height: 14px;
-  // text-transform: uppercase;
-  // color: #000000;
+  @include font ($size: 14px, $line-height: 14px, $color: $color-white);
 
-  &.slogan--mobile {
-    color: #ffffff;
-    line-height: 14px;
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 20px, $color: $color-second-text);
+  }
+}
+
+.slogan-2 {
+  /* слоган в examples */
+
+  @include font ($size: 16px, $line-height: 20px, $color: $color-second-text);
+
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 26px, $color: $color-second-text);
   }
 }
 
 .button-text {
-  /* слоган в Hero */
+  /* кнопка */
 
   @include font ($size: 16px, $line-height: 20px, $color: $color-white);
-
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 16px;
-  // line-height: 20px;
-  // text-transform: uppercase;
-  // color: #ffffff;
 
   text-decoration: none;
   text-align: center;
@@ -127,19 +118,26 @@
   @include font ($size: 16px, $line-height: 16px);
   text-decoration: none;
 
-  // font-family: "Oswald", "PT Sans", sans-serif;
-  // font-size: 16px;
-  // line-height: 16px;
-  // text-transform: uppercase;
-  // color: #000000;
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 26px);
+  }
 }
 
 .product-title {
   @include font ($size: 16px, $line-height: 20px, $color: $color-product-title);
+
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 24px, $color: $color-product-title);
+    text-align: center;
+  }
 }
 
 .second-page-title {
   @include font ($size: 24px, $line-height: 26px);
+
+  @include media-tablet {
+    @include font ($size: 36px, $line-height: 36px);
+  }
 }
 
 .product-lid-txt {
@@ -148,12 +146,32 @@
 
 .form-lid-text {
   @include font ($size: 14px, $line-height: 18px, $color: $color-black);
+
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 30px);
+  }
 }
 
 .form-txt {
   @include font ($size: 16px, $line-height: 18px, $color: $color-base-text);
+
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 26px, $color: $color-base-text);
+  }
 }
 
 .property-text {
-  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none);
+  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
+
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none, $color: $color-base-text);
+  }
+}
+
+.address-text {
+  @include font ($family: $font-base, $size: 14px, $line-height: 20px, $color: $color-base-text, $upper: none);
+
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-base-text, $upper: none);
+  }
 }

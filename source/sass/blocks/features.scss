@@ -5,6 +5,10 @@
 
 .features__title {
   margin-bottom: 40px;
+
+  @include media-tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -13,4 +17,42 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 37px 137px;
+  }
+
+  @include media-desktop {
+    flex-wrap: nowrap;
+    gap: 74px;
+  }
+}
+
+.features__item {
+  position: relative;
+
+  counter-increment: characters;
+
+  @include media-tablet {
+    display: block;
+    width: 230px;
+    height: 280px;
+  }
+}
+
+
+.features__item::after {
+  @include media-tablet {
+
+    content: counter(characters);
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+
+    @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
+  }
 }

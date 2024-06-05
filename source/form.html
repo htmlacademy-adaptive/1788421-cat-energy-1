@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <title>Kat Energy * заявка</title>
   <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body basic-text">
 
-  <header class="main-header container inner">
-    <nav class="main-nav main-header__mav">
+  <header class="main-header container">
+    <nav class="main-nav main-header__nav">
       <div class="main-nav__wrapp">
         <a class="logo-link" href="./index.html" aria-current="page">
           <img class="logo-link__img" src="./img/tmp/logo-mobile-img.svg" alt="логотип-картинка" width="33" height="38">
@@ -22,81 +23,93 @@
         </button>
       </div>
 
-      <ul class="main-nav__list visually-hidden">
-        <li class="main-nav__item"><a class="main-nav__link main-nav__link--activ nav-text" href="./index.html"
-            aria-current="page">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link nav-text" href="./catalog.html">Каталог продукции</a></li>
-        <li class="main-nav__item"><a class="main-nav__link nav-text " href="./form.html">Подбор программы</a></li>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link  nav-text" href="./index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link nav-text" href="./catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current nav-text " href="./form.html" aria-current="page">Подбор
+            программы</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="form-main">
-    <section class="container">
+  <main class="form-main container">
+    <section class="form-main__container">
 
-      <h1 class="form-main__title main-title">Подбор программы</h1>
+      <h1 class="form-main__title main-title main-title--second-pares">
+        Подбор программы
+      </h1>
+
       <p class="form-main__lid form-lid-text">
-        Заполните анкету, и мы подберем программу питания для вашего кота
+        Заполните анкету, и мы подберем<br>
+        программу питания для вашего кота
       </p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
-        <fieldset class="form__fildset form__fildset--no-label inner">
-          <legend class="visually-hidden">Основные данные</legend>
+        <div class="form__wrapp-horizon-1">
+          <fieldset class="form__fildset">
+            <legend class="visually-hidden">Основные данные</legend>
 
-          <div class="form__wrapp">
-            <label class="form__label form-txt" for="name">
-              <span class="form__name">Имя:*</span>
-              <input class="form__field form-txt" placeholder="Барсик" type="text" name="name" id="name" required>
-            </label>
-
-            <label class="form__label form-txt" for="weight">
-              <span class="form__name">Вес (кг):*</span>
-              <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
-            </label>
-
-            <label class="form__label form-txt" for="age">
-              <span class="form__name">Возраст (лет):</span>
-              <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset class="form__fildset form__fildset--no-label inner">
-          <legend class="visually-hidden">Программа</legend>
-
-          <ul>
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Похудение" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Похудение</span>
+            <div class="form__wrapp">
+              <label class="form__label form-txt" for="name">
+                <span class="form__name">Имя:*</span>
+                <input class="form__field form-txt" placeholder="Барсик" type="text" name="name" id="name" required>
               </label>
-            </li>
 
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Набор массы">
-                <span class="control__mark"></span>
-                <span class="control__label"> Набор массы</span>
+              <label class="form__label form-txt" for="weight">
+                <span class="form__name">Вес (кг):*</span>
+                <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
               </label>
-            </li>
 
-            <li>
-              <label class="control">
-                <input class="control__input visually-hidden-" type="radio" name="program" value="Нужен совет">
-                <span class="control__mark"></span>
-                <span class="control__label"> Не знаю (нужен ваш совет)</span>
+              <label class="form__label form-txt" for="age">
+                <span class="form__name">Возраст (лет):</span>
+                <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
               </label>
-            </li>
-          </ul>
-        </fieldset>
+            </div>
+          </fieldset>
 
+          <fieldset class="form__fildset form__fildset--no-label">
+            <legend class="visually-hidden">Программа</legend>
+
+            <ul>
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Похудение" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Похудение</span>
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Набор массы">
+                  <span class="control__mark"></span>
+                  <span class="control__label"> Набор массы</span>
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input class="control__input visually-hidden-" type="radio" name="program" value="Нужен совет">
+                  <span class="control__mark"></span>
+                  <span class="control__label"> Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+        </div>
         <fieldset class="form__fildset">
 
-          <legend class="form__title  second-page-title ">Контактные данные (владельца кота)</legend>
+          <legend class="form__title  second-page-title">Контактные данные (владельца кота)</legend>
 
-          <div class="form__wrapp">
+          <div class="form__wrapp form__wrapp--cont">
             <label class="form__label form-txt" for="email">
               <span class="form__name">E-mail:*</span>
               <input class="form__field form-txt" placeholder="кuklachev@gmail.com" type="email" name="email" id="email"
@@ -121,8 +134,8 @@
 
         <fieldset class="form__fildset">
           <legend class="form__title second-page-title">Дополнительно</legend>
-          <ul>
-            <li>
+          <ul class="form__habits-list">
+            <li class="form__habits-item">
               <label class="control">
                 <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Сахарозаменитель"
                   checked>
@@ -131,7 +144,7 @@
               </label>
             </li>
 
-            <li>
+            <li class="form__habits-item">
               <label class="control">
                 <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Питьевая вода">
                 <span class="control__mark"></span>
@@ -139,7 +152,7 @@
               </label>
             </li>
 
-            <li>
+            <li class="form__habits-item">
               <label class="control">
                 <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Молоко">
                 <span class="control__mark"></span>
@@ -147,7 +160,7 @@
               </label>
             </li>
 
-            <li>
+            <li class="form__habits-item">
               <label class="control">
                 <input class="control__input visually-hidden-" type="checkbox" name="addition" value="Витамины">
                 <span class="control__mark"></span>
@@ -157,8 +170,8 @@
           </ul>
         </fieldset>
 
-        <div class="inner">
-          <button class="form__button button-text button" type="submit">отправить заявку</button>
+        <div class="form__wrapp-horizon-2">
+          <button class="form__button button-text button button--form" type="submit">отправить заявку</button>
 
           <p class="form__text">* — Обязательные поля</p>
         </div>
@@ -167,23 +180,28 @@
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__container container container--second">
-      <div class="main-footer__contacts contacts">
+    <div class="main-footer__container main-footer__container--second">
+      <div class="main-footer__contacts contacts container">
         <h2 class="visually-hidden">Как нас найти</h2>
 
-        <div class="contacts__wrapp inner">
-          <p class="contacts__slogan slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <div class="contacts__wrapp">
+          <p class="contacts__slogan slogan-2">
+            Приглашаем<br>
+            к сотрудничеству<br>
+            дилеров!
+          </p>
 
-          <address class="contacts__address">
-            <span>ул. Большая Конюшенная, д. 19/8</span>
+          <address class="contacts__address address-text">
+            <span>ул. Большая<br>
+              Конюшенная, д. 19/8</span>
             <span>Санкт-Петербург</span>
           </address>
         </div>
-
-        <img class="contacts__map" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
       </div>
 
-      <div class="main-footer__wrapp inner">
+      <img class="main-footer__map" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
+
+      <div class="main-footer__wrapp container">
         <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128" height="24">
 
         <ul class="main-footer__social social">
