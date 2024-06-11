@@ -14,5 +14,6 @@
   @include media-desktop {
     padding-left: 110px;
     padding-right: 110px;
+    max-width: $desktop-width;
   }
 }

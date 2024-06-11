@@ -10,9 +10,9 @@
 
   outline: 1px solid #ff0000;
 
-  @include media-desktop {
-    max-width: $desktop-width;
-  }
+  // @include media-desktop {
+  //   max-width: $desktop-width;
+  // }
 }
 
 // * {
