@@ -11,30 +11,30 @@
 <body class="page__body basic-text">
 
   <header class="main-header">
-    <nav class="main-nav main-header__nav">
-    <div class="main-nav__wrapp container">
-      <a class="logo-link" href="./index.html" aria-current="page">
-        <img class="logo-link__img" src="./img/tmp/logo-mobile-img.svg" alt="логотип-картинка" width="33" height="38">
-        <img class="logo-link__txt" src="./img/tmp/logo-txt.svg" alt="логотип-текст" width="101" height="18">
-      </a>
+    <nav class="main-nav main-header__nav container main-nav--nojs">
+      <div class="main-nav__wrapp">
+        <a class="logo-link" href="./index.html" aria-current="page">
+          <img class="logo-link__img" src="./img/tmp/logo-mobile-img.svg" alt="логотип-картинка" width="33" height="38">
+          <img class="logo-link__txt" src="./img/tmp/logo-txt.svg" alt="логотип-текст" width="101" height="18">
+        </a>
 
-        <button class="hamburger hamburger--open" type="button" aria-label="отерыть меню">
+        <button class="hamburger" type="button" aria-label="отерыть меню">
           <span class="visually-hidden">Меню</span>
         </button>
-    </div>
+      </div>
 
-    <ul class="main-nav__list">
-      <li class="main-nav__item">
-        <a class="main-nav__link main-nav__link--current main-nav__link--index nav-text nav-text--index"
-          href="./index.html" aria-current="page">Главная</a>
-      </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link nav-text nav-text--index" href="./catalog.html">Каталог продукции</a>
-      </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link nav-text nav-text--index" href="./form.html">Подбор программы</a>
-      </li>
-    </ul>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current main-nav__link--index nav-text nav-text--index"
+            href="./index.html" aria-current="page">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link nav-text nav-text--index" href="./catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link nav-text nav-text--index" href="./form.html">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -60,8 +60,8 @@
       <h2 class="visually-hidden">Программы питания</h2>
       <div class="results__container container">
 
-        <article class="result-item result-item--icon icon icon--slim ">
-          <h3 class="result-item__title subtitle">Похудение</h3>
+        <article class="result-item">
+          <h3 class="result-item__title subtitle result-item__icon icon icon--round icon--slim">Похудение</h3>
 
           <p class="result-item__description">Ваш кот весит больше собаки и почти утратил способность лазить
             по деревьям? Пора на
@@ -70,8 +70,8 @@
           <a class="result-item__link link-text" href="#">каталог slim</a>
         </article>
 
-        <article class="result-item result-item--icon icon icon--fat ">
-          <h3 class="result-item__title subtitle">Набор массы</h3>
+        <article class="result-item">
+          <h3 class="result-item__title subtitle result-item__icon icon icon--round icon--fat">Набор массы</h3>
 
           <p class="result-item__description">Заработать авторитет среди дворовых котов и даже собак? Серия
             Cat Energy Pro поможет
@@ -87,19 +87,19 @@
         <h2 class="features__title section-title">Как это работает</h2>
 
         <ul class="features__list">
-          <li class="features__item features__icon icon icon--slim">
+          <li class="features__item features__icon icon icon--square icon--leaf">
             Функциональное питание содержит только полезные питательные вещества.
           </li>
 
-          <li class="features__item features__icon icon icon--bowl">
+          <li class="features__item features__icon icon icon--square icon--bowl">
             Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
           </li>
 
-          <li class="features__item features__icon icon icon--spoon">
+          <li class="features__item features__icon icon icon--square icon--eat">
             Замените один-два приема обычной еды на наше функциональное питание.
           </li>
 
-          <li class="features__item features__icon icon icon--time">
+          <li class="features__item features__icon icon icon--square icon--time">
             Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ul>
@@ -206,6 +206,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

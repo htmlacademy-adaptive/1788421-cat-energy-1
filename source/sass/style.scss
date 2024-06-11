@@ -11,11 +11,10 @@
 @import "./base/container.scss";
 @import "./base/button.scss";
 @import "./base/transfer-block.scss";
-@import "./base/inner.scss";
 @import "./base/outlines.scss";
 
 // BLOCKS
-
+@import "./blocks/icon.scss";
 @import "./blocks/logo-link.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";

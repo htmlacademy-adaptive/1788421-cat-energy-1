@@ -3,10 +3,14 @@
 }
 
 .main-header__nav {
+  padding-top: 13px;
+  padding-bottom: 15px;
+
   @include media-tablet {
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @include media-desktop {

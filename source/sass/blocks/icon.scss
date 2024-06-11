@@ -1,0 +1,70 @@
+.icon {
+  overflow: visible;
+
+  &::before {
+    content: "";
+
+    @include icon;
+  }
+}
+
+.icon--round::before {
+  width: 50px;
+  height: 50px;
+  background-color: $color-bg-base;
+  border-radius: 50%;
+
+  @include media-tablet {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include media-desktop {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.icon--square::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $color-bg-base;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+
+    @include media-tablet {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+.icon--slim::before {
+  background-image: url('../../img/tmp/cat-slim.svg');
+}
+
+.icon--fat::before {
+  background-image: url('../../img/tmp/cat-pro.svg');
+}
+
+
+.icon--leaf::before {
+ background-size: 30px 32px;
+  background-image: url('../../img/tmp/icon_leaf.svg');
+}
+
+.icon--bowl::before {
+  background-size: 26px 29px;
+  background-image: url('../../img/tmp/icon-bowl.svg');
+}
+
+.icon--eat::before {
+  background-size: 26px 30px;
+  background-image: url('../../img/tmp/icon_eat.svg');
+}
+
+.icon--time::before {
+  background-size: 26px 31px;
+  background-image: url('../../img/tmp/icon-time.svg');
+}

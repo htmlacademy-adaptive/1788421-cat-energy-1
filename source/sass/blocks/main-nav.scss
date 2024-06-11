@@ -1,7 +1,4 @@
 .main-nav__wrapp {
-  padding-top: 13px;
-  padding-bottom: 15px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,6 +28,17 @@
 
   @include media-tablet {
     border-top: none;
+    padding-bottom: 0;
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  position: relative;
+  padding: 22px 0 8px;
+
+  @include media-tablet {
+    padding: 12px 0 14px;
   }
 }
 
@@ -50,14 +58,10 @@
   }
 }
 
+.main-nav--nojs .hamburger {
+  display: none;
+}
 
-.main-nav__link {
-  display: inline-block;
-  position: relative;
-  padding: 22px 0 8px;
-
-
-  @include media-tablet {
-    padding: 12px 0 14px;
-  }
+.main-nav--nojs .main-nav__list {
+  position: static;
 }
