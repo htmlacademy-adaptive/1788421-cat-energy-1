@@ -26,19 +26,19 @@
 }
 
 .icon--square::before {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: $color-bg-base;
-    box-sizing: border-box;
-    flex-shrink: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: $color-bg-base;
+  box-sizing: border-box;
+  flex-shrink: 0;
 
 
-    @include media-tablet {
-      width: 80px;
-      height: 80px;
-    }
+  @include media-tablet {
+    width: 80px;
+    height: 80px;
   }
+}
 
 .icon--slim::before {
   background-image: url('../../img/tmp/cat-slim.svg');
@@ -50,7 +50,7 @@
 
 
 .icon--leaf::before {
- background-size: 30px 32px;
+  background-size: 30px 32px;
   background-image: url('../../img/tmp/icon_leaf.svg');
 }
 

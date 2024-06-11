@@ -53,7 +53,7 @@
 
   @include media-desktop {
     &::before {
-     position: static;
+      position: static;
     }
   }
 }
