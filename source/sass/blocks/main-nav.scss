@@ -2,6 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
+  margin-bottom: 14px;
+
+  @include media-tablet {
+    margin-bottom: 0;
+  }
 }
 
 .main-nav__list {

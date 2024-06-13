@@ -1,8 +1,49 @@
 .property {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.property__data {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px 18px 18px;
+  border: 1px solid $color-border-3;
+  border-radius: 3px;
+  min-width: 124px;
+
+  @include media-tablet {
+    padding: 15px 23px 25px;
+    min-width: 170px;
+  }
+
+  @include media-desktop {
+    padding: 15px 18px 25px;
+    min-width: 162px;
+  }
 }
 
 .property__description {
+  box-sizing: border-box;
   margin-left: 0;
+  // width: 88px;
+  padding: 0 20px;
+  text-align: center;
+  background-color: $color-bg-examples;
+
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media-tablet {
+    background-color: $color-white;
+    padding: 0 10px;
+    width: 150px;
+    top: 68px;
+  }
+
+  @include media-desktop {
+    background-color: $color-bg-grey;
+  }
 }

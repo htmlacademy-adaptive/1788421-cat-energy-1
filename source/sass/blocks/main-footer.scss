@@ -28,23 +28,53 @@
 
 .main-footer__logo-text {
   margin-bottom: 20px;
+
+  @include media-tablet {
+    margin-bottom: 0;
+  }
 }
 
 .main-footer__social {
   display: block;
 }
 
+.main-footer__htmlacademy-wrapp {
+  position: relative;
+  margin-top: 20px;
+
+  @include media-tablet {
+    margin-top: 0;
+    text-align: end;
+    justify-self: end;
+  }
+}
+
 .main-footer__htmlacademy-logo {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  text-align: left;
+  width: fit-content;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-footer-icons, $upper: none);
 
-  margin-top: 20px;
   text-decoration: none;
 
   @include media-tablet {
+    display: flex;
     gap: 23px;
+    align-items: center;
+    // width: 100%;
+  }
+}
+
+.main-footer__htmlacademy-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @include media-tablet {
+    position: static;
   }
 }
 

@@ -15,11 +15,18 @@
 
 .result-item__link {
   padding-top: 15px;
-  display: block;
   width: fit-content;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  &::before {
+    display: none;
+  }
 
   @include media-tablet {
     padding-top: 0;
+    gap: 25px;
   }
 }
 

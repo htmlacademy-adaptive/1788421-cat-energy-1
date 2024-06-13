@@ -43,6 +43,7 @@
 .examples__content-wrapp {
   @include media-desktop {
     margin-top: 70px;
+    margin-bottom: 75px;
     width: 436px;
   }
 }
@@ -60,34 +61,46 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 99px;
+    align-items: start;
   }
 
   @include media-desktop {
     flex-direction: column;
     align-items: start;
+    margin-bottom: 0;
   }
 }
 
 .examples__wrapp {
-  margin-bottom: 20px;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
+  margin-bottom: 34px;
+
 
   @include media-tablet {
     gap: 43px;
+    // max-width: 384px;
+    margin-bottom: 0;
+  }
+
+  @include media-desktop {
+    // max-width: 366px;
+    gap: 42px;
+    margin-bottom: 55px;
   }
 }
 
 .examples__costs {
   margin-bottom: 20px;
-
-  @include font ($size: 14px, $line-height: 20px);
+  text-align: center;
+  color: $color-black;
 
   @include media-tablet {
     display: flex;
     flex-direction: column;
     text-align: right;
+    gap: 9px;
   }
 
   @include media-desktop {

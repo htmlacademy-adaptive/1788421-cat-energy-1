@@ -12,14 +12,17 @@
 }
 
 .features__list {
+  box-sizing: border-box;
+
   @include list-reset;
 
   display: grid;
   gap: 20px;
+  // grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
 
   @include media-tablet {
-    grid-template-columns: 1fr 1fr;
-    gap: 37px 58px;
+    grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
+    gap: 37px 60px;
   }
 
   @include media-desktop {
@@ -43,16 +46,16 @@
     padding-top: 40px;
     // width: 230px;
     height: 280px;
-    margin-right: 79px;
+    // margin-right: 79px;
 
     &::before {
       margin-bottom: 31px;
     }
   }
 
-  @include media-desktop {
-    margin-right: 0;
-  }
+  // @include media-desktop {
+  //   margin-right: 0;
+  // }
 }
 
 .features__item::after {

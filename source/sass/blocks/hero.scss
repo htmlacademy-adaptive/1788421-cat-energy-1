@@ -10,15 +10,45 @@
   min-height: 302px;
 
   position: absolute;
-  z-index: -10;
+  z-index: -5;
 
-  background-color: $color-bg-base;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/tmp/index-background-mob.jpg"),
+  background-image: url("../../img/tmp/index-background-mob.jpg"),
     linear-gradient($color-base-text, $color-base-text);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @include media-tablet {
+    display: none;
+  }
+
+  @include media-desktop {
+    display: block;
+    min-width: 50%;
+    min-height: calc(100% + 135px);
+
+    top: -135px;
+    left: 50%;
+
+    background-image: url("../../img/tmp/index-background-desktop.jpg"),
+      linear-gradient($color-base-text, $color-base-text);
+    background-size: cover;
+  }
+}
+
+.hero::after {
+  box-sizing: border-box;
+  display: block;
+  content: "";
+  min-width: 100%;
+  min-height: 302px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
 
   @include media-tablet {
     display: none;
@@ -34,10 +64,6 @@
 
     top: -135px;
     left: 50%;
-
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../../img/tmp/index-background-desktop.jpg");
-    background-size: cover;
   }
 }
 
