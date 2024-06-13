@@ -3,12 +3,14 @@
 
   &::before {
     content: "";
+
     @include icon;
     z-index: 2;
   }
 
   &::after {
     content: "";
+
     @include icon;
     z-index: 1;
   }
@@ -48,7 +50,7 @@
 }
 
 .icon--slim::before {
-  background-image: url('../../img/tmp/cat-slim.svg');
+  background-image: url("../../img/tmp/cat-slim.svg");
   width: 36px;
   height: 50px;
 
@@ -64,13 +66,13 @@
 }
 
 .icon--fat::before {
-  background-image: url('../../img/tmp/cat-pro.svg');
+  background-image: url("../../img/tmp/cat-pro.svg");
   width: 67px;
   height: 28px;
 
   @include media-tablet {
     width: 268px;
-    height: 112x;
+    height: 112px;
   }
 
   @include media-desktop {
@@ -82,20 +84,20 @@
 
 .icon--leaf::before {
   background-size: 30px 32px;
-  background-image: url('../../img/tmp/icon_leaf.svg');
+  background-image: url("../../img/tmp/icon_leaf.svg");
 }
 
 .icon--bowl::before {
   background-size: 26px 29px;
-  background-image: url('../../img/tmp/icon-bowl.svg');
+  background-image: url("../../img/tmp/icon-bowl.svg");
 }
 
 .icon--eat::before {
   background-size: 26px 30px;
-  background-image: url('../../img/tmp/icon_eat.svg');
+  background-image: url("../../img/tmp/icon_eat.svg");
 }
 
 .icon--time::before {
   background-size: 26px 31px;
-  background-image: url('../../img/tmp/icon-time.svg');
+  background-image: url("../../img/tmp/icon-time.svg");
 }
