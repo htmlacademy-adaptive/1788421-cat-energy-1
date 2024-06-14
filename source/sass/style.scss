@@ -5,7 +5,9 @@
 @import "./base/variables.scss";
 @import "./base/mixins.scss";
 @import "./base/fonts.scss";
-@import "./base/base.scss";
+// @import "./base/base.scss";
+@import "./base/no-js.scss";
+@import "./base/visible.scss";
 @import "./base/visually-hidden";
 @import "./base/page";
 @import "./base/container.scss";
@@ -17,7 +19,6 @@
 // BLOCKS
 @import "./blocks/icon.scss";
 @import "./blocks/logo-link.scss";
-@import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/hamburger.scss";
 @import "./blocks/hero.scss";

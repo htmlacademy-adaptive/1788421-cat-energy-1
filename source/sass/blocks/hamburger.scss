@@ -7,7 +7,7 @@
   box-sizing: border-box;
   position: relative;
   border: none;
-  background-color: #ff00ff;
+  background-color: $color-white;
   cursor: pointer;
 
   @include media-tablet {
