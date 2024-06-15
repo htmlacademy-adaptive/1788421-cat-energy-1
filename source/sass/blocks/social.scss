@@ -17,3 +17,16 @@
     padding-bottom: 7px;
   }
 }
+
+.social__link {
+  transition: background-color, opacity 0.3s ease-in-out;
+  // transition: opacity 0.3s ease-in-out;
+}
+
+.social__link:hover {
+  background-color: $color-bg-base;
+}
+
+.social__link:active {
+  opacity: 0.3;
+}

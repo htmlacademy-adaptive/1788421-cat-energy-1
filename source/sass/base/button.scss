@@ -16,6 +16,14 @@
   &--secondary {
     color: $color-base-text;
     background-color: $color-bg-grey;
+
+    &:hover {
+      background-color: $color-border-4;
+    }
+
+    &:active {
+      color: $color-base-text;
+    }
   }
 
   @include media-tablet {

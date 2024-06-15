@@ -20,8 +20,14 @@
   gap: 15px;
   align-items: center;
 
+  transition: opacity 0.3s ease-in-out;
+
   &::before {
     display: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @include media-tablet {

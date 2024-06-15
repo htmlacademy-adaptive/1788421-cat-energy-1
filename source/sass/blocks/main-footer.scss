@@ -60,6 +60,15 @@
 
   text-decoration: none;
 
+  // &:hover .main-footer__htmlacademy-img {
+  //   background-color: $color-bg-base;
+  // }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+
   @include media-tablet {
     display: flex;
     gap: 23px;
@@ -67,6 +76,7 @@
     // width: 100%;
   }
 }
+
 
 .main-footer__htmlacademy-img {
   position: absolute;

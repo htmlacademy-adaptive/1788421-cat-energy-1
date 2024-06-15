@@ -68,6 +68,16 @@
   position: relative;
   padding: 22px 0 8px;
 
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include media-tablet {
     padding: 12px 0 14px;
   }

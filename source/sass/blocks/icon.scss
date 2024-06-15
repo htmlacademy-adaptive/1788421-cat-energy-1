@@ -35,7 +35,6 @@
 // }
 
 .icon--square::before {
-  display: block;
   width: 60px;
   height: 60px;
   background-color: $color-bg-base;
@@ -102,7 +101,6 @@
 }
 
 .icon--arrow::after {
-  content: "";
   width: 24px;
   height: 12px;
   background-image: url("../../img/tmp/icon_arrow.svg");
@@ -111,19 +109,21 @@
 .icon--social {
   width: 28px;
   height: 22px;
+  background-color: $color-footer-icons;
+
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  mask-position: center;
 }
 
 .icon--vk {
-  display: block;
-  background-image: url("../../img/tmp/vkontakte.svg");
+  mask-image: url("../../img/tmp/vkontakte.svg");
 }
 
 .icon--youtube {
-  display: block;
-  background-image: url("../../img/tmp/youtube.svg");
+  mask-image: url("../../img/tmp/youtube.svg");
 }
 
 .icon--telegramm {
-  display: block;
-  background-image: url("../../img/tmp/telegram.svg");
+  mask-image: url("../../img/tmp/telegram.svg");
 }
