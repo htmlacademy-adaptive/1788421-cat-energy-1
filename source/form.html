@@ -64,12 +64,14 @@
 
               <label class="form__label form-txt" for="weight">
                 <span class="form__name">Вес (кг):*</span>
-                <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required>
+                <input class="form__field form-txt" placeholder="7" type="number" name="weight" id="weight" required
+                  min="0.5" max="30">
               </label>
 
               <label class="form__label form-txt" for="age">
                 <span class="form__name">Возраст (лет):</span>
-                <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age">
+                <input class="form__field form-txt" placeholder="7" type="number" name="age" id="age" min="0.5"
+                  max="30">
               </label>
             </div>
           </fieldset>
@@ -107,19 +109,19 @@
         </div>
         <fieldset class="form__fildset">
 
-          <legend class="form__title  second-page-title">Контактные данные (владельца кота)</legend>
+          <legend class="form__title second-page-title">Контактные данные (владельца кота)</legend>
 
           <div class="form__wrapp form__wrapp--cont">
             <label class="form__label form-txt" for="email">
-              <span class="form__name">E-mail:*</span>
-              <input class="form__field form-txt" placeholder="кuklachev@gmail.com" type="email" name="email" id="email"
-                required>
+              <span class="form__name form__icon icon icon--email">E-mail:*</span>
+              <input class="form__field form__field--icon form-txt" placeholder="кuklachev@gmail.com" type="email"
+                name="email" id="email" required>
             </label>
 
             <label class="form__label form-txt" for="phone">
-              <span class="form__name">Телефон:*</span>
-              <input class="form__field form-txt" placeholder="8 (960) 900-60-90" type="tel" name="phone" id="phone"
-                required>
+              <span class="form__name form__icon icon icon--phone">Телефон:*</span>
+              <input class="form__field form__field--icon form-txt" placeholder="8 (960) 900-60-90" type="tel"
+                name="phone" id="phone" required>
             </label>
           </div>
 
@@ -203,7 +205,10 @@
 
 
       <div class="main-footer__wrapp container">
-        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128" height="24">
+        <a href="./index.html" aria-current="page">
+          <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
+            height="24">
+        </a>
 
         <ul class="main-footer__social social">
           <li class="social__item">
@@ -219,7 +224,7 @@
           </li>
 
           <li class="social__item">
-            <a class="social__link icon--social icon--telegramm" href="#">
+            <a class="social__link icon--social icon icon--telegramm" href="#">
               <span class="visually-hidden">telegramm</span>
             </a>
           </li>

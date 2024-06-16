@@ -46,6 +46,8 @@
 
   align-items: center;
 
+  position: relative;
+
   @include media-desktop {
     flex-grow: 1;
   }
@@ -60,9 +62,54 @@
   padding: 14px 10px 13px 15px;
   border: 1px solid $color-border-field;
 
+  appearance: textfield;
+
+  &:not(:disabled):hover {
+    border-color: $color-border-3;
+  }
+
+  &:not(:disabled):focus {
+    outline: none;
+    border-color: $color-base-text;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:invalid {
+    border-color: $color-error;
+  }
+
   @include media-tablet {
     padding: 11px 20px;
   }
+
+  &--icon {
+    padding-right: 35px;
+  }
+}
+
+.form__icon::after {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+
+  @include media-tablet {
+    right: 14px;
+  }
+
+  @include media-desktop {
+    right: 16px;
+  }
+}
+
+.form__icon::after ~ .form__field:not(:disabled):focus {
+  background-color: $color-bg-base;
 }
 
 .form__title {
@@ -85,6 +132,23 @@
   border: 1px solid $color-border-field;
 
   padding: 14px 15px;
+
+  &:not(:disabled):hover {
+    border-color: $color-border-3;
+  }
+
+  &:not(:disabled):focus {
+    outline: none;
+    border-color: $color-base-text;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:invalid {
+    border-color: $color-error;
+  }
 
   @include media-tablet {
     margin-top: 30px;

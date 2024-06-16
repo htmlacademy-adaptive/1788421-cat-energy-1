@@ -127,3 +127,13 @@
 .icon--telegramm {
   mask-image: url("../../img/tmp/telegram.svg");
 }
+
+.icon--email::after {
+  mask-image: url("../../img/tmp/icon-email.svg");
+  background-color: $color-black;
+}
+
+.icon--phone::after {
+  background-color: $color-black;
+  mask-image: url("../../img/tmp/icon-phone.svg");
+}
