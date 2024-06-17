@@ -6,6 +6,9 @@
   <title>Kat Energy * catalog</title>
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body class="page__body basic-text no-js">
@@ -387,8 +390,9 @@
           </address>
         </div>
       </div>
-      <img class="main-footer__map" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
+      <img class="main-footer__map visually-hidden" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
 
+      <div id="map" style="width: 100%; height: 400px"></div>
 
       <div class="main-footer__wrapp container">
         <a href="./index.html" aria-current="page">
@@ -428,6 +432,7 @@
   </footer>
 
   <script src="./js/app.js"></script>
+  <script src="./js/map.js" type="text/javascript"></script>
 </body>
 
 </html>
