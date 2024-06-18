@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU" type="text/javascript">
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU"
+    type="text/javascript">
+    </script>
 </head>
 
 <body class="page__body basic-text no-js">
@@ -41,7 +42,7 @@
     </nav>
   </header>
 
-  <main class="catalog-main container">
+  <main class="catalog-main container page__main">
     <section class="main-products">
       <h1 class="main-products__title main-title main-title--second-pares">Каталог продукции</h1>
 
@@ -350,7 +351,6 @@
 
             <span class="additional-products__description"> 1 упаковка (30 г) </span>
             <span class="additional-products__data">300 ₽</span>
-            </dl>
 
             <a class="additional-products__button button-text button" href="./form.html">заказать</a>
           </li>
@@ -390,9 +390,10 @@
           </address>
         </div>
       </div>
-      <img class="main-footer__map visually-hidden" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
 
-      <div id="map" style="width: 100%; height: 400px"></div>
+      <div class="main-footer__map" id="map">
+        <span class="visually-hidden">карта сокровищ</span>
+      </div>
 
       <div class="main-footer__wrapp container">
         <a href="./index.html" aria-current="page">
