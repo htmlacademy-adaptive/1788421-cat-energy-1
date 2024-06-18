@@ -1,7 +1,13 @@
-let btnOened = document.querySelector('.hamburger--open');
-let btnClosed = document.querySelector('.hamburger--closed');
+document.body.classList.remove('no-js');
 
-switchingHamburger.onclick = function () {
-  btnOened.classList.remove('hamburger--open');
-  btnClosed.classList.add('hamburger--closed');
-}
+let btnHamburger = document.querySelector('.hamburger');
+let ulMainNavList = document.querySelector('.main-nav__list');
+
+btnHamburger.addEventListener('click', function () {
+  ulMainNavList.classList.toggle('visible');
+  btnHamburger.classList.toggle('hamburger--open');
+  btnHamburger.classList.toggle('hamburger--closed');
+
+})
+
+console.log('Hi!');
