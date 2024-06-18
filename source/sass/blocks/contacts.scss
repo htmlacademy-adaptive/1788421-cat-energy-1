@@ -1,3 +1,7 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapp {
   display: flex;
   margin-bottom: 26px;
@@ -7,6 +11,23 @@
     margin-bottom: 60px;
     margin-left: 40px;
     margin-right: 40px;
+  }
+
+  @include media-desktop {
+    box-sizing: border-box;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    width: 565px;
+    height: 199px;
+    padding: 60px 78px 60px 80px;
+    z-index: 5;
+    background-color: $color-white;
+
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

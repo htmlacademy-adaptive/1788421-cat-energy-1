@@ -16,68 +16,65 @@
   }
 }
 
-// .icon--round::after {
-//   background-color: $color-bg-base;
-//   border-radius: 50%;
+.icon--round::before {
+  background-color: $color-bg-base;
+  border-radius: 50%;
 
-//   width: 50px;
-//   height: 50px;
+  width: 50px;
+  height: 50px;
 
-//   @include media-tablet {
-//     width: 200px;
-//     height: 200px;
-//   }
+  @include media-tablet {
+    width: 200px;
+    height: 200px;
+  }
 
-//   @include media-desktop {
-//     width: 100px;
-//     height: 100px;
-//   }
-// }
+  @include media-desktop {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .icon--square::before {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: $color-bg-base;
   box-sizing: border-box;
   flex-shrink: 0;
 
 
   @include media-tablet {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.icon--slim::before {
-  background-image: url("../../img/tmp/cat-slim.svg");
-  width: 50px;
-  height: 53px;
-
-  @include media-tablet {
     width: 200px;
-    height: 211px;
+    height: 200px;
   }
 
   @include media-desktop {
     width: 100px;
-    height: 106px;
+    height: 100px;
   }
 }
 
-.icon--fat::before {
-  background-image: url("../../img/tmp/cat-pro.svg");
+.icon--slim::after,
+.icon--fat::after {
   width: 67px;
   height: 50px;
 
   @include media-tablet {
     width: 268px;
-    height: 200px;
+    height: 194px;
   }
 
   @include media-desktop {
     width: 134px;
-    height: 100px;
+    height: 97px;
   }
+}
+
+.icon--slim::after {
+  background-image: url("../../img/tmp/cat-slim.svg");
+}
+
+.icon--fat::after {
+  background-image: url("../../img/tmp/cat-pro.svg");
 }
 
 .icon--leaf::before {

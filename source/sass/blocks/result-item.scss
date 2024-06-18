@@ -56,12 +56,18 @@
 
   &::after {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -3px;
+    left: -10px;
   }
 
   @include media-tablet {
     gap: 62px;
+
+    &::after {
+      top: 0;
+      right: -304px;
+      left: auto;
+    }
 
     &::before {
       position: absolute;
@@ -73,6 +79,11 @@
   @include media-desktop {
     &::before {
       position: static;
+    }
+
+    &::after {
+      top: -6px;
+      left: -20px;
     }
   }
 }
