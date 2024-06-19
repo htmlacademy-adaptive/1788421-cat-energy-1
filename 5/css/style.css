@@ -417,6 +417,7 @@
 }
 
 .page__body {
+  position: relative;
   margin: 0 auto;
   background-color: #ffffff;
   min-width: 320px;
@@ -832,6 +833,11 @@
 .hero {
   position: relative;
 }
+@media (min-width: 768px) {
+  .hero {
+    position: static;
+  }
+}
 
 .hero::before {
   box-sizing: border-box;
@@ -855,8 +861,8 @@
   .hero::before {
     display: block;
     min-width: 50%;
-    min-height: calc(100% + 135px);
-    top: -135px;
+    height: 694px;
+    top: 0;
     left: 50%;
     background-image: url("../../img/tmp/index-background-desktop.jpg"), linear-gradient(#444444, #444444);
     background-size: cover;
@@ -873,7 +879,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+  background: rgba(104, 183, 56, 0.85);
 }
 @media (min-width: 768px) {
   .hero::after {
@@ -884,8 +890,8 @@
   .hero::after {
     display: block;
     min-width: 50%;
-    min-height: calc(100% + 135px);
-    top: -135px;
+    height: 694px;
+    top: 0;
     left: 50%;
   }
 }
@@ -1594,17 +1600,18 @@
   padding-top: 20px;
   padding-bottom: 25px;
   border-top: 1px solid #ebebeb;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (min-width: 768px) {
   .product-card {
     padding: 10px 37px 40px;
+    margin-left: 0;
+    margin-right: 0;
     border-top: none;
     background-color: #f2f2f2;
-  }
-}
-@media (min-width: 1440px) {
-  .product-card {
-    padding: 10px 38px 40px;
   }
 }
 
