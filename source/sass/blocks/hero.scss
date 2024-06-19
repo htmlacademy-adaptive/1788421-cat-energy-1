@@ -1,5 +1,9 @@
 .hero {
   position: relative;
+
+  @include media-tablet {
+    position: static;
+  }
 }
 
 .hero::before {
@@ -25,9 +29,10 @@
   @include media-desktop {
     display: block;
     min-width: 50%;
-    min-height: calc(100% + 135px);
+    // min-height: calc(100% + 135px);
+    height: 694px;
 
-    top: -135px;
+    top: 0;
     left: 50%;
 
     background-image: url("../../img/tmp/index-background-desktop.jpg"),
@@ -48,7 +53,7 @@
   left: 0;
   z-index: -1;
 
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+  background: rgba(104, 183, 56, 0.85);
 
   @include media-tablet {
     display: none;
@@ -58,11 +63,10 @@
     display: block;
 
     min-width: 50%;
-    //  min-height: 694px;
+    height: 694px;
+    // min-height: calc(100% + 135px);
 
-    min-height: calc(100% + 135px);
-
-    top: -135px;
+    top: 0;
     left: 50%;
   }
 }
