@@ -127,10 +127,50 @@
 }
 
 .second-page-title {
-  @include font ($size: 24px, $line-height: 26px);
+  @include font ($size: 24px, $line-height: 26px, $upper: none);
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    height: 2px;
+    width: 100vw;
+
+    background-color: $color-bg-base;
+    box-shadow: 100vw 0 0 0 $color-bg-base;
+  }
 
   @include media-tablet {
-    @include font ($size: 36px, $line-height: 36px);
+    @include font ($size: 36px, $line-height: 36px, $upper: none);
+
+    margin-left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      top: 23px;
+    }
+  }
+
+  @include media-desktop {
+    // margin-left: -110px;
+    // padding-left: 150px;
+    // padding-right: 40px;
+    &::before {
+      top: 25px;
+    }
   }
 }
 
