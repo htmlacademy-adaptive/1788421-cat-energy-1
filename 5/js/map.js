@@ -1,3 +1,6 @@
+document.querySelector('.main-footer__map').classList.remove('no-js');
+
+
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
     center: [59.938631, 30.323037],

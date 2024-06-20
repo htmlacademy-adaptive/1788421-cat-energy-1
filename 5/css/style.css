@@ -381,7 +381,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .no-js .hamburger {
     display: none;
   }
@@ -548,14 +548,8 @@
 }
 @media (min-width: 768px) {
   .icon--square::before {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (min-width: 1440px) {
-  .icon--square::before {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -847,7 +841,8 @@
   min-height: 302px;
   position: absolute;
   z-index: -5;
-  background-image: url("../../img/tmp/index-background-mob.jpg"), linear-gradient(#444444, #444444);
+  background-image: url("../../img/tmp/index-background-mob.jpg");
+  background-color: #444444;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -864,7 +859,8 @@
     height: 694px;
     top: 0;
     left: 50%;
-    background-image: url("../../img/tmp/index-background-desktop.jpg"), linear-gradient(#444444, #444444);
+    background-image: url("../../img/tmp/index-background-desktop.jpg");
+    background-color: #444444;
     background-size: cover;
   }
 }
@@ -1480,19 +1476,21 @@
   display: block;
   width: 100%;
   height: 362px;
+}
+.main-footer__map.no-js {
   background-image: url("../../img/tmp/location.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 768px) {
-  .main-footer__map {
+  .main-footer__map.no-js {
     background-image: url("../../img/tmp/location_tabl.jpg");
     height: 400px;
   }
 }
 @media (min-width: 1440px) {
-  .main-footer__map {
+  .main-footer__map.no-js {
     background-image: url("../../img/tmp/location_desk.jpg");
   }
 }
@@ -1565,7 +1563,7 @@
 }
 
 .social__link {
-  transition: background-color, opacity 0.3s ease-in-out;
+  transition: background-color 3.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .social__link:hover {
@@ -2080,7 +2078,7 @@
 .form__field:disabled {
   opacity: 0.3;
 }
-.form__field:invalid {
+.form__field:not(:placeholder-shown):invalid {
   border-color: #ff8282;
 }
 @media (min-width: 768px) {
@@ -2109,10 +2107,6 @@
   .form__icon::after {
     right: 16px;
   }
-}
-
-.form__icon::after ~ .form__field:not(:disabled):focus {
-  background-color: #68b738;
 }
 
 .form__title {
@@ -2147,7 +2141,7 @@
 .form__textarea:disabled {
   opacity: 0.3;
 }
-.form__textarea:invalid {
+.form__textarea:not(:placeholder-shown):invalid {
   border-color: #ff8282;
 }
 @media (min-width: 768px) {
