@@ -98,17 +98,19 @@
   width: 100%;
   height: 362px;
 
-  background-image: url("../../img/tmp/location.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  &.no-js {
+    background-image: url("../../img/tmp/location.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-  @include media-tablet {
-    background-image: url("../../img/tmp/location_tabl.jpg");
-    height: 400px;
-  }
+    @include media-tablet {
+      background-image: url("../../img/tmp/location_tabl.jpg");
+      height: 400px;
+    }
 
-  @include media-desktop {
-    background-image: url("../../img/tmp/location_desk.jpg");
+    @include media-desktop {
+      background-image: url("../../img/tmp/location_desk.jpg");
+    }
   }
 }

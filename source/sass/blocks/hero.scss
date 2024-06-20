@@ -16,8 +16,8 @@
   position: absolute;
   z-index: -5;
 
-  background-image: url("../../img/tmp/index-background-mob.jpg"),
-    linear-gradient($color-base-text, $color-base-text);
+  background-image: url("../../img/tmp/index-background-mob.jpg");
+  background-color: $color-base-text;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -35,8 +35,8 @@
     top: 0;
     left: 50%;
 
-    background-image: url("../../img/tmp/index-background-desktop.jpg"),
-      linear-gradient($color-base-text, $color-base-text);
+    background-image: url("../../img/tmp/index-background-desktop.jpg");
+    background-color: $color-base-text;
     background-size: cover;
   }
 }

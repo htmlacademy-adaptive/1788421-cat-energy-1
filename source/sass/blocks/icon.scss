@@ -43,13 +43,8 @@
 
 
   @include media-tablet {
-    width: 200px;
-    height: 200px;
-  }
-
-  @include media-desktop {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
