@@ -1,0 +1,75 @@
+.control {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.control__mark-radio,
+.control__mark-check {
+  position: relative;
+
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: $color-white;
+  border: 1px solid $color-border-3;
+}
+
+.control__mark-radio {
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:checked + .control__mark-radio::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: $color-bg-base;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .control__mark-check::before {
+
+.control__input[type="checheckbox"]:checked + .control__mark-check::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 14px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: url("../../img/tmp/tick.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.control__input:disabled + .control__mark-radio,
+.control__input:disabled + .control__mark-check,
+.control__input:disabled ~ .control__label {
+  opacity: 0.3;
+}
+
+.control__input:not(:disabled):hover + .control__mark-radio,
+.control__input:not(:disabled):hover + .control__mark-check {
+  // border-color: $color-border-hover;
+  border-color: #ff0000;
+}
+
+.control__input:not(:disabled):focus + .control__mark-radio,
+.control__input:not(:disabled):focus + .control__mark-check {
+  outline: auto;
+}
+
+.control__input:not(:disabled):active + .control__mark-radio,
+.control__input:not(:disabled):active + .control__mark-check {
+  background-color: #ff0000;
+}

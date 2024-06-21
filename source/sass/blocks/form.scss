@@ -13,6 +13,11 @@
     margin-left: -20px;
     margin-right: -20px;
 
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
     @include media-tablet {
       border: 1px solid $color-border-2;
       margin-right: 0;
@@ -95,6 +100,14 @@
   }
 }
 
+.form__program-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
 .form__icon::after {
   width: 20px;
   height: 20px;
@@ -112,10 +125,6 @@
     right: 16px;
   }
 }
-
-// .form__icon::after~.form__field:not(:disabled):focus {
-//   background-color: $color-bg-base;
-// }
 
 .form__title {
   margin-top: 24px;
@@ -201,7 +210,9 @@
   text-align: center;
 }
 
-.form__habits-list {
+.form__additionally-list {
+  @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -218,7 +229,7 @@
   }
 }
 
-.form__habits-item {
+.form__additionally-item {
   @include media-tablet {
     width: 230px;
   }
