@@ -130,7 +130,7 @@
   @include font ($size: 24px, $line-height: 26px, $upper: none);
   box-sizing: border-box;
   position: relative;
-  width: fit-content;
+  width: min-content;
   margin-left: -20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -155,6 +155,7 @@
   @include media-tablet {
     @include font ($size: 36px, $line-height: 36px, $upper: none);
 
+    width: fit-content;
     margin-left: 0;
     padding-left: 40px;
     padding-right: 40px;

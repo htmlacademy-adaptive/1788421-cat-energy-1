@@ -18,14 +18,14 @@
   }
 }
 
-.social__link {
-  transition: background-color 3.3s ease-in-out, opacity 0.3s ease-in-out;
+.social__link::before {
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.social__link:hover {
+.social__link:hover::before {
   background-color: $color-bg-base;
 }
 
-.social__link:active {
+.social__link:active::before {
   opacity: 0.3;
 }

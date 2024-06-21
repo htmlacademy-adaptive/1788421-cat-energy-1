@@ -5,6 +5,8 @@
 }
 
 .property__data {
+  @include font ($size: 24px, $line-height: 24px, $upper: none);
+
   box-sizing: border-box;
   text-align: center;
   padding: 15px 18px 18px;
@@ -26,13 +28,13 @@
 .property__description {
   box-sizing: border-box;
   margin-left: 0;
-  // width: 88px;
+  // width: fit-content;
   padding: 0 20px;
   text-align: center;
   background-color: $color-bg-examples;
 
   position: absolute;
-  top: 53px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -40,7 +42,7 @@
     background-color: $color-white;
     padding: 0 10px;
     width: 150px;
-    top: 68px;
+    top: 56px;
   }
 
   @include media-desktop {

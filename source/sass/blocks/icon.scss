@@ -99,24 +99,33 @@
 }
 
 .icon--social {
+  display: block;
   width: 28px;
   height: 22px;
-  background-color: $color-footer-icons;
 
-  mask-repeat: no-repeat;
-  mask-size: 28px 22px;
-  mask-position: center;
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+
+    background-color: $color-footer-icons;
+
+    mask-repeat: no-repeat;
+    mask-size: 28px 22px;
+    mask-position: center;
+  }
 }
 
-.icon--vk {
+.icon--vk::before {
   mask-image: url("../../img/tmp/vkontakte.svg");
 }
 
-.icon--youtube {
+.icon--youtube::before {
   mask-image: url("../../img/tmp/youtube.svg");
 }
 
-.icon--telegramm {
+.icon--telegramm::before {
   mask-image: url("../../img/tmp/telegram.svg");
 }
 
