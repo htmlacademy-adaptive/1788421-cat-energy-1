@@ -8,6 +8,10 @@
       background-color: $color-bg-grey;
     }
   }
+
+  @include media-desktop {
+    padding-top: 0;
+  }
 }
 
 .main-footer__wrapp {
@@ -15,7 +19,11 @@
   padding-bottom: 40px;
   text-align: center;
 
+  background-color: $color-bg-grey;
+
   @include media-tablet {
+    text-align: left;
+
     padding-top: 55px;
     padding-bottom: 55px;
 
@@ -26,28 +34,94 @@
   }
 }
 
+.main-footer__logo {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+
+  @include media-tablet {
+    margin: 0;
+  }
+}
+
 .main-footer__logo-text {
   margin-bottom: 20px;
+
+  @include media-tablet {
+    margin-bottom: 0;
+  }
 }
 
 .main-footer__social {
   display: block;
 }
 
+.main-footer__htmlacademy-wrapp {
+  position: relative;
+  margin-top: 20px;
+
+  @include media-tablet {
+    margin-top: 0;
+    text-align: end;
+    justify-self: end;
+  }
+}
+
 .main-footer__htmlacademy-logo {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  text-align: left;
+  width: fit-content;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   @include font ($family: $font-base, $size: 16px, $line-height: 20px, $color: $color-footer-icons, $upper: none);
 
-  margin-top: 20px;
   text-decoration: none;
 
+  // &:hover .main-footer__htmlacademy-img {
+  //   background-color: $color-bg-base;
+  // }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include media-tablet {
+    display: flex;
     gap: 23px;
+    align-items: center;
+    // width: 100%;
+  }
+}
+
+.main-footer__htmlacademy-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @include media-tablet {
+    position: static;
   }
 }
 
 .main-footer__map {
   display: block;
+  width: 100%;
+  height: 362px;
+
+  &.no-js {
+    background-image: url("../../img/tmp/location.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include media-tablet {
+      background-image: url("../../img/tmp/location_tabl.jpg");
+      height: 400px;
+    }
+
+    @include media-desktop {
+      background-image: url("../../img/tmp/location_desk.jpg");
+    }
+  }
 }

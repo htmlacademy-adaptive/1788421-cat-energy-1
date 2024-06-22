@@ -106,12 +106,6 @@
 
   text-decoration: none;
   text-align: center;
-  background-color: #68b738;
-
-  &.button--secondary {
-    color: $color-base-text;
-    background-color: $color-bg-grey;
-  }
 }
 
 .link-text {
@@ -133,10 +127,51 @@
 }
 
 .second-page-title {
-  @include font ($size: 24px, $line-height: 26px);
+  @include font ($size: 24px, $line-height: 26px, $upper: none);
+  box-sizing: border-box;
+  position: relative;
+  width: min-content;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    height: 2px;
+    width: 100vw;
+
+    background-color: $color-bg-base;
+    box-shadow: 100vw 0 0 0 $color-bg-base;
+  }
 
   @include media-tablet {
-    @include font ($size: 36px, $line-height: 36px);
+    @include font ($size: 36px, $line-height: 36px, $upper: none);
+
+    width: fit-content;
+    margin-left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      top: 23px;
+    }
+  }
+
+  @include media-desktop {
+    // margin-left: -110px;
+    // padding-left: 150px;
+    // padding-right: 40px;
+    &::before {
+      top: 25px;
+    }
   }
 }
 
@@ -161,10 +196,10 @@
 }
 
 .property-text {
-  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
+  @include font ($family: $font-base, $size: 12px, $line-height: 12px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {
-    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none, $color: $color-base-text);
+    @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
   }
 }
 

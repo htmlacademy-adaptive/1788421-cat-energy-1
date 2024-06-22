@@ -5,19 +5,20 @@
 @import "./base/variables.scss";
 @import "./base/mixins.scss";
 @import "./base/fonts.scss";
-@import "./base/base.scss";
+// @import "./base/base.scss";
+@import "./base/no-js.scss";
+@import "./base/visible.scss";
 @import "./base/visually-hidden";
 @import "./base/page";
 @import "./base/container.scss";
 @import "./base/button.scss";
 @import "./base/transfer-block.scss";
-@import "./base/inner.scss";
 @import "./base/outlines.scss";
 
-// BLOCKS
 
+// BLOCKS
+@import "./blocks/icon.scss";
 @import "./blocks/logo-link.scss";
-@import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/hamburger.scss";
 @import "./blocks/hero.scss";
@@ -46,3 +47,4 @@
 
 @import "./blocks/form-main.scss";
 @import "./blocks/form.scss";
+@import "./blocks/control.scss";

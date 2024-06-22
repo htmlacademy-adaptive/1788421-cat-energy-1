@@ -13,6 +13,11 @@
     margin-left: -20px;
     margin-right: -20px;
 
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
     @include media-tablet {
       border: 1px solid $color-border-2;
       margin-right: 0;
@@ -46,6 +51,8 @@
 
   align-items: center;
 
+  position: relative;
+
   @include media-desktop {
     flex-grow: 1;
   }
@@ -60,8 +67,62 @@
   padding: 14px 10px 13px 15px;
   border: 1px solid $color-border-field;
 
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:not(:disabled):hover {
+    border-color: $color-border-3;
+  }
+
+  &:not(:disabled):focus {
+    outline: none;
+    border-color: $color-base-text;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: $color-error;
+  }
+
   @include media-tablet {
     padding: 11px 20px;
+  }
+
+  &--icon {
+    padding-right: 35px;
+  }
+}
+
+.form__program-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.form__icon::after {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+
+  @include media-tablet {
+    right: 14px;
+  }
+
+  @include media-desktop {
+    right: 16px;
   }
 }
 
@@ -85,6 +146,23 @@
   border: 1px solid $color-border-field;
 
   padding: 14px 15px;
+
+  &:not(:disabled):hover {
+    border-color: $color-border-3;
+  }
+
+  &:not(:disabled):focus {
+    outline: none;
+    border-color: $color-base-text;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: $color-error;
+  }
 
   @include media-tablet {
     margin-top: 30px;
@@ -132,7 +210,9 @@
   text-align: center;
 }
 
-.form__habits-list {
+.form__additionally-list {
+  @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -149,7 +229,7 @@
   }
 }
 
-.form__habits-item {
+.form__additionally-item {
   @include media-tablet {
     width: 230px;
   }

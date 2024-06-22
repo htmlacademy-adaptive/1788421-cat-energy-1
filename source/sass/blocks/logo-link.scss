@@ -1,8 +1,30 @@
 .logo-link {
   display: flex;
-  align-items: center;
+  align-items: end;
+  gap: 13px;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo-link__img {
+  display: block;
   margin-right: 56px;
+}
+
+.logo-link__txt {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include media-tablet {
+    position: static;
+  }
 }

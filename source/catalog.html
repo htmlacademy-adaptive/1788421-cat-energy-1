@@ -6,18 +6,23 @@
   <title>Kat Energy * catalog</title>
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU"
+    type="text/javascript">
+    </script>
 </head>
 
-<body class="page__body basic-text">
-  <header class="main-header container">
-    <nav class="main-nav main-header__nav">
+<body class="page__body basic-text no-js">
+
+  <header class="main-header">
+    <nav class="main-nav main-header__nav container">
       <div class="main-nav__wrapp">
         <a class="logo-link" href="./index.html" aria-current="page">
           <img class="logo-link__img" src="./img/tmp/logo-mobile-img.svg" alt="логотип-картинка" width="33" height="38">
           <img class="logo-link__txt" src="./img/tmp/logo-txt.svg" alt="логотип-текст" width="101" height="18">
         </a>
 
-        <button class="hamburger hamburger--open" type="button" aria-label="отерыть меню">
+        <button class="hamburger hamburger--open" type="button" aria-label="открыть меню">
           <span class="visually-hidden">Меню</span>
         </button>
       </div>
@@ -37,7 +42,7 @@
     </nav>
   </header>
 
-  <main class="catalog-main container">
+  <main class="catalog-main container page__main">
     <section class="main-products">
       <h1 class="main-products__title main-title main-title--second-pares">Каталог продукции</h1>
 
@@ -346,7 +351,6 @@
 
             <span class="additional-products__description"> 1 упаковка (30 г) </span>
             <span class="additional-products__data">300 ₽</span>
-            </dl>
 
             <a class="additional-products__button button-text button" href="./form.html">заказать</a>
           </li>
@@ -386,39 +390,50 @@
           </address>
         </div>
       </div>
-      <img class="main-footer__map"" src="./img/tmp/location.jpg" alt="карта сокровищ" width="320" height="362">
+
+      <div class="main-footer__map" id="map">
+        <span class="visually-hidden">карта сокровищ</span>
+      </div>
 
       <div class="main-footer__wrapp container">
-        <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128" height="24">
+        <a href="./index.html" aria-current="page">
+          <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
+            height="24">
+        </a>
 
         <ul class="main-footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vk" href="#">
-              <span class="visually-hidden-">ВК</span>
+            <a class="social__link icon icon--social icon--vk" href="#">
+              <span class="visually-hidden">ВК</span>
             </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">
-              <span class="visually-hidden-">youtube</span>
+            <a class="social__link icon icon--social icon--youtube" href="#">
+              <span class="visually-hidden">youtube</span>
             </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--telegramm" href="#">
-              <span class="visually-hidden-">telegramm</span>
+            <a class="social__link icon--social icon icon--telegramm" href="#">
+              <span class="visually-hidden">telegramm</span>
             </a>
           </li>
         </ul>
 
-        <a class="main-footer__htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <span>HTML Academy</span>
-          <img class="main-footer__htmlacademy-img" src="./img/htmlacademy.svg" alt="htmlacademy logo" width="27"
-            height="34">
-        </a>
+        <div class="main-footer__htmlacademy-wrapp">
+          <a class="main-footer__htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>HTML Academy</span>
+            <img class="main-footer__htmlacademy-img" src="./img/tmp/html-logo.svg" alt="htmlacademy logo" width="27"
+              height="34">
+          </a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script src="./js/app.js"></script>
+  <script src="./js/map.js" type="text/javascript"></script>
 </body>
 
 </html>

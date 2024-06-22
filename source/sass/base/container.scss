@@ -1,6 +1,5 @@
 .container {
   box-sizing: border-box;
-  border: 1px solid #00ff00;
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
@@ -14,5 +13,6 @@
   @include media-desktop {
     padding-left: 110px;
     padding-right: 110px;
+    max-width: $desktop-width;
   }
 }
