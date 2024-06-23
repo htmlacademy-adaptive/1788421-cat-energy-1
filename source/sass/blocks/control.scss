@@ -2,6 +2,8 @@
   display: flex;
   gap: 15px;
   align-items: center;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .control__mark-radio,
@@ -13,6 +15,11 @@
   height: 30px;
   background-color: $color-white;
   border: 1px solid $color-border-3;
+
+  @include media-tablet {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control__mark-radio {
@@ -33,9 +40,7 @@
   transform: translate(-50%, -50%);
 }
 
-// .control__mark-check::before {
-
-.control__input[type="checheckbox"]:checked + .control__mark-check::before {
+.control__input[type="checkbox"]:checked + .control__mark-check::before {
   content: "";
   display: block;
   width: 18px;
@@ -60,16 +65,5 @@
 
 .control__input:not(:disabled):hover + .control__mark-radio,
 .control__input:not(:disabled):hover + .control__mark-check {
-  // border-color: $color-border-hover;
-  border-color: #ff0000;
-}
-
-.control__input:not(:disabled):focus + .control__mark-radio,
-.control__input:not(:disabled):focus + .control__mark-check {
-  outline: auto;
-}
-
-.control__input:not(:disabled):active + .control__mark-radio,
-.control__input:not(:disabled):active + .control__mark-check {
-  background-color: #ff0000;
+  border-color: $color-border-hover;
 }

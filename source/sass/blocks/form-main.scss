@@ -1,6 +1,6 @@
 .form-main__container {
   border-top: 1px solid #d9d9d9;
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 32px;
 
   @include media-tablet {
@@ -12,18 +12,22 @@
   }
 
   @include media-desktop {
-    padding-top: 74px;
-    padding-bottom: 78px;
+    padding-top: 45px;
+    padding-bottom: 79px;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .form-main__title {
-  margin-bottom: 27px;
+  margin-bottom: 37px;
 
   @include media-tablet {
     margin-bottom: 54px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 55px;
   }
 }
 
