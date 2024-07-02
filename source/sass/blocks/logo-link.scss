@@ -1,6 +1,6 @@
 .logo-link {
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 13px;
 
   transition: opacity 0.3s ease-in-out;
@@ -16,15 +16,25 @@
 
 .logo-link__img {
   display: block;
-  margin-right: 56px;
+
+  @include media-tablet {
+    margin-right: 56px;
+  }
 }
 
 .logo-link__txt {
+  width: 101px;
+  height: 18px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @include media-tablet {
     position: static;
+  }
+
+  @include media-desktop {
+    width: 118px;
+    height: 21px;
   }
 }
