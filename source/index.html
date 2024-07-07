@@ -34,13 +34,13 @@
       <div class="main-nav__wrapp">
         <a class="logo-link" href="./index.html" aria-current="page">
           <picture>
-            <source @media="(min-width:1440px)" srcset="./img/logo/logo-desk.svg" width="70" height="59">
-            <source @media="(min-width:768px)" srcset="./img/logo/logo-tabl.svg" width="60" height="50">
+            <source media="(min-width:1440px)" srcset="./img/logo/logo-desk.svg" width="70" height="59">
+            <source media="(min-width:768px)" srcset="./img/logo/logo-tabl.svg" width="60" height="50">
             <img class="logo-link__img" src="./img/logo/logo-mobile.svg" alt="логотип-картинка" width="33" height="38">
           </picture>
 
           <picture>
-            <source @media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
+            <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
             <img class="logo-link__txt" src="./img/logo/logo-footer.svg" alt="логотип-текст" width="101" height="18">
         </a>
 
@@ -75,7 +75,15 @@
           Занялся собой? Займись котом!
         </p>
 
-        <img class="hero__img" src="./img/tmp/index-can-mobile.png" alt="корм для котиков" width="280" height="270">
+        <picture class="hero__img">
+          <source media="(min-width:1440px)" srcset="./img/hero-desk-@1x.png 1x, ./img/hero-desk-@2x.png 2x" width="552"
+            height="449">
+          <source media="(min-width:768px)" srcset="./img/hero-tabl-@1x.png 1x, ./img/hero-tabl-@2x.png 2x" width="709"
+            height="609">
+          <img class="hero__img-" src="./img/hero-mob-@1x.png" srcset="./img/hero-mob-@2x.png 2x"
+            alt="вкусная еда для котика" width="280" height="270">
+        </picture>
+
         <a class="hero__button button-text button" href="./form.html">
           подобрать программу
         </a>
@@ -167,8 +175,20 @@
           </div>
 
           <div class="examples__slider slider">
-            <img class="slider__img" src="./img/tmp/kat-fat.png" alt="толстый кот" width="280" height="256">
-            <img class="slider__img" src="./img/tmp/kat-slim.png" alt="отощал, бедняжка" width="280" height="256">
+
+            <picture class="slider__img">
+              <source media="(min-width:768px)" srcset="./img/kat-fat-tabl-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x"
+                width="560" height="512">
+              <img class="slider__img-" src="./img/kat-fat-mob-@1x.png" srcset="./img/kat-fat-mob-@2x.png 2x"
+                alt="толстый кот" width="280" height="256">
+            </picture>
+
+            <picture class="slider__img">
+              <source media="(min-width:768px)" srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x"
+                width="560" height="512">
+              <img class="slider__img-" src="./img/kat-slim-mob-@1x.png" srcset="./img/kat-slim-mob-@2x.png 2x"
+                alt="отощал, бедняжка" width="280" height="256">
+            </picture>
 
             <button class="slider__button" type="button">
               <span class="visually-hidden">круглая стрелка</span>

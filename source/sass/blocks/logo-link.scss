@@ -12,14 +12,14 @@
   &:active {
     opacity: 0.6;
   }
+
+  @include media-desktop {
+    gap: 14px;
+  }
 }
 
 .logo-link__img {
   display: block;
-
-  @include media-tablet {
-    margin-right: 56px;
-  }
 }
 
 .logo-link__txt {
@@ -31,6 +31,7 @@
 
   @include media-tablet {
     position: static;
+    transform: none;
   }
 
   @include media-desktop {
