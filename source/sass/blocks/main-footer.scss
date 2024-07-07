@@ -115,13 +115,25 @@
     background-size: cover;
     background-position: center;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location-mob-@2x.jpg");
+    }
+
     @include media-tablet {
-      background-image: url("../../img/tmp/location_tabl.jpg");
+      background-image: url("../../img/tmp/location-tabl.jpg");
       height: 400px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/location-tabl-@2x.jpg");
+      }
     }
 
     @include media-desktop {
-      background-image: url("../../img/tmp/location_desk.jpg");
+      background-image: url("../../img/tmp/location-desk.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location-desk-@2x.jpg");
     }
   }
 }

@@ -16,9 +16,31 @@
 
   border-bottom: 1px solid $color-border-4;
 
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/tmp/icon_plus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   @include media-tablet {
     background-color: $color-white;
     border: 1px solid $color-border-4;
+
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    background-image: none;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 

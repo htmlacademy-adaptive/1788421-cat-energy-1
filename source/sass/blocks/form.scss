@@ -4,7 +4,19 @@
   margin-right: 0;
   padding: 0;
 
-  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+  @include media-tablet {
+    margin-bottom: 65px;
+
+    &--crutch-1 {
+      margin-bottom: 72px;
+    }
+  }
+
+  @include media-desktop {
+    margin-bottom: 70px;
+  }
 
   &--no-label {
     border-top: 1px solid $color-border-2;
@@ -16,13 +28,36 @@
     padding-top: 22px;
     padding-left: 20px;
     padding-right: 20px;
-
+    padding-bottom: 19px;
 
     @include media-tablet {
       border: 1px solid $color-border-2;
       margin-right: 0;
       margin-left: 0;
-      padding-bottom: 0;
+
+      padding-top: 23px;
+      padding-left: 27px;
+      padding-right: 27px;
+      padding-bottom: 27px;
+    }
+
+    @include media-desktop {
+      padding-top: 25px;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &--crutch-4 {
+    margin-bottom: 34px;
+
+    @include media-tablet {
+      margin-bottom: 52px;
+    }
+
+    @include media-desktop {
+      margin-bottom: 60px;
     }
   }
 }
@@ -33,7 +68,7 @@
   flex-direction: column;
 
   @include media-tablet {
-    margin-top: 19px;
+    // margin-top: 19px;
     gap: 20px;
   }
 
@@ -127,16 +162,24 @@
 }
 
 .form__title {
-  margin-top: 24px;
   margin-bottom: 36px;
 
   @include media-tablet {
-    margin-top: 65px;
     margin-bottom: 57px;
+
+    &--crutch-2 {
+      margin-bottom: 76px;
+    }
+
+    &--crutch-3 {
+      margin-bottom: 87px;
+    }
   }
 
   @include media-desktop {
-    margin-top: 70px;
+    &--crutch-3 {
+      margin-bottom: 87px;
+    }
   }
 }
 
