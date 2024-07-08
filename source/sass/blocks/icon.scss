@@ -52,6 +52,7 @@
 .icon--fat::after {
   width: 67px;
   height: 50px;
+  background-position: center;
 
   @include media-tablet {
     width: 268px;
@@ -65,37 +66,50 @@
 }
 
 .icon--slim::after {
-  background-image: url("../../img/tmp/cat-slim.svg");
+  background-color: aqua;
+  background-size: 36px 50px;
+
+  background-image: url("../../img/stek.svg#cat-slim");
+
+  @include media-tablet {
+    background-size: 140px 194px;
+  }
+
+  @include media-desktop {
+    background-size: 70px 97px;
+  }
 }
 
 .icon--fat::after {
-  background-image: url("../../img/tmp/cat-pro.svg");
+  background-size: 67px 28px;
+
+  background-image: url("../../img/stek.svg#cat-pro");
 }
 
 .icon--leaf::before {
   background-size: 30px 32px;
-  background-image: url("../../img/tmp/icon_leaf.svg");
+  background-image: url("../../img/stek.svg#icon_leaf");
 }
 
 .icon--bowl::before {
   background-size: 26px 29px;
-  background-image: url("../../img/tmp/icon-bowl.svg");
+  background-image: url("../../img/stek.svg#icon-bowl");
 }
 
 .icon--eat::before {
   background-size: 26px 30px;
-  background-image: url("../../img/tmp/icon_eat.svg");
+  background-image: url("../../img/stek.svg#icon_eat");
 }
 
 .icon--time::before {
   background-size: 26px 31px;
-  background-image: url("../../img/tmp/icon-time.svg");
+  background-image: url("../../img/stek.svg#icon-time");
 }
 
 .icon--arrow::after {
   width: 24px;
   height: 12px;
-  background-image: url("../../img/tmp/icon_arrow.svg");
+  background-image: url("../../img/stek.svg#icon_arrow");
 }
 
 .icon--social {
@@ -118,23 +132,23 @@
 }
 
 .icon--vk::before {
-  mask-image: url("../../img/tmp/vkontakte.svg");
+  mask-image: url("../../img/stek.svg#vkontakte");
 }
 
 .icon--youtube::before {
-  mask-image: url("../../img/tmp/youtube.svg");
+  mask-image: url("../../img/stek.svg#youtube");
 }
 
 .icon--telegramm::before {
-  mask-image: url("../../img/tmp/telegram.svg");
+  mask-image: url("../../img/stek.svg#telegram");
 }
 
 .icon--email::after {
-  mask-image: url("../../img/tmp/icon-email.svg");
+  mask-image: url("../../img/stek.svg#icon-email");
   background-color: $color-black;
 }
 
 .icon--phone::after {
   background-color: $color-black;
-  mask-image: url("../../img/tmp/icon-phone.svg");
+  mask-image: url("../../img/stek.svg#icon-phone");
 }
