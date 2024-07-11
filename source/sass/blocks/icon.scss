@@ -71,7 +71,7 @@
 
   background-image: url("../../img/stek.svg#cat-slim");
 
-  background-color: #00ffff;
+  // background-color: #00ffff;
 
   @include media-tablet {
     background-size: 140px 194px;
@@ -87,7 +87,7 @@
 
   background-image: url("../../img/stek.svg#cat-pro");
 
-  background-color: #b891e4;
+  // background-color: #b891e4;
 
   @include media-tablet {
     background-size: 268px 112px;
@@ -165,8 +165,9 @@
   mask-image: url("../../img/stek.svg#icon-phone");
 }
 
-.hero__button .icon__energy-color {
+.logo-link__txt-use .icon__energy-color {
   @include media-tablet {
-    fill: #444444;
+    // fill: #444444;
+    fill: #ff0000;
   }
 }

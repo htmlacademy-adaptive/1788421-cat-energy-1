@@ -5,7 +5,7 @@
     }
   </style>
 
-  <svg id="cat-slim"  fill="red">
+  <svg id="cat-slim"  viewBox="0 0 36 50">
 
 <!-- width="36" height="50" viewBox="0 0 36 50" -->
 
@@ -19,7 +19,7 @@
 </defs>
 </svg>
 
-    <svg  id="cat-pro" fill="none">
+    <svg  id="cat-pro" viewBox="0 0 67 28" fill="none">
 
 <!-- width="67" height="28" viewBox="0 0 67 28" -->
 
