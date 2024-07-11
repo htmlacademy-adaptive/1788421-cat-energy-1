@@ -101,6 +101,7 @@
 }
 
 .hero__title {
+  box-sizing: border-box;
   margin-bottom: 25px;
 
   @include media-tablet {
@@ -110,6 +111,8 @@
 
   @include media-desktop {
     margin-top: 110px;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }
 
@@ -123,6 +126,8 @@
 
   @include media-desktop {
     margin-bottom: 52px;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }
 
@@ -161,5 +166,7 @@
 
   @include media-desktop {
     margin-bottom: 184px;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }
