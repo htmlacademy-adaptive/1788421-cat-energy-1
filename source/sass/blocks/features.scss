@@ -1,6 +1,10 @@
 .features__container {
   padding-top: 10px;
   padding-bottom: 49px;
+
+  @include media-tablet {
+    padding-bottom: 69px;
+  }
 }
 
 .features__title {

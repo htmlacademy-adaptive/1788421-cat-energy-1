@@ -2,13 +2,16 @@
   background-color: $color-bg-examples;
 
   @include media-tablet {
-    background-color: $color-white;
+    // background-color: $color-white;
     border-top: 1px solid $color-border;
+    background-image: linear-gradient($color-white 619px, $color-bg-examples 619px);
+    padding-bottom: 101px;
   }
 
   @include media-desktop {
     border-top: none;
-    background-color: $color-bg-grey;
+    background-image: linear-gradient($color-white 135px, $color-bg-grey 135px);
+    padding-bottom: 85px;
   }
 }
 
@@ -20,6 +23,10 @@
     padding-top: 45px;
     padding-bottom: 0;
   }
+
+  @include media-desktop {
+    padding-top: 0;
+  }
 }
 
 .examples__title {
@@ -30,7 +37,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 76px;
+    margin-bottom: 146px;
   }
 }
 
@@ -42,8 +49,8 @@
 
 .examples__content-wrapp {
   @include media-desktop {
-    margin-top: 70px;
-    margin-bottom: 75px;
+    // margin-top: 70px;
+    // margin-bottom: 75px;
     width: 436px;
   }
 }
@@ -53,6 +60,10 @@
 
   @include media-tablet {
     margin-bottom: 55px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 69px;
   }
 }
 
@@ -110,8 +121,18 @@
 }
 
 .examples__slider {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  display: grid;
+  place-items: center;
+  width: 280px;
+  height: 256px;
+  outline: 2px solid #ff6347;
+
   @include media-tablet {
-    background-color: $color-bg-examples;
+    width: 560px;
+    height: 512px;
   }
 
   @include media-desktop {

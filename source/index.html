@@ -148,10 +148,13 @@
 
     <section class="examples">
       <div class="examples__container container">
-        <h2 class="examples__title section-title">Живой пример</h2>
 
         <div class="examples__wrap-horison">
+
+
           <div class="examples__content-wrapp">
+            <h2 class="examples__title section-title">Живой пример</h2>
+
             <p class="examples__description">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
               Отличный результат
@@ -179,8 +182,25 @@
               </p>
             </div>
           </div>
+<div class="examples__slider">
+          <div class="slider">
+            <!-- <div class="slider__image-container"> -->
+              <img class="slider__image-before slider__image" src="./img/kat-fat-mob-@1x.png" alt="до" width="280" height="256">
+              <img class="slider__image-after slider__image" src="./img/kat-slim-mob-@1x.png" alt="после" width="280" height="256">
+            <!-- </div> -->
+            <input class="slider__range" type="range" min="0" max="100" value="50"
+              aria-label="процентное соотношение к показанному до-после фото">
+            <div class="slider__line"></div>
+            <div class="slider__button" aria-hidden="true">
+              <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L0 9L8 18V0Z" />
+                <path d="M24 9L16 0V18L24 9Z" />
+              </svg>
 
-          <div class="examples__slider slider">
+            </div>
+
+
+            <!-- <div class="examples__slider slider">
 
             <picture class="slider__img">
               <source media="(min-width:768px)" srcset="./img/kat-fat-tabl-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x"
@@ -199,9 +219,10 @@
             <button class="slider__button" type="button">
               <span class="visually-hidden">круглая стрелка</span>
             </button>
+          </div> -->
           </div>
+</div>
         </div>
-      </div>
     </section>
   </main>
 
@@ -273,7 +294,9 @@
   </footer>
 
   <script src="./js/app.js"></script>
-  <script src="./js/map.js" type="text/javascript"></script>
+  <script src="./js/map.js"></script>
+  <script src="./js/slider.js"></script>
+
 </body>
 
 </html>
