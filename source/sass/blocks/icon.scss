@@ -122,6 +122,12 @@
   width: 24px;
   height: 12px;
   background-image: url("../../img/stek.svg#icon_arrow");
+  background-color: #ff0000;
+
+  &:hover {
+    width: 32px;
+    background-color: #ff0000;
+  }
 }
 
 .icon--social {
@@ -165,9 +171,13 @@
   mask-image: url("../../img/stek.svg#icon-phone");
 }
 
-.logo-link__txt-use .icon__energy-color {
+.icon__energy-color {
   @include media-tablet {
     // fill: #444444;
     fill: #ff0000;
   }
+}
+
+.icon__htmlacademy-logo {
+  fill: $color-footer-icons;
 }

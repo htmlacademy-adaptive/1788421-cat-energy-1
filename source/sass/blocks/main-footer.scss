@@ -82,9 +82,13 @@
 
   text-decoration: none;
 
-  // &:hover .main-footer__htmlacademy-img {
-  //   background-color: $color-bg-base;
-  // }
+  &:hover {
+    // background-color: #7fffd4;
+
+    .icon__htmlacademy-logo {
+      fill: $color-bg-base;
+    }
+  }
 
   &:active {
     opacity: 0.3;

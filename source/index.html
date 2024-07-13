@@ -41,7 +41,7 @@
           </picture>
 
           <svg class="logo-link__txt" width="101" height="18">
-            <use class="logo-link__txt-use" href="./img/sprite.svg#logo-text"></use>
+            <use class="logo-link__txt-use" href="./img/stek.svg#logo-text"></use>
           </svg>
 
           <!-- <picture>
@@ -182,46 +182,48 @@
               </p>
             </div>
           </div>
-<div class="examples__slider">
-          <div class="slider">
-            <!-- <div class="slider__image-container"> -->
-              <img class="slider__image-before slider__image" src="./img/kat-fat-mob-@1x.png" alt="до" width="280" height="256">
-              <img class="slider__image-after slider__image" src="./img/kat-slim-mob-@1x.png" alt="после" width="280" height="256">
-            <!-- </div> -->
-            <input class="slider__range" type="range" min="0" max="100" value="50"
-              aria-label="процентное соотношение к показанному до-после фото">
-            <div class="slider__line"></div>
-            <div class="slider__button" aria-hidden="true">
-              <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 0L0 9L8 18V0Z" />
-                <path d="M24 9L16 0V18L24 9Z" />
-              </svg>
+          <div class="examples__slider">
+            <div class="slider">
 
+              <picture class="slider__image-before- slider__image-">
+                <source class="slider__image-before- slider__image-" media="(min-width:768px)"
+                  srcset="./img/kat-fat-mob-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x" width="560" height="512">
+
+
+                <!-- <source class="slider__image-before- slider__image-" media="(min-width:768px)"
+                  srcset="./img/kat-fat-tabl-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x" width="560" height="512"> -->
+
+                <img class="slider__image-before slider__image" src="./img/kat-fat-mob-@1x.png"
+                  srcset="./img/kat-fat-mob-@2x.png 2x" alt="толстый кот" width="280" height="256">
+              </picture>
+
+              <picture class="slider__image-after slider__image">
+                <source class="slider__image-after- slider__image-" media="(min-width:768px)"
+                  srcset="./img/kat-slim-mob-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512" />
+
+                <!-- <source
+									class="slider__image-after- slider__image-" media="(min-width:768px)"
+									srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512"> -->
+
+                <img class="slider__image-after- slider__image-" src="./img/kat-slim-mob-@1x.png"
+                  srcset="./img/kat-slim-mob-@2x.png 2x" alt="отощал, бедняжка" width="280" height="256">
+              </picture>
+
+              <input class="slider__range" type="range" min="0" max="100" value="50"
+                aria-label="процентное соотношение к показанному до-после фото">
+
+              <button type="button" class="slider__line">
+                <span class="visually-hidden">потяните вправо-влево, чтобы посмотреть котика до и после</span>
+
+                <div class="slider__button" aria-hidden="true">
+
+                  <svg width="24" height="18">
+                    <use href="./img/stek.svg#slider-buttun"></use>
+                  </svg>
+                </div>
+              </button>
             </div>
-
-
-            <!-- <div class="examples__slider slider">
-
-            <picture class="slider__img">
-              <source media="(min-width:768px)" srcset="./img/kat-fat-tabl-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x"
-                width="560" height="512">
-              <img class="slider__img-" src="./img/kat-fat-mob-@1x.png" srcset="./img/kat-fat-mob-@2x.png 2x"
-                alt="толстый кот" width="280" height="256">
-            </picture>
-
-            <picture class="slider__img">
-              <source media="(min-width:768px)" srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x"
-                width="560" height="512">
-              <img class="slider__img-" src="./img/kat-slim-mob-@1x.png" srcset="./img/kat-slim-mob-@2x.png 2x"
-                alt="отощал, бедняжка" width="280" height="256">
-            </picture>
-
-            <button class="slider__button" type="button">
-              <span class="visually-hidden">круглая стрелка</span>
-            </button>
-          </div> -->
           </div>
-</div>
         </div>
     </section>
   </main>
@@ -253,11 +255,8 @@
       <div class="main-footer__wrapp container">
         <a class="main-footer__logo" href="./index.html" aria-current="page">
 
-          <!-- <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
-            height="24"> -->
-
           <svg class="main-footer__logo-text" width="128" height="24">
-            <use href="./img/sprite.svg#logo-text"></use>
+            <use href="./img/stek.svg#logo-text-no_color"></use>
           </svg>
         </a>
 
@@ -283,10 +282,17 @@
 
         <div class="main-footer__htmlacademy-wrapp">
           <a class="main-footer__htmlacademy-logo" href="#">
-            <!-- https://htmlacademy.ru/intensive/adaptive  -->
             <span>HTML Academy</span>
-            <img class="main-footer__htmlacademy-img" src="./img/tmp/html-logo.svg" alt="htmlacademy logo" width="27"
-              height="34">
+
+            <svg viewBox="0 0 60 60" width="27" height="34">
+              <path class="icon__htmlacademy-logo"
+                d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+            </svg>
+
+            <!-- <svg class="main-footer__htmlacademy-img" width="27"
+            height="34">
+              <use href="./img/stek.svg#htmlacademy-logo"></use>
+            </svg> -->
           </a>
         </div>
       </div>

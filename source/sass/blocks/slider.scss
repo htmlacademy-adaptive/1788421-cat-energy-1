@@ -67,13 +67,40 @@
   width: 4px;
   height: 100%;
   background-color: $color-footer-icons;
+  border: none;
+  padding: 0;
   border-radius: 2px;
   /* z-index: 10; */
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
   /* позволяет контролировать события, при которых элемент может стать объектом события мыши. Если это свойство не задано, то к содержимому SVG будут применяться характеристики значения visiblePainted. */
+
+  &:hover {
+    pointer-events: mouseover;
+    background-color: $color-bg-base;
+
+    .slider__button {
+      border-color: $color-bg-base;
+    }
+  }
+
+
+  &:focus-visible {
+    background-color: $color-bg-base;
+    outline: auto;
+
+    .slider__button {
+      border-color: $color-bg-base;
+    }
+  }
+
+  &:active {
+    background-color: $color-bg-base-hover;
+    opacity: 0.6;
+  }
 }
+
 
 .slider__button {
   box-sizing: border-box;
@@ -92,7 +119,7 @@
   top: 50%;
   left: var(--position);
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  // pointer-events: none;
   /* z-index: 100; */
   // box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }

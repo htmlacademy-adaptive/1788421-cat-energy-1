@@ -26,6 +26,15 @@
     display: none;
   }
 
+  &:hover {
+    color: #00ffff;
+
+    .icon--arrow::after {
+      width: 32px;
+      background-color: #ffe4c4;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
