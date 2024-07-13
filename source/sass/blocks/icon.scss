@@ -83,19 +83,19 @@
 }
 
 .icon--fat::after {
-  background-size: 67px 28px;
+  // background-size: 167px 28px;
 
   background-image: url("../../img/stek.svg#cat-pro");
 
   // background-color: #b891e4;
 
-  @include media-tablet {
-    background-size: 268px 112px;
-  }
+  // @include media-tablet {
+  //   background-size: 268px 112px;
+  // }
 
-  @include media-desktop {
-    background-size: 134px 56px;
-  }
+  // @include media-desktop {
+  //   background-size: 134px 56px;
+  // }
 }
 
 .icon--leaf::before {
