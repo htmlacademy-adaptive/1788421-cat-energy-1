@@ -3,9 +3,9 @@
 }
 
 .contacts__wrapp {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 26px;
-  justify-content: space-between;
 
   @include media-tablet {
     margin-bottom: 60px;
@@ -30,7 +30,6 @@
     margin-right: 0;
   }
 }
-
 
 .contacts__address {
   font-style: normal;

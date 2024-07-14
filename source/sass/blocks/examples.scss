@@ -86,7 +86,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 
 
   @include media-tablet {
@@ -103,7 +103,7 @@
 }
 
 .examples__costs {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   text-align: center;
   color: $color-black;
 

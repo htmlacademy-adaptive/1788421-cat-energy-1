@@ -8,7 +8,7 @@
 }
 
 .features__title {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 
   @include media-tablet {
     margin-bottom: 32px;
@@ -72,4 +72,8 @@
 
     @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
   }
+}
+
+.features__item-txt {
+  margin-top: 2px;
 }

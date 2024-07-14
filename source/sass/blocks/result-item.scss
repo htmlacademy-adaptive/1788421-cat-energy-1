@@ -1,6 +1,6 @@
 .result-item {
   box-sizing: border-box;
-  padding: 21px 33px 18px 20px;
+  padding: 24px 20px 23px 20px;
   background-color: $color-bg-grey;
 
   @include media-tablet {
@@ -46,7 +46,7 @@
 }
 
 .result-item__title {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   @include media-tablet {
     margin-bottom: 24px;
@@ -63,11 +63,11 @@
   gap: 20px;
   align-items: center;
 
-  &::after {
-    position: absolute;
-    top: -3px;
-    left: -10px;
-  }
+  // &::after {
+  //   position: absolute;
+  //   top: -3px;
+  //   left: -10px;
+  // }
 
   @include media-tablet {
     gap: 62px;

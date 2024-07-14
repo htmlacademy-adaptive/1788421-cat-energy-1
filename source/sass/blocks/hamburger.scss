@@ -11,8 +11,6 @@
   background-color: $color-white;
   cursor: pointer;
 
-background-color: #00ffff;
-
   @include media-tablet {
     display: none;
   }
