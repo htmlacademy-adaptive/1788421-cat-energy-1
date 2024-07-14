@@ -68,14 +68,17 @@
 .icon--slim::after {
 
   position: absolute;
-  top: -4px;
-  left: -9px;
+  top: -3px;
+  right: 181px;
 
   background-size: 36px 50px;
   background-image: url("../../img/stek.svg#cat-slim");
 
   @include media-tablet {
     background-size: 140px 194px;
+
+    top: 4px;
+    right: -287px;
   }
 
   @include media-desktop {
@@ -86,8 +89,8 @@
 .icon--fat::after {
 
   position: absolute;
-  top: -1px;
-  left: -8px;
+  top: 0;
+  right: 181px;
 
   // background-size: 167px 28px;
 
@@ -95,9 +98,11 @@
 
   // background-color: #b891e4;
 
-  // @include media-tablet {
-  //   background-size: 268px 112px;
-  // }
+  @include media-tablet {
+    //   background-size: 268px 112px;
+    top: 16px;
+    right: -287px;
+  }
 
   // @include media-desktop {
   //   background-size: 134px 56px;

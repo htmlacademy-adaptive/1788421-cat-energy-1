@@ -15,8 +15,10 @@
   min-width: 124px;
 
   @include media-tablet {
-    padding: 15px 23px 25px;
-    min-width: 170px;
+    @include font ($size: 30px, $line-height: 37px);
+
+    padding: 13px 26px 20px;
+    width: 162px;
   }
 
   @include media-desktop {
@@ -42,7 +44,7 @@
     background-color: $color-white;
     padding: 0 10px;
     width: 150px;
-    top: 56px;
+    top: 63px;
   }
 
   @include media-desktop {

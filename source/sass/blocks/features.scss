@@ -3,7 +3,8 @@
   padding-bottom: 49px;
 
   @include media-tablet {
-    padding-bottom: 69px;
+    padding-top: 0;
+    padding-bottom: 46px;
   }
 }
 
@@ -25,7 +26,7 @@
   // grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
 
   @include media-tablet {
-    grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(249px, 1fr));
     gap: 37px 60px;
   }
 
@@ -36,8 +37,8 @@
 }
 
 .features__item {
+  box-sizing: border-box;
   position: relative;
-
   counter-increment: characters;
 
   display: flex;

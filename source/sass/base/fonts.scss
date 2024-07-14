@@ -106,6 +106,10 @@
 
   text-decoration: none;
   text-align: center;
+
+  @include media-tablet {
+    @include font ($size: 20px, $line-height: 26px, $color: $color-white);
+  }
 }
 
 .link-text {

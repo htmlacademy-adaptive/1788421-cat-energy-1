@@ -29,8 +29,9 @@
 }
 
 .main-nav__list {
-  @include list-reset;
+  box-sizing: border-box;
 
+  @include list-reset;
   display: flex;
   flex-direction: column;
   margin-left: -20px;
@@ -38,6 +39,8 @@
   margin-right: -20px;
 
   @include media-tablet {
+    flex-wrap: wrap;
+    max-width: 436px;
     display: flex;
     flex-direction: row;
     gap: 33px;
@@ -53,6 +56,8 @@
 .main-nav__item {
   display: block;
   padding-bottom: 16px;
+
+  background-color: #00ffff;
 
   text-align: center;
 
@@ -90,7 +95,7 @@
   height: 2px;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 2px;
   background-color: $color-bg-base;
 }
 

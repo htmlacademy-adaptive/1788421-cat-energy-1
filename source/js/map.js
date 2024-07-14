@@ -16,7 +16,7 @@ ymaps.ready(function () {
             center: [59.968528, 30.317632],
 
     // изменения масштаба в зависимости от экрана
-            zoom: window.innerWidth <= 500 ? myMapZoom[0] : myMapZoom[1]
+            zoom: window.innerWidth <= 768 ? myMapZoom[0] : myMapZoom[1]
         });
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -43,15 +43,15 @@ ymaps.ready(function () {
 
         let check = true;
         myMap.events.add('boundschange', function () {
-            if (window.innerWidth <= 500 && check) {
+            if (window.innerWidth <= 768 && check) {
                 myPlacemark.options.set('iconImageSize', sizePlacemark[0]);
                 myMap.setZoom(myMapZoom[0], {duration: 300});
                 return check = false;
-            } else if (window.innerWidth > 500 && !check) {
+            } else if (window.innerWidth > 768 && !check) {
                 myPlacemark.options.set('iconImageSize', sizePlacemark[1]);
                 myMap.setZoom(myMapZoom[1], { duration: 300 });
                 return check = true;
-            } else if (window.innerWidth > 900) {
+            } else if (window.innerWidth > 1440) {
                 myMap.setZoom(myMapZoom[2], { duration: 300 });
             }
         });

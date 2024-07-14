@@ -28,7 +28,7 @@
   @include media-tablet {
     text-align: left;
 
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 55px;
 
     display: grid;
@@ -46,6 +46,8 @@
   padding-bottom: 15px;
 
   @include media-tablet {
+    padding-top: 6px;
+    padding-bottom: 0;
     margin: 0;
   }
 }
@@ -129,7 +131,6 @@
 
     @include media-tablet {
       background-image: url("../../img/tmp/location-tabl.jpg");
-      height: 400px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/location-tabl-@2x.jpg");
@@ -143,5 +144,9 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/location-desk-@2x.jpg");
     }
+  }
+
+  @include media-tablet {
+    height: 400px;
   }
 }
