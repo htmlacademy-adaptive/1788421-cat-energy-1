@@ -8,7 +8,7 @@
   }
 
   @include media-desktop {
-    padding: 41px 61px 55px 52px;
+    padding: 46px 61px 55px 52px;
     width: 570px;
   }
 }
@@ -53,7 +53,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 73px;
+    margin-bottom: 40px;
   }
 }
 
@@ -83,11 +83,6 @@
     &::before {
       position: static;
     }
-
-    &::after {
-      top: -6px;
-      left: -20px;
-    }
   }
 }
 
@@ -103,6 +98,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 23px;
+    margin-bottom: 30px;
+    padding-bottom: 0;
   }
 }

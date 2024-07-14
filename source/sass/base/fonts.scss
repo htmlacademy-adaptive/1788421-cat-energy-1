@@ -73,6 +73,8 @@
   @include media-desktop {
     color: $color-second-text;
 
+    @include font ($size: 20px, $line-height: 24px);
+
     &--index {
       color: $color-white;
     }
@@ -170,6 +172,7 @@
   }
 
   @include media-desktop {
+
     // margin-left: -110px;
     // padding-left: 150px;
     // padding-right: 40px;

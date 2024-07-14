@@ -22,7 +22,7 @@
   }
 
   @include media-desktop {
-    padding: 15px 18px 25px;
+    padding: 13px 18px 20px;
     min-width: 162px;
   }
 }
@@ -44,7 +44,7 @@
     background-color: $color-white;
     padding: 0 10px;
     width: 150px;
-    top: 63px;
+    top: 61px;
   }
 
   @include media-desktop {

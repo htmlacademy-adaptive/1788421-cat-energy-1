@@ -11,7 +11,7 @@
   @include media-desktop {
     border-top: none;
     background-image: linear-gradient($color-white 135px, $color-bg-grey 135px);
-    padding-bottom: 85px;
+    padding-bottom: 75px;
   }
 }
 
@@ -44,6 +44,7 @@
 .examples__wrap-horison {
   @include media-desktop {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -98,7 +99,7 @@
   @include media-desktop {
     // max-width: 366px;
     gap: 42px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 }
 
@@ -117,7 +118,7 @@
 
   @include media-desktop {
     flex-direction: row;
-    gap: 63px;
+    gap: 66px;
   }
 }
 
@@ -138,5 +139,6 @@
 
   @include media-desktop {
     background-color: transparent;
+    margin: 0;
   }
 }

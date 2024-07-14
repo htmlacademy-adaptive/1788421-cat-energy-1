@@ -4,7 +4,7 @@
 
   @include media-tablet {
     padding-top: 0;
-    padding-bottom: 46px;
+    padding-bottom: 70px;
   }
 }
 
@@ -32,7 +32,7 @@
 
   @include media-desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 74px;
+    gap: 78px;
   }
 }
 

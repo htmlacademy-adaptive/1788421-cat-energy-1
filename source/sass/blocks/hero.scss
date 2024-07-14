@@ -96,7 +96,7 @@
 
   @include media-desktop {
     padding-top: 80px;
-    margin-bottom: 82px;
+    margin-bottom: 84px;
   }
 }
 
@@ -110,7 +110,7 @@
   }
 
   @include media-desktop {
-    margin-top: 110px;
+    margin-top: 0;
     margin-left: 80px;
     max-width: 420px;
   }
@@ -147,7 +147,7 @@
 
   @include media-desktop {
     position: absolute;
-    top: 100px;
+    top: 0;
     right: 331px;
 
     width: 552px;

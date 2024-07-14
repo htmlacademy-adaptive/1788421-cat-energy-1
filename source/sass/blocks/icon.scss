@@ -83,6 +83,8 @@
 
   @include media-desktop {
     background-size: 70px 97px;
+    top: -6px;
+    right: 340px;
   }
 }
 
@@ -104,9 +106,12 @@
     right: -287px;
   }
 
-  // @include media-desktop {
-  //   background-size: 134px 56px;
-  // }
+  @include media-desktop {
+    //   background-size: 134px 56px;
+
+    top: 0;
+    right: 342px;
+  }
 }
 
 .icon--leaf::before {

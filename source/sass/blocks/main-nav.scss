@@ -50,6 +50,7 @@
 
   @include media-desktop {
     background-color: transparent;
+    max-width: 600px;
   }
 }
 
@@ -57,7 +58,7 @@
   display: block;
   padding-bottom: 16px;
 
-  background-color: #00ffff;
+  // background-color: #00ffff;
 
   text-align: center;
 
@@ -86,6 +87,10 @@
 
   @include media-tablet {
     padding: 12px 0 14px;
+  }
+
+  @include media-desktop {
+    padding: 19px 0 13px;
   }
 }
 
