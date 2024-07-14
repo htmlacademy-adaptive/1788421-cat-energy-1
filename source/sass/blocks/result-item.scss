@@ -14,7 +14,7 @@
 }
 
 .result-item__link {
-  padding-top: 15px;
+  padding-top: 18px;
   width: fit-content;
   display: flex;
   gap: 15px;
@@ -46,7 +46,7 @@
 }
 
 .result-item__title {
-  margin-bottom: 29px;
+  margin-bottom: 23px;
 
   @include media-tablet {
     margin-bottom: 24px;
