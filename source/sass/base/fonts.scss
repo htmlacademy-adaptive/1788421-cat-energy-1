@@ -110,7 +110,9 @@
   text-align: center;
 
   @include media-tablet {
-    @include font ($size: 20px, $line-height: 26px, $color: $color-white);
+    .button-text--big {
+      @include font ($size: 20px, $line-height: 26px, $color: $color-white);
+    }
   }
 }
 
@@ -206,7 +208,7 @@
   @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {
-    @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none, $color: $color-base-text);
   }
 }
 
@@ -214,7 +216,7 @@
   @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {
-    @include font ($family: $font-base, $size: 16px, $line-height: 10px, $upper: none, $color: $color-base-text);
+    @include font ($family: $font-base, $size: 16px, $line-height: 20px, $upper: none, $color: $color-base-text);
   }
 }
 

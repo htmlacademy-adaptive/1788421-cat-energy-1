@@ -26,9 +26,12 @@
     }
   }
 
+
   @include media-tablet {
-    padding: 14px 26px;
-    display: inline-block;
+    &--big {
+      padding: 14px 26px;
+      display: inline-block;
+    }
 
     &--form {
       padding: 14px 65px;
@@ -36,8 +39,9 @@
   }
 
   @include media-desktop {
-    padding: 14px 27px;
-
+    &--big {
+      padding: 14px 27px;
+    }
 
     &--form {
       padding: 14px 208px;
