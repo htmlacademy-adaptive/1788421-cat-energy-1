@@ -36,6 +36,11 @@
     gap: 20px;
     align-items: center;
   }
+
+  @include media-desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .main-footer__logo {

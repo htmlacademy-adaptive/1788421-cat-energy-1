@@ -20,6 +20,10 @@
     margin-top: 82px;
   }
 
+  @include media-desktop {
+    margin-top: 80px;
+  }
+
   &::before {
     content: "";
     display: block;

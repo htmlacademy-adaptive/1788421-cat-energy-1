@@ -14,7 +14,7 @@
   }
 
   @include media-desktop {
-    gap: 87px;
+    gap: 55px;
 
     box-sizing: border-box;
     position: absolute;
@@ -23,7 +23,7 @@
 
     width: 565px;
     height: 199px;
-    padding: 60px 78px 60px 80px;
+    padding: 61px 63px 60px 80px;
     z-index: 5;
     background-color: $color-white;
 
@@ -42,5 +42,16 @@
 
   @include media-tablet {
     text-align: end;
+  }
+
+  @include media-desktop {
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+.contacts__slogan {
+  @include media-desktop {
+    line-height: 26px;
   }
 }

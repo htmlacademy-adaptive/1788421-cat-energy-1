@@ -4,6 +4,10 @@
   @include media-tablet {
     padding-top: 21px;
   }
+
+  @include media-desktop {
+    padding-top: 22px;
+  }
 }
 
 .additional-products__title {
@@ -65,12 +69,11 @@
   }
 
   @include media-desktop {
-    grid-template-columns: auto 185px 66px 244px;
-
-    padding: 14px 0 17px;
-
+    grid-template-columns: auto 233px 73px 244px;
+    align-items: baseline;
+    padding: 10px 0 15px;
     grid-template-areas: "title descr data btn";
-    gap: 40px;
+    gap: 10px;
   }
 }
 
@@ -86,11 +89,19 @@
   @include media-tablet {
     text-align: right;
   }
+
+  @include media-desktop {
+    text-align: left;
+  }
 }
 
 .additional-products__data {
   text-align: right;
   grid-area: data;
+
+  @include media-desktop {
+    text-align: left;
+  }
 }
 
 .additional-products__button {
@@ -107,5 +118,6 @@
 
   @include media-desktop {
     margin-top: 0;
+    width: 245px;
   }
 }

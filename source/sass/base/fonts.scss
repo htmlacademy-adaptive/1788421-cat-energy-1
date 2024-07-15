@@ -99,6 +99,10 @@
   @include media-tablet {
     @include font ($size: 20px, $line-height: 26px, $color: $color-second-text);
   }
+
+  @include media-desktop {
+    @include font ($size: 20px, $line-height: 24px, $color: $color-second-text);
+  }
 }
 
 .button-text {
@@ -109,8 +113,8 @@
   text-decoration: none;
   text-align: center;
 
-  @include media-tablet {
-    .button-text--big {
+  &--big {
+    @include media-tablet {
       @include font ($size: 20px, $line-height: 26px, $color: $color-white);
     }
   }
@@ -175,7 +179,8 @@
 
   @include media-desktop {
 
-    // margin-left: -110px;
+    margin-left: -40px;
+
     // padding-left: 150px;
     // padding-right: 40px;
     &::before {
@@ -192,7 +197,7 @@
   @include font ($size: 14px, $line-height: 18px, $color: $color-black);
 
   @include media-tablet {
-    @include font ($size: 20px, $line-height: 30px);
+    @include font ($size: 20px, $line-height: 30px, $color: $color-black);
   }
 }
 

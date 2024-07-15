@@ -145,6 +145,11 @@
     padding-top: 48px;
     margin-bottom: 18px;
   }
+
+  @include media-desktop {
+    padding-top: 39px;
+    margin-bottom: 25px;
+  }
 }
 
 .product-card__text {
@@ -152,5 +157,9 @@
 
   @include media-tablet {
     margin-bottom: 82px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 87px;
   }
 }

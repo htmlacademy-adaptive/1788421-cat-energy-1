@@ -8,4 +8,8 @@
     padding-bottom: 75px;
     border-top: none;
   }
+
+  @include media-desktop {
+    padding-bottom: 89px;
+  }
 }
