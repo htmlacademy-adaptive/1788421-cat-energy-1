@@ -1,5 +1,9 @@
 .additional-products {
   padding-top: 24px;
+
+  @include media-tablet {
+    padding-top: 21px;
+  }
 }
 
 .additional-products__title {
@@ -50,13 +54,14 @@
   border-bottom: 1px solid $color-border-3;
 
   @include media-tablet {
-    padding: 26px 38px 28px;
+    padding: 26px 38px 27px;
 
-    grid-template-columns: 6fr 3fr 1fr;
+    grid-template-columns: 347px auto 92px;
+
     grid-template-areas:
       "title descr data"
       "btn btn btn";
-    gap: 25px 49px;
+    gap: 15px 0;
   }
 
   @include media-desktop {
@@ -77,6 +82,10 @@
 .additional-products__description {
   text-align: left;
   grid-area: descr;
+
+  @include media-tablet {
+    text-align: right;
+  }
 }
 
 .additional-products__data {
