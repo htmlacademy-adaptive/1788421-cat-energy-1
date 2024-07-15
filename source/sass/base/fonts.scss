@@ -136,7 +136,7 @@
   @include font ($size: 24px, $line-height: 26px, $upper: none);
   box-sizing: border-box;
   position: relative;
-  width: min-content;
+  width: fit-content;
   margin-left: -20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -203,10 +203,18 @@
 }
 
 .property-text {
-  @include font ($family: $font-base, $size: 12px, $line-height: 12px, $upper: none, $color: $color-base-text);
+  @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {
     @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
+  }
+}
+
+.property-text-addition {
+  @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
+
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 16px, $line-height: 10px, $upper: none, $color: $color-base-text);
   }
 }
 

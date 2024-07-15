@@ -1,5 +1,5 @@
 .additional-products {
-  padding-top: 25px;
+  padding-top: 24px;
 }
 
 .additional-products__title {
@@ -45,8 +45,8 @@
   text-align: start;
   align-items: center;
 
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 10px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $color-border-3;
 
   @include media-tablet {
@@ -85,11 +85,12 @@
 }
 
 .additional-products__button {
+  margin-top: 6px;
   grid-area: btn;
 }
 
 .additional-products__lid {
-  margin-top: 35px;
+  margin-top: 37px;
 
   @include media-tablet {
     margin-top: 70px;

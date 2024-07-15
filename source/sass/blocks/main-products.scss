@@ -10,7 +10,7 @@
 
 .main-products__still {
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 24px;
   padding-bottom: 24px;
   text-align: center;
 
@@ -59,7 +59,7 @@
 .main-products__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  // gap: 20px;
 
 
   @include media-tablet {
