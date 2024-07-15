@@ -28,7 +28,7 @@
     padding-top: 22px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 19px;
+    padding-bottom: 17px;
 
     @include media-tablet {
       border: 1px solid $color-border-2;
@@ -64,7 +64,7 @@
 
 .form__wrapp {
   display: flex;
-  gap: 14px;
+  gap: 13px;
   flex-direction: column;
 
   @include media-tablet {
@@ -99,7 +99,7 @@
 
 .form__field {
   width: 100%;
-  padding: 14px 10px 13px 15px;
+  padding: 10px 10px 10px 15px;
   border: 1px solid $color-border-field;
 
   appearance: textfield;

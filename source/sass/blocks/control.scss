@@ -11,8 +11,7 @@
   position: relative;
 
   display: inline-block;
-  width: 30px;
-  height: 30px;
+
   background-color: $color-white;
   border: 1px solid $color-border-3;
 
@@ -22,8 +21,15 @@
   }
 }
 
+.control__mark-check {
+  width: 30px;
+  height: 30px;
+}
+
 .control__mark-radio {
   border-radius: 50%;
+  width: 28px;
+  height: 28px;
 }
 
 .control__input[type="radio"]:checked + .control__mark-radio::before {
