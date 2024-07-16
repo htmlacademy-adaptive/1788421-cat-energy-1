@@ -177,6 +177,11 @@
   mask-image: url("../../img/stek.svg#telegram");
 }
 
+.icon--email::before,
+.icon--phone::before {
+  content: none;
+}
+
 .icon--email::after {
   mask-image: url("../../img/stek.svg#icon-email");
   background-color: $color-black;
