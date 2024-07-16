@@ -15,7 +15,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   &--no-label {
@@ -49,6 +49,16 @@
     }
   }
 
+  &--crutch-3 {
+    @include media-tablet {
+      margin-bottom: 62px;
+    }
+
+    @include media-desktop {
+      margin-bottom: 68px;
+    }
+  }
+
   &--crutch-4 {
     margin-bottom: 35px;
 
@@ -71,12 +81,13 @@
     // margin-top: 19px;
     gap: 20px;
   }
+}
 
+.form__wrapp-cont {
   @include media-desktop {
-    &--cont {
-      flex-direction: row;
-      gap: 81px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 81px;
   }
 }
 
@@ -185,17 +196,25 @@
     &--crutch-2 {
       margin-bottom: 76px;
       width: fit-content;
-      padding-left: 0;
+      // padding-left: 0;
     }
 
     &--crutch-3 {
       margin-bottom: 87px;
+    }
+
+    &--crutch-4 {
+      margin-bottom: 58px;
     }
   }
 
   @include media-desktop {
+    &--crutch-2 {
+      padding-right: 38px;
+    }
+
     &--crutch-3 {
-      margin-bottom: 87px;
+      margin-bottom: 58px;
     }
   }
 }
@@ -203,6 +222,7 @@
 .form__textarea {
   box-sizing: border-box;
   width: 100%;
+  min-height: 150px;
   border: 1px solid $color-border-field;
 
   padding: 12px 14px 10px;
@@ -225,8 +245,9 @@
   }
 
   @include media-tablet {
-    margin-top: 30px;
-    padding: 11px 20px;
+    // margin-top: 30px;
+    padding: 12px 20px 5px;
+    min-height: 175px;
   }
 
   @include media-desktop {
@@ -237,8 +258,10 @@
 
 .form__wrapp-horizon-1 {
   @include media-desktop {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
+    // margin-bottom: 66px;
   }
 }
 
@@ -246,6 +269,7 @@
   @include media-tablet {
     display: flex;
     gap: 60px;
+    align-items: center;
   }
 
   @include media-desktop {
@@ -268,6 +292,12 @@
   margin-top: 20px;
   margin-bottom: 0;
   text-align: center;
+
+  @include media-tablet {
+    margin-top: 0;
+    line-height: 16px;
+    padding-bottom: 5px;
+  }
 }
 
 .form__additionally-list {
@@ -279,13 +309,13 @@
 
   @include media-tablet {
     flex-direction: row;
-    gap: 60px;
+    gap: 32px 115px;
     flex-wrap: wrap;
   }
 
   @include media-desktop {
-    gap: 80px;
-    flex-wrap: nowrap;
+    gap: 95px;
+    // flex-wrap: nowrap;
   }
 }
 
