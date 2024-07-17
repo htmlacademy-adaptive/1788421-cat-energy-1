@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
+  <link rel="mask-icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
   <link rel="apple-touch-icon" href="./img/fav2/apple-touch-icon.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
 
@@ -22,9 +22,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff"> -->
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU"
-    type="text/javascript">
-    </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU">
+  </script>
 </head>
 
 <body class="page__body basic-text no-js">
@@ -144,7 +143,7 @@
 
           <li class="features__item features__icon icon icon--square icon--bowl">
             <span class="features__item-txt">
-              Выпускается в виде порошка, который нужно залить кипятком и готово.
+              Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
             </span>
           </li>
 
@@ -156,7 +155,7 @@
 
           <li class="features__item features__icon icon icon--square icon--time">
             <span class="features__item-txt">
-              Уже через месяц наслаж-дайтесь изменениями к лучшему вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </span>
           </li>
         </ul>
@@ -214,15 +213,15 @@
                   srcset="./img/kat-fat-mob-@2x.png 2x" alt="толстый кот" width="280" height="256">
               </picture>
 
-              <picture class="slider__image-after slider__image">
+              <picture class="slider__image-after- slider__image">
                 <source class="slider__image-after- slider__image-" media="(min-width:768px)"
-                  srcset="./img/kat-slim-mob-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512" />
+                  srcset="./img/kat-slim-mob-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512">
 
                 <!-- <source
 									class="slider__image-after- slider__image-" media="(min-width:768px)"
 									srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512"> -->
 
-                <img class="slider__image-after- slider__image-" src="./img/kat-slim-mob-@1x.png"
+                <img class="slider__image-after slider__image-" src="./img/kat-slim-mob-@1x.png"
                   srcset="./img/kat-slim-mob-@2x.png 2x" alt="отощал, бедняжка" width="280" height="256">
               </picture>
 
@@ -232,16 +231,17 @@
               <button type="button" class="slider__line">
                 <span class="visually-hidden">потяните вправо-влево, чтобы посмотреть котика до и после</span>
 
-                <div class="slider__button" aria-hidden="true">
+                <span class="slider__button" aria-hidden="true">
 
                   <svg width="24" height="18">
                     <use href="./img/stek.svg#slider-buttun"></use>
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </div>
         </div>
+      </div>
     </section>
   </main>
 
@@ -304,7 +304,7 @@
             <svg class="main-footer__htmlacademy-img" width="27" height="35" viewBox="0 0 27 35" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z"/>
+                d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" />
             </svg>
 
 

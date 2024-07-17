@@ -58,7 +58,8 @@
   border-bottom: 1px solid $color-border-3;
 
   @include media-tablet {
-    padding: 26px 38px 27px;
+    padding: 25px 38px 27px;
+    align-items: baseline;
 
     grid-template-columns: 347px auto 92px;
 
@@ -107,6 +108,11 @@
 .additional-products__button {
   margin-top: 6px;
   grid-area: btn;
+
+  @include media-desktop {
+    margin-top: 4px;
+    margin-bottom: 2px;
+  }
 }
 
 .additional-products__lid {

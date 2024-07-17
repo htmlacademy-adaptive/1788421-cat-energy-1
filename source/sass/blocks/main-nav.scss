@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: start;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 21px;
   }
 
   @include media-desktop {
@@ -35,16 +35,18 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
-  margin-left: -20px;
 
+  margin-left: -20px;
   margin-right: -20px;
 
   @include media-tablet {
-    flex-wrap: wrap;
-    max-width: 436px;
-    display: flex;
     flex-direction: row;
-    gap: 33px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    gap: 34px;
+
+    max-width: 440px;
     margin-left: 0;
     margin-right: 0;
   }
@@ -52,6 +54,7 @@
   @include media-desktop {
     background-color: transparent;
     max-width: 600px;
+    flex-grow: 0;
   }
 }
 
@@ -87,7 +90,7 @@
   }
 
   @include media-tablet {
-    padding: 12px 0 14px;
+    padding: 13px 0 11px;
   }
 
   @include media-desktop {

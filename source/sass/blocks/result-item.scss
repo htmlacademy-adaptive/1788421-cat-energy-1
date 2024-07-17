@@ -8,7 +8,7 @@
   }
 
   @include media-desktop {
-    padding: 46px 61px 55px 52px;
+    padding: 44px 61px 61px 52px;
     width: 570px;
   }
 }
@@ -24,15 +24,6 @@
 
   &::before {
     display: none;
-  }
-
-  &:hover {
-    color: #00ffff;
-
-    .icon--arrow::after {
-      width: 32px;
-      background-color: #ffe4c4;
-    }
   }
 
   &:active {

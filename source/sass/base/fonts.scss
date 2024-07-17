@@ -168,7 +168,7 @@
     @include font ($size: 36px, $line-height: 36px, $upper: none);
 
     width: fit-content;
-    margin-left: -40px;
+    margin-left: 0;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -210,6 +210,14 @@
 }
 
 .property-text {
+  @include font ($family: $font-base, $size: 12px, $line-height: 12px, $upper: none, $color: $color-base-text);
+
+  @include media-tablet {
+    @include font ($family: $font-base, $size: 14px, $line-height: 14px, $upper: none, $color: $color-base-text);
+  }
+}
+
+.property-text-catalog {
   @include font ($family: $font-base, $size: 12px, $line-height: 16px, $upper: none, $color: $color-base-text);
 
   @include media-tablet {

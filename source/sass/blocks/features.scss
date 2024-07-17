@@ -4,7 +4,7 @@
 
   @include media-tablet {
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 46px;
   }
 }
 
@@ -47,18 +47,12 @@
   @include media-tablet {
     display: block;
     padding-top: 40px;
-    // width: 230px;
     height: 280px;
-    // margin-right: 79px;
 
     &::before {
       margin-bottom: 31px;
     }
   }
-
-  // @include media-desktop {
-  //   margin-right: 0;
-  // }
 }
 
 .features__item::after {
@@ -68,7 +62,7 @@
 
     position: absolute;
     top: 0;
-    right: 0;
+    left: 116px;
     z-index: -5;
 
     @include font ($family: $font-secondary, $size: 280px, $line-height: 280px, $weight: 400, $color: $color-bg-grey);
@@ -77,4 +71,5 @@
 
 .features__item-txt {
   margin-top: 2px;
+  padding-right: 75px;
 }

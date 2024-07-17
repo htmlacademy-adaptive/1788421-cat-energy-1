@@ -135,15 +135,15 @@
 }
 
 .icon--arrow::after {
-  width: 24px;
+  width: 32px;
   height: 12px;
   background-image: url("../../img/stek.svg#icon_arrow");
-  background-color: #ff0000;
+  background-position: -7px;
+  transition: background-position 0.3s ease-in-out;
+}
 
-  &:hover {
-    width: 32px;
-    background-color: #ff0000;
-  }
+.icon--arrow:hover::after {
+  background-position: right;
 }
 
 .icon--social {
@@ -195,10 +195,10 @@
 .icon__energy-color {
   @include media-tablet {
     fill: #444444;
-    // fill: #ff0000;
   }
 }
 
 .icon__htmlacademy-logo {
   fill: $color-footer-icons;
+  transition: background-color 0.3s ease-in-out;
 }

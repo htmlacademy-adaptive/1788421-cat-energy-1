@@ -1,17 +1,21 @@
 .slider {
-  /* display: grid;
-  place-content: center; */
   position: relative;
   overflow: hidden;
-  // border-radius: 10px;
   --position: 50%;
 }
 
-// .slider__image-container {
-//   max-width: 800px;
-//   max-height: 800px;
-//   aspect-ratio: 1/1;
-// }
+.slider:hover .slider__line {
+  background-color: $color-bg-base;
+  border: 1px solid #ff0000;
+}
+
+.slider:hover .slider__button {
+  border: 1px solid $color-bg-base;
+}
+
+.slider:active .slider__line {
+  opacity: 0.6;
+}
 
 .slider__image {
   display: block;
@@ -33,17 +37,16 @@
   /*растягивает элемент на весь экран */
   width: var(--position);
 
-  background-color: $color-bg-examples;
-  /* filter: grayscale(100%) */
+  // left: -8px;  для совпаденеия с макетом
+}
 
-  @include media-tablet {
-    background-image: linear-gradient(#ffffff 159px, #f2f2f2 159px);
-  }
+.slider__image-after {
+  position: absolute;
 
+  inset: 0;
+  /*растягивает элемент на весь экран */
 
-  @include media-desktop {
-    background-image: linear-gradient(#ffffff 135px, #f2f2f2 135px);
-  }
+  clip-path: inset(0 0 0 var(--position));
 }
 
 .slider__range {
@@ -57,8 +60,8 @@
 }
 
 .slider:focus-visible ~ .slider-button {
-  outline: 5px solid #000000;
-  outline-offset: 3px;
+  outline: auto;
+  outline-offset: 1px;
 }
 
 .slider__line {
@@ -70,56 +73,35 @@
   border: none;
   padding: 0;
   border-radius: 2px;
-  /* z-index: 10; */
+  z-index: 10;
+
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
   /* позволяет контролировать события, при которых элемент может стать объектом события мыши. Если это свойство не задано, то к содержимому SVG будут применяться характеристики значения visiblePainted. */
 
-  &:hover {
-    pointer-events: mouseover;
-    background-color: $color-bg-base;
-
-    .slider__button {
-      border-color: $color-bg-base;
-    }
-  }
-
-
-  &:focus-visible {
-    background-color: $color-bg-base;
-    outline: auto;
-
-    .slider__button {
-      border-color: $color-bg-base;
-    }
-  }
-
-  &:active {
-    background-color: $color-bg-base-hover;
-    opacity: 0.6;
-  }
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-
 .slider__button {
+  position: absolute;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  place-items: center;
+  /* позволяет одновременно выравнивать элементы и колонки, и ряда */
+
   box-sizing: border-box;
   width: 40px;
   height: 40px;
 
-  position: absolute;
   background-color: #ffffff;
   color: #000000;
   padding: 5px;
   border-radius: 50%;
   border: 2px solid $color-footer-icons;
-  display: grid;
-  place-items: center;
-  /* позволяет одновременно выравнивать элементы и колонки, и ряда */
-  top: 50%;
-  left: var(--position);
-  transform: translate(-50%, -50%);
-  // pointer-events: none;
-  /* z-index: 100; */
-  // box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+
+  transition: border 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
