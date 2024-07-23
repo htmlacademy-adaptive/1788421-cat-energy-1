@@ -19,11 +19,13 @@
 
 .slider__image {
   display: block;
+  inset: 0;
+  /*растягивает элемент на весь экран */
 
   width: 280px;
   height: 256px;
+
   object-fit: cover;
-  object-position: left;
 
   @include media-tablet {
     width: 560px;
@@ -33,19 +35,21 @@
 
 .slider__image-before {
   position: absolute;
-  inset: 0;
-  /*растягивает элемент на весь экран */
-  width: var(--position);
+  left: -8px;
+  //для совпаденеия с макетом
 
-  // left: -8px;  для совпаденеия с макетом
+  width: calc(var(--position) + 6px);
+  object-position: left;
 }
 
 .slider__image-after {
   position: absolute;
+  right: -2px;
+  left: auto;
 
-  inset: 0;
-  /*растягивает элемент на весь экран */
+  // width: calc(100% - var(--position) + 6px);
 
+  object-position: right;
   clip-path: inset(0 0 0 var(--position));
 }
 
