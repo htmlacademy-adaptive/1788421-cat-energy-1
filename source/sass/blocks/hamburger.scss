@@ -7,6 +7,7 @@
   box-sizing: border-box;
   position: relative;
   border: none;
+  padding: 0;
   background-color: $color-white;
   cursor: pointer;
 
@@ -20,10 +21,10 @@
     content: "";
 
     @include hamburger-line;
-    top: 0;
+    top: 1px;
     left: 0;
 
-    box-shadow: 0 12px 0 0 #000000, 0 24px 0 0 #000000;
+    box-shadow: 0 9px 0 0 #000000, 0 18px 0 0 #000000;
   }
 }
 

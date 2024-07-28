@@ -4,8 +4,12 @@
   border-top: 1px solid $color-border-2;
 
   @include media-tablet {
-    padding-top: 40px;
+    padding-top: 44px;
     padding-bottom: 75px;
     border-top: none;
+  }
+
+  @include media-desktop {
+    padding-bottom: 85px;
   }
 }

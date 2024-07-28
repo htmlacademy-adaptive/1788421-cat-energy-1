@@ -81,7 +81,7 @@
 .hero__container {
   position: relative;
 
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 10px;
   text-align: center;
 
@@ -96,12 +96,13 @@
 
   @include media-desktop {
     padding-top: 80px;
-    margin-bottom: 82px;
+    margin-bottom: 84px;
   }
 }
 
 .hero__title {
-  margin-bottom: 25px;
+  box-sizing: border-box;
+  margin-bottom: 26px;
 
   @include media-tablet {
     margin-bottom: 40px;
@@ -109,7 +110,9 @@
   }
 
   @include media-desktop {
-    margin-top: 110px;
+    margin-top: 0;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }
 
@@ -123,6 +126,8 @@
 
   @include media-desktop {
     margin-bottom: 52px;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }
 
@@ -131,18 +136,19 @@
   display: block;
   width: 280px;
   height: 270px;
-  margin: 0 auto;
+  margin: 0 auto 3px;
 
   @include media-tablet {
     width: 708px;
     height: 609px;
     order: 1;
+    margin-bottom: -3px;
   }
 
   @include media-desktop {
     position: absolute;
-    top: 100px;
-    right: 305px;
+    top: 0;
+    right: 331px;
 
     width: 552px;
     height: 499px;
@@ -161,5 +167,7 @@
 
   @include media-desktop {
     margin-bottom: 184px;
+    margin-left: 80px;
+    max-width: 420px;
   }
 }

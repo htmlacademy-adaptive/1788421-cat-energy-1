@@ -1,3 +1,7 @@
+.main-footer {
+  background-color: #f2f2f2;
+}
+
 .main-footer__container {
   padding-top: 26px;
 
@@ -24,13 +28,18 @@
   @include media-tablet {
     text-align: left;
 
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: start;
+  }
+
+  @include media-desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -39,14 +48,16 @@
   margin: 0 auto;
   width: fit-content;
 
+  padding-bottom: 15px;
+
   @include media-tablet {
+    padding-top: 13px;
+    padding-bottom: 0;
     margin: 0;
   }
 }
 
 .main-footer__logo-text {
-  margin-bottom: 20px;
-
   @include media-tablet {
     margin-bottom: 0;
   }
@@ -78,9 +89,13 @@
 
   text-decoration: none;
 
-  // &:hover .main-footer__htmlacademy-img {
-  //   background-color: $color-bg-base;
-  // }
+  &:hover {
+    // background-color: #7fffd4;
+
+    .main-footer__htmlacademy-img {
+      fill: $color-bg-base;
+    }
+  }
 
   &:active {
     opacity: 0.3;
@@ -98,6 +113,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
+
+  fill: $color-footer-icons;
 
   @include media-tablet {
     position: static;
@@ -121,7 +138,6 @@
 
     @include media-tablet {
       background-image: url("../../img/tmp/location-tabl.jpg");
-      height: 400px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/location-tabl-@2x.jpg");
@@ -135,5 +151,9 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/location-desk-@2x.jpg");
     }
+  }
+
+  @include media-tablet {
+    height: 400px;
   }
 }

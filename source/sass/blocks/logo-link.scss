@@ -29,12 +29,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  margin-top: 19px;
+
   @include media-tablet {
     position: static;
     transform: none;
+    margin-top: 0;
   }
 
   @include media-desktop {
+
     width: 118px;
     height: 21px;
   }

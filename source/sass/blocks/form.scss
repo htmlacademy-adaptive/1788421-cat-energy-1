@@ -4,7 +4,7 @@
   margin-right: 0;
   padding: 0;
 
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   @include media-tablet {
     margin-bottom: 65px;
@@ -15,7 +15,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   &--no-label {
@@ -25,10 +25,10 @@
     margin-left: -20px;
     margin-right: -20px;
 
-    padding-top: 22px;
+    padding-top: 21px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 19px;
+    padding-bottom: 21px;
 
     @include media-tablet {
       border: 1px solid $color-border-2;
@@ -38,7 +38,7 @@
       padding-top: 23px;
       padding-left: 27px;
       padding-right: 27px;
-      padding-bottom: 27px;
+      padding-bottom: 24px;
     }
 
     @include media-desktop {
@@ -49,8 +49,18 @@
     }
   }
 
+  &--crutch-3 {
+    @include media-tablet {
+      margin-bottom: 62px;
+    }
+
+    @include media-desktop {
+      margin-bottom: 68px;
+    }
+  }
+
   &--crutch-4 {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
 
     @include media-tablet {
       margin-bottom: 52px;
@@ -64,19 +74,20 @@
 
 .form__wrapp {
   display: flex;
-  gap: 14px;
+  gap: 13px;
   flex-direction: column;
 
   @include media-tablet {
     // margin-top: 19px;
     gap: 20px;
   }
+}
 
+.form__wrapp-cont {
   @include media-desktop {
-    &--cont {
-      flex-direction: row;
-      gap: 81px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 81px;
   }
 }
 
@@ -95,11 +106,12 @@
 
 .form__name {
   min-width: fit-content;
+  text-align: left;
 }
 
 .form__field {
   width: 100%;
-  padding: 14px 10px 13px 15px;
+  padding: 10px 10px 10px 15px;
   border: 1px solid $color-border-field;
 
   appearance: textfield;
@@ -127,7 +139,7 @@
   }
 
   @include media-tablet {
-    padding: 11px 20px;
+    padding: 10px 20px 10px;
   }
 
   &--icon {
@@ -164,21 +176,45 @@
 .form__title {
   margin-bottom: 36px;
 
+  &--crutch-2 {
+    padding-top: 1px;
+    width: min-content;
+    padding-right: 25px;
+  }
+
+  &--crutch-3 {
+    margin-bottom: 38px;
+  }
+
+  &--crutch-4 {
+    margin-bottom: 34px;
+  }
+
   @include media-tablet {
     margin-bottom: 57px;
 
     &--crutch-2 {
       margin-bottom: 76px;
+      width: fit-content;
+      // padding-left: 0;
     }
 
     &--crutch-3 {
       margin-bottom: 87px;
+    }
+
+    &--crutch-4 {
+      margin-bottom: 58px;
     }
   }
 
   @include media-desktop {
+    &--crutch-2 {
+      padding-right: 38px;
+    }
+
     &--crutch-3 {
-      margin-bottom: 87px;
+      margin-bottom: 58px;
     }
   }
 }
@@ -186,9 +222,10 @@
 .form__textarea {
   box-sizing: border-box;
   width: 100%;
+  min-height: 150px;
   border: 1px solid $color-border-field;
 
-  padding: 14px 15px;
+  padding: 12px 14px 10px;
 
   &:not(:disabled):hover {
     border-color: $color-border-3;
@@ -208,8 +245,9 @@
   }
 
   @include media-tablet {
-    margin-top: 30px;
-    padding: 11px 20px;
+    // margin-top: 30px;
+    padding: 12px 20px 5px;
+    min-height: 175px;
   }
 
   @include media-desktop {
@@ -220,8 +258,10 @@
 
 .form__wrapp-horizon-1 {
   @include media-desktop {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
+    // margin-bottom: 66px;
   }
 }
 
@@ -229,6 +269,7 @@
   @include media-tablet {
     display: flex;
     gap: 60px;
+    align-items: center;
   }
 
   @include media-desktop {
@@ -248,9 +289,15 @@
 }
 
 .form__text {
-  margin-top: 21px;
+  margin-top: 20px;
   margin-bottom: 0;
   text-align: center;
+
+  @include media-tablet {
+    margin-top: 0;
+    line-height: 16px;
+    padding-bottom: 5px;
+  }
 }
 
 .form__additionally-list {
@@ -258,17 +305,17 @@
 
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
 
   @include media-tablet {
     flex-direction: row;
-    gap: 60px;
+    gap: 32px 115px;
     flex-wrap: wrap;
   }
 
   @include media-desktop {
-    gap: 80px;
-    flex-wrap: nowrap;
+    gap: 95px;
+    // flex-wrap: nowrap;
   }
 }
 

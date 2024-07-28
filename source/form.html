@@ -8,12 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
+  <link rel="mask-icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
   <link rel="apple-touch-icon" href="./img/fav2/apple-touch-icon.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU"
-    type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU">
     </script>
 </head>
 
@@ -23,8 +22,21 @@
     <nav class="main-nav main-header__nav container">
       <div class="main-nav__wrapp">
         <a class="logo-link" href="./index.html" aria-current="page">
-          <img class="logo-link__img" src="./img/tmp/logo-mobile-img.svg" alt="логотип-картинка" width="33" height="38">
-          <img class="logo-link__txt" src="./img/tmp/logo-txt.svg" alt="логотип-текст" width="101" height="18">
+
+          <picture>
+            <source media="(min-width:1440px)" srcset="./img/logo/logo-desk.svg" width="70" height="59">
+            <source media="(min-width:768px)" srcset="./img/logo/logo-tabl.svg" width="60" height="50">
+            <img class="logo-link__img" src="./img/logo/logo-mobile.svg" alt="логотип-картинка" width="33" height="38">
+          </picture>
+
+          <svg class="logo-link__txt" width="101" height="18">
+            <use class="logo-link__txt-use" href="./img/stek.svg#logo-text"></use>
+          </svg>
+
+          <!-- <picture>
+            <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
+            <img class="logo-link__txt" src="./img/logo/logo-footer.svg" alt="логотип-текст" width="101" height="18">
+          </picture> -->
         </a>
 
         <button class="hamburger hamburger--open" type="button" aria-label="открыть меню">
@@ -91,7 +103,7 @@
             <ul class="form__program-list">
               <li>
                 <label class="control form-txt">
-                  <input class="control__input visually-hidden" type="radio" name="program" value="Похудение" checked >
+                  <input class="control__input visually-hidden" type="radio" name="program" value="Похудение" checked>
                   <span class="control__mark-radio"></span>
                   <span class="control__label">Похудение</span>
                 </label>
@@ -107,7 +119,7 @@
 
               <li>
                 <label class="control form-txt">
-                  <input class="control__input visually-hidden" type="radio" name="program" value="Нужен совет" >
+                  <input class="control__input visually-hidden" type="radio" name="program" value="Нужен совет">
                   <span class="control__mark-radio"></span>
                   <span class="control__label"> Не знаю (нужен ваш совет)</span>
                 </label>
@@ -118,9 +130,10 @@
         </div>
         <fieldset class="form__fildset">
 
-          <legend class="form__title form__title--crutch-2 second-page-title">Контактные&nbsp;данные (владельца&nbsp;кота)</legend>
+          <legend class="form__title form__title--crutch-2 second-page-title">Контактные&nbsp;данные
+            (владельца&nbsp;кота)</legend>
 
-          <div class="form__wrapp form__wrapp--cont">
+          <div class="form__wrapp-cont">
             <label class="form__label form-txt  form__icon icon icon--email" for="email">
               <span class="form__name">E-mail:*</span>
               <input class="form__field form__field--icon form-txt" value="kuklachev@gmail.com" type="email"
@@ -136,15 +149,15 @@
 
         </fieldset>
 
-        <fieldset class="form__fildset">
+        <fieldset class="form__fildset form__fildset--crutch-3">
           <legend class="form__title form__title--crutch-3 second-page-title">Комментарий</legend>
           <label class="visually-hidden" for="habits">Повадки:</label>
-          <textarea class="form__textarea form-txt" name="habits" id="habits" cols="30" rows="10"
+          <textarea class="form__textarea form-txt" name="habits" id="habits" cols="30" rows="6"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__fildset form__fildset--crutch-4">
-          <legend class="form__title  second-page-title">Дополнительно</legend>
+          <legend class="form__title form__title--crutch-4 second-page-title">Дополнительно</legend>
           <ul class="form__additionally-list">
             <li class="form__additionally-item">
               <label class="control form-txt">
@@ -182,7 +195,8 @@
         </fieldset>
 
         <div class="form__wrapp-horizon-2">
-          <button class="form__button button-text button button--form" type="submit">отправить заявку</button>
+          <button class="form__button button-text button-text--big button button--form" type="submit">отправить
+            заявку</button>
 
           <p class="form__text">* — Обязательные поля</p>
         </div>
@@ -191,7 +205,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__container main-footer__container--second">
+    <div class="main-footer__container">
       <div class="main-footer__contacts contacts container">
         <h2 class="visually-hidden">Как нас найти</h2>
 
@@ -210,14 +224,16 @@
         </div>
       </div>
 
-      <div class="main-footer__map" id="map">
+      <div class="main-footer__map no-js" id="map">
         <span class="visually-hidden">карта сокровищ</span>
       </div>
 
       <div class="main-footer__wrapp container">
-        <a href="./index.html" aria-current="page">
-          <img class="main-footer__logo-text" src="./img/tmp/logo-txt.svg" alt="логотип-название" width="128"
-            height="24">
+        <a class="main-footer__logo" href="./index.html" aria-current="page">
+
+          <svg class="main-footer__logo-text" width="128" height="24">
+            <use href="./img/stek.svg#logo-text-no_color"></use>
+          </svg>
         </a>
 
         <ul class="main-footer__social social">
@@ -234,17 +250,27 @@
           </li>
 
           <li class="social__item">
-            <a class="social__link icon--social icon icon--telegramm" href="#">
+            <a class="social__link icon icon--social icon--telegramm" href="#">
               <span class="visually-hidden">telegramm</span>
             </a>
           </li>
         </ul>
 
         <div class="main-footer__htmlacademy-wrapp">
-          <a class="main-footer__htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="main-footer__htmlacademy-logo" href="#">
             <span>HTML Academy</span>
-            <img class="main-footer__htmlacademy-img" src="./img/tmp/html-logo.svg" alt="htmlacademy logo" width="27"
-              height="34">
+
+            <svg class="main-footer__htmlacademy-img" width="27" height="35" viewBox="0 0 27 35" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z"/>
+            </svg>
+
+
+            <!-- <svg class="main-footer__htmlacademy-img" width="27"
+            height="34">
+              <use href="./img/stek.svg#htmlacademy-logo"></use>
+            </svg> -->
           </a>
         </div>
       </div>
@@ -252,7 +278,7 @@
   </footer>
 
   <script src="./js/app.js"></script>
-  <script src="./js/map.js" type="text/javascript"></script>
+  <script src="./js/map.js"></script>
 </body>
 
 </html>

@@ -26,18 +26,22 @@
     }
   }
 
+
   @include media-tablet {
-    padding: 14px 26px;
-    display: inline-block;
+    &--big {
+      padding: 14px 26px;
+      display: inline-block;
+    }
 
     &--form {
-      padding: 14px 65px;
+      padding: 14px 66px;
     }
   }
 
   @include media-desktop {
-    padding: 10px 26px;
-
+    &--big {
+      padding: 14px 27px;
+    }
 
     &--form {
       padding: 14px 208px;

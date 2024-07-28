@@ -87,11 +87,14 @@
     align-items: center;
 
     text-align: start;
+    padding-top: 3px;
   }
 
   @include media-desktop {
-    display: block;
+    // display: block;
+    flex-direction: column;
     text-align: center;
+    padding-top: 0;
   }
 }
 
