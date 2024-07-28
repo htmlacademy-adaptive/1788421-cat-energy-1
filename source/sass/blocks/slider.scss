@@ -6,11 +6,11 @@
 
 .slider:hover .slider__line {
   background-color: $color-bg-base;
-  border: 1px solid #ff0000;
 }
 
 .slider:hover .slider__button {
-  border: 1px solid $color-bg-base;
+  // border: 2px solid $color-bg-base;
+  border-color: $color-bg-base;
 }
 
 .slider:active .slider__line {
@@ -35,22 +35,23 @@
 
 .slider__image-before {
   position: absolute;
-  left: -8px;
+  left: -16px;
   //для совпаденеия с макетом
 
-  width: calc(var(--position) + 6px);
+  width: calc(var(--position) + 16px);
   object-position: left;
 }
 
 .slider__image-after {
   position: absolute;
-  right: -2px;
+  right: -15px;
   left: auto;
 
-  // width: calc(100% - var(--position) + 6px);
+  width: calc(100% - var(--position) + 14px);
 
+  object-fit: cover; //ОООчень важное свойство! без него не работает!
   object-position: right;
-  clip-path: inset(0 0 0 var(--position));
+  // clip-path: inset(0 0 0 calc(var(--position) - 14px));
 }
 
 .slider__range {
@@ -65,7 +66,7 @@
 
 .slider:focus-visible ~ .slider-button {
   outline: auto;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 .slider__line {
@@ -84,7 +85,7 @@
   pointer-events: none;
   /* позволяет контролировать события, при которых элемент может стать объектом события мыши. Если это свойство не задано, то к содержимому SVG будут применяться характеристики значения visiblePainted. */
 
-  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .slider__button {
