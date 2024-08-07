@@ -25,7 +25,7 @@
     left: 0;
     z-index: -5;
 
-    background-image: url("../../img/tmp/catalog_bg-present.jpg");
+    background-image: url("../../img/catalog/catalog_bg-present.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280px 290px;
@@ -39,10 +39,10 @@
       height: 200px;
       background-size: 707px 200px;
 
-      background-image: url("../../img/tmp/catalog_bg-present-tabl.jpg");
+      background-image: url("../../img/catalog/catalog_bg-present-tabl.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog_bg-present-tabl-@2x.jpg");
+        background-image: url("../../img/catalog/catalog_bg-present-tabl-@2x.jpg");
       }
     }
 
@@ -50,10 +50,10 @@
       height: 288px;
       background-size: 245px 288px;
 
-      background-image: url("../../img/tmp/catalog_bg-present.jpg");
+      background-image: url("../../img/catalog/catalog_bg-present.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/catalog_bg-present-desk-@2x.jpg");
+        background-image: url("../../img/catalog/catalog_bg-present-desk-@2x.jpg");
       }
     }
   }
@@ -108,7 +108,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-image: url("../../img/tmp/icon_gift.svg");
+  background-image: url("../../img/icons/icon_gift.svg");
   background-repeat: no-repeat;
 
   @include media-tablet {
