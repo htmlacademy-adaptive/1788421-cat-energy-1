@@ -16,14 +16,14 @@
   position: absolute;
   z-index: -5;
 
-  background-image: url("../../img/main/index-background-mob.jpg");
+  background-image: url("../../img/hero/hero-bg-mob.jpg");
   background-color: $color-base-text;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/main/index-background-mob-@2x.jpg");
+    background-image: url("../../img/hero/hero-bg-mob-@2x.jpg");
   }
 
   @include media-tablet {
@@ -39,12 +39,12 @@
     top: 0;
     left: 50%;
 
-    background-image: url("../../img/main/index-background-desktop.jpg");
+    background-image: url("../../img/hero/hero-bg-desktop.webp");
     background-color: $color-base-text;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/main/index-background-desk-@2x.jpg");
+      background-image: url("../../img/hero/hero-bg-desktop-@2x.jpg");
     }
   }
 }

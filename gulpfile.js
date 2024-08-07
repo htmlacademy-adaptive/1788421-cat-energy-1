@@ -84,7 +84,13 @@ export function watcher() {
   gulp.watch('source/icons/**/*.svg', gulp.series(createStack));
 }
 
-export default gulp.series(scssToCss, serverSrc, watcher);
+export function watcherSrc() {
+
+  gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss));
+  gulp.watch('source/*.html', gulp.series(reload));
+}
+
+export default gulp.series(scssToCss, serverSrc, watcherSrc);
 
 // =============== минимизация ============
 
@@ -143,26 +149,25 @@ export function cssMinif() {
     .pipe(browser.stream())
 }
 
-
 // jsMin
 
 export function jsMinif() {
   return gulp.src('source/js/*.js')
-    .pipe(terser())
-    .pipe(concat('index.js')) // Конкатенируем в один файл
+    // .pipe(terser())
+    // .pipe(concat('index.js')) // Конкатенируем в один файл
 
-    .pipe(rename({
-      suffix: '-min'
-    }))
+    // .pipe(rename({
+    //   suffix: '-min'
+    // }))
 
     .pipe(notify('MinJs'))
-    .pipe(size(
-      {
-        uncompressed: true,
-        showFiles: true,
-        pretty: true
-      }
-    ))
+    // .pipe(size(
+    //   {
+    //     uncompressed: true,
+    //     showFiles: true,
+    //     pretty: true
+    //   }
+    // ))
 
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream())
@@ -180,7 +185,7 @@ export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
 
 export function imgOpt() {
   return gulp.src('source/**/*.{png,jpg,svg}')
-  // return gulp.src('source/img/img_test/**/*.{png,jpg,svg}')
+    // return gulp.src('source/img/img_test/**/*.{png,jpg,svg}')
 
     .pipe(never('TMP'))
 
@@ -236,14 +241,14 @@ export function imgOpt() {
 export function retinaWebp() {
   return gulp.src('TMP/**/*.{png,jpg}')
 
-  .pipe(never('build/')) // ????????? почему не работает!
+    .pipe(never('build/')) // ????????? почему не работает!
 
     .pipe(sharp({
       includeOriginalFile: true,
       formats: [{
         width: (metadata) => metadata.width * 2,
         rename: {
-          suffix: "@2x"
+          suffix: "-@2x"
         },
         jpegOptions: {
           progressive: true
@@ -252,7 +257,7 @@ export function retinaWebp() {
         width: (metadata) => metadata.width * 2,
         format: "webp",
         rename: {
-          suffix: "@2x"
+          suffix: "-@2x"
         }
       }, {
         format: "webp"
@@ -263,13 +268,13 @@ export function retinaWebp() {
     .pipe(notify('оптимизация!'))
 }
 
-export function imgCopySvg () {
-    return gulp.src(['TMP/img/*.svg', '!TMP/img/icons/*.svg'])
+export function imgCopySvg() {
+  return gulp.src(['TMP/img/*.svg', '!TMP/img/icons/*.svg'])
     .pipe(never('build/img'))  // ????????? почему не работает!
 
-      .pipe(notify('копируем svg'))
-      .pipe(gulp.dest('build/img'))
-  }
+    .pipe(notify('копируем svg'))
+    .pipe(gulp.dest('build/img'))
+}
 
 export function createStack() {
   return gulp.src('TMP/img/icons/*.svg')
@@ -311,7 +316,6 @@ export function copy() {
     .pipe(gulp.dest('build'))
 }
 
-
 // Build
 
 export function server(done) {
@@ -337,5 +341,5 @@ export const build = gulp.series(
   imgOpt,
   imgCopySvg,
   gulp.parallel(retinaWebp, createStack),
- server,
-watcher)
+  server,
+  watcher)

@@ -82,6 +82,26 @@
 
         <picture class="hero__img">
 
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/hero-desk.webp 1x,
+            ./img/hero/hero-desk-@2x.webp 2x" width="552" height="499">
+
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/hero-tabl.webp 1x,
+            ./img/hero/hero-tabl-@2x.webp 2x" width="709" height="609">
+
+          <source type="image/webp" srcset="./img/hero/hero-mob.webp 1x,
+          ./img/hero/hero-mob-@2x.webp 2x" width="280" height="270">
+
+          <source media="(min-width:1440px)" srcset="./img/hero/hero-desk.png 1x,
+          ./img/hero/hero-desk-@2x.png 2x" width="552" height="499">
+          <source media="(min-width:768px)" srcset="./img/hero/hero-tabl.png 1x,
+          ./img/hero/hero-tabl-@2x.png 2x" width="709" height="609">
+
+          <img class="hero__img-" src="./img/hero/hero-mob.png" srcset="/img/hero/hero-mob-@2x.png 2x"
+            alt="вкусная еда для котика" width="280" height="270">
+        </picture>
+
+        <!-- <picture class="hero__img">
+
           <source type="image/webp" media="(min-width: 1440px)"
             srcset="./img/test_retina/hero-desk-@11x.webp 1x, ./img/test_retina/hero-desk-@22x.webp 2x" width="552" height="499">
 
@@ -97,7 +117,7 @@
             height="609">
           <img class="hero__img-" src="./img/test_retina/hero-mob-@1x.png" srcset="./img/test_retina/hero-mob-@2x.png 2x"
             alt="вкусная еда для котика" width="280" height="270">
-        </picture>
+        </picture> -->
 
         <a class="hero__button button-text button-text--big  button button--big" href="./form.html">
           подобрать программу
@@ -143,7 +163,7 @@
 
           <li class="features__item features__icon icon icon--square icon--bowl">
             <span class="features__item-txt">
-              Выпускается в&nbsp;виде порошка, который нужно  залить кипятком и&nbsp;готово.
+              Выпускается в&nbsp;виде порошка, который нужно залить кипятком и&nbsp;готово.
             </span>
           </li>
 
@@ -203,7 +223,8 @@
 
               <picture class="slider__image-before- slider__image-">
                 <source class="slider__image-before- slider__image-" media="(min-width:768px)"
-                  srcset="./img/main/kat-fat-mob-@1x.png 1x, ./img/main/kat-fat-tabl-@2x.png 2x" width="560" height="512">
+                  srcset="./img/main/kat-fat-mob-@1x.png 1x, ./img/main/kat-fat-tabl-@2x.png 2x" width="560"
+                  height="512">
 
 
                 <!-- <source class="slider__image-before- slider__image-" media="(min-width:768px)"
@@ -215,11 +236,8 @@
 
               <picture class="slider__image-after- slider__image">
                 <source class="slider__image-after- slider__image-" media="(min-width:768px)"
-                  srcset="./img/main/kat-slim-mob-@1x.png 1x, ./img/main/kat-slim-tabl-@2x.png 2x" width="560" height="512">
-
-                <!-- <source
-									class="slider__image-after- slider__image-" media="(min-width:768px)"
-									srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512"> -->
+                  srcset="./img/main/kat-slim-mob-@1x.png 1x, ./img/main/kat-slim-tabl-@2x.png 2x" width="560"
+                  height="512">
 
                 <img class="slider__image-after slider__image-" src="./img/main/kat-slim.png"
                   srcset="./img/main/kat-slim-mob-@2x.png 2x" alt="отощал, бедняжка" width="280" height="256">
@@ -322,7 +340,9 @@
   <script src="./js/map.js"></script>
   <script src="./js/slider.js"></script>
 
-  <!-- <script src="./js/test.js"></script> -->
+  <!-- <script src="./js/index-min.js"></script> -->
+
+
 </body>
 
 </html>
