@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
-  <link rel="mask-icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
-  <link rel="apple-touch-icon" href="./img/fav2/apple-touch-icon.png"> <!-- 180×180 -->
+  <link rel="mask-icon" href="./img/favicons/favicon-svg.svg" type="image/svg+xml" color="#5bbad5">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU">
-    </script>
+  </script>
 </head>
 
 <body class="page__body basic-text no-js">
@@ -29,14 +29,13 @@
             <img class="logo-link__img" src="./img/logo/logo-mobile.svg" alt="логотип-картинка" width="33" height="38">
           </picture>
 
-          <svg class="logo-link__txt" width="101" height="18">
-            <use class="logo-link__txt-use" href="./img/stek.svg#logo-text"></use>
-          </svg>
-
-          <!-- <picture>
+          <!-- <svg class="logo-link__txt" width="101" height="18">
+            <use class="logo-link__txt-use" href="./img/stack.svg#logo-text"></use>
+          </svg> -->
+          <picture class="logo-link__txt">
             <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
-            <img class="logo-link__txt" src="./img/logo/logo-footer.svg" alt="логотип-текст" width="101" height="18">
-          </picture> -->
+            <img src="./img/logo/logo-text-no_color.svg" alt="логотип-текст" width="101" height="18">
+          </picture>
         </a>
 
         <button class="hamburger hamburger--open" type="button" aria-label="открыть меню">
@@ -71,17 +70,24 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-1-tabl-@1x.png 1x, ./img/catalog/catalog-2-tabl-@2x.png 2x" width="161"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-1-tabl.webp 1x,
+                ./img/catalog/catalog-1-tabl-@2x.webp 2x" width="161" height="172">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-1-mob.webp 1x,
+                ./img/catalog/catalog-1-mob.webp 2x" width="68" height="86">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-1-tabl.png 1x, ./img/catalog/catalog-1-tabl-@2x.png 2x" width="161"
                   height="172">
-                <img class="product-card__img" src="./img/catalog/catalog-1-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-1-mob.png"
                   srcset="./img/catalog/catalog-1-mob-@2x.png 2x" alt="вкусная еда для котика" width="68" height="86">
               </picture>
             </a>
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob"> PRO <span class="transfer-block"> 500 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> PRO <span class="transfer-block"> 500 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -111,10 +117,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-2-tabl-@1x.png 1x, ./img/catalog/catalog-2-tabl-@2x.png 2x" width="168"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-2-tabl.webp 1x,
+                ./img/catalog/catalog-2-tabl-@2x.webp 2x" width="168" height="206">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-2-mob.webp 1x,
+                ./img/catalog/catalog-2-mob.webp 2x" width="84" height="100">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-2-tabl.png 1x, ./img/catalog/catalog-2-tabl-@2x.png 2x" width="168"
                   height="206">
-                <img class="product-card__img" src="./img/catalog/catalog-2-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-2-mob.png"
                   srcset="./img/catalog/catalog-2-mob-@2x.png 2x" alt="вкусная еда для котика" width="84" height="100">
               </picture>
 
@@ -123,7 +136,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  PRO <span class="transfer-block">1000 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> PRO <span class="transfer-block">1000 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -152,10 +165,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-3-tabl-@1x.png 1x, ./img/catalog/catalog-3-tabl-@2x.png 2x" width="163"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-3-tabl.webp 1x,
+                ./img/catalog/catalog-3-tabl-@2x.webp 2x" width="163" height="174">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-3-mob.webp 1x,
+                ./img/catalog/catalog-3-mob.webp 2x" width="68" height="78">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-3-tabl.png 1x, ./img/catalog/catalog-3-tabl-@2x.png 2x" width="163"
                   height="174">
-                <img class="product-card__img" src="./img/catalog/catalog-3-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-3-mob.png"
                   srcset="./img/catalog/catalog-3-mob-@2x.png 2x" alt="вкусная еда для котика" width="68" height="78">
               </picture>
 
@@ -164,7 +184,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  PRO <span class="transfer-block">500 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> PRO <span class="transfer-block">500 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -194,10 +214,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-4-tabl-@1x.png 1x, ./img/catalog/catalog-4-tabl-@2x.png 2x" width="168"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-4-tabl.webp 1x,
+                ./img/catalog/catalog-4-tabl-@2x.webp 2x" width="168" height="200">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-4-mob.webp 1x,
+                ./img/catalog/catalog-4-mob.webp 2x" width="84" height="100">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-4-tabl.png 1x, ./img/catalog/catalog-4-tabl-@2x.png 2x" width="168"
                   height="200">
-                <img class="product-card__img" src="./img/catalog/catalog-4-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-4-mob.png"
                   srcset="./img/catalog/catalog-4-mob-@2x.png 2x" alt="вкусная еда для котика" width="84" height="100">
               </picture>
 
@@ -206,7 +233,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  PRO <span class="transfer-block">1000 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> PRO <span class="transfer-block">1000 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -236,10 +263,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-5-tabl-@1x.png 1x, ./img/catalog/catalog-5-tabl-@2x.png 2x" width="161"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-5-tabl.webp 1x,
+                ./img/catalog/catalog-5-tabl-@2x.webp 2x" width="161" height="171">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-5-mob.webp 1x,
+                ./img/catalog/catalog-5-mob.webp 2x" width="68" height="78">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-5-tabl.png 1x, ./img/catalog/catalog-5-tabl-@2x.png 2x" width="161"
                   height="171">
-                <img class="product-card__img" src="./img/catalog/catalog-5-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-5-mob.png"
                   srcset="./img/catalog/catalog-5-mob-@2x.png 2x" alt="вкусная еда для котика" width="68" height="78">
               </picture>
 
@@ -248,7 +282,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  SLIM <span class="transfer-block">500 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> SLIM <span class="transfer-block">500 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -278,10 +312,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-6-tabl-@1x.png 1x, ./img/catalog/catalog-6-tabl-@2x.png 2x" width="168"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-6-tabl.webp 1x,
+                ./img/catalog/catalog-6-tabl-@2x.webp 2x" width="168" height="200">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-6-mob.webp 1x,
+                ./img/catalog/catalog-6-mob.webp 2x" width="84" height="100">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-6-tabl.png 1x, ./img/catalog/catalog-6-tabl-@2x.png 2x" width="168"
                   height="200">
-                <img class="product-card__img" src="./img/catalog/catalog-6-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-6-mob.png"
                   srcset="./img/catalog/catalog-6-mob-@2x.png 2x" alt="вкусная еда для котика" width="84" height="100">
               </picture>
 
@@ -290,7 +331,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  SLIM <span class="transfer-block">1000 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> SLIM <span class="transfer-block">1000 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -320,10 +361,17 @@
             <a class="product-card__link-img" href="#">
 
               <picture>
-                <source media="(min-width:768px)"
-                  srcset="./img/catalog/catalog-7-tabl-@1x.png 1x, ./img/catalog/catalog-7-tabl-@2x.png 2x" width="163"
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/catalog-7-tabl.webp 1x,
+                ./img/catalog/catalog-7-tabl-@2x.webp 2x" width="163" height="174">
+
+                <source type="image/webp" srcset="./img/catalog/catalog-7-mob.webp 1x,
+                ./img/catalog/catalog-7-mob.webp 2x" width="72" height="84">
+
+                <source type="image/png" media="(min-width:768px)"
+                  srcset="./img/catalog/catalog-7-tabl.png 1x, ./img/catalog/catalog-7-tabl-@2x.png 2x" width="163"
                   height="174">
-                <img class="product-card__img" src="./img/catalog/catalog-7-mob-@1x.png"
+
+                <img class="product-card__img" src="./img/catalog/catalog-7-mob.png"
                   srcset="./img/catalog/catalog-7-mob-@2x.png 2x" alt="вкусная еда для котика" width="72" height="84">
               </picture>
 
@@ -332,7 +380,7 @@
 
             <div class="product-card__wrapp">
               <h3 class="product-card__title product-title">
-                Cat Energy <span class="transfer-block--mob">  SLIM <span class="transfer-block">500 г</span></span>
+                Cat Energy <span class="transfer-block-mob"> SLIM <span class="transfer-block">500 г</span></span>
               </h3>
 
               <dl class="product-card__list property-text-catalog">
@@ -476,7 +524,7 @@
         <a class="main-footer__logo" href="./index.html" aria-current="page">
 
           <svg class="main-footer__logo-text" width="128" height="24">
-            <use href="./img/stek.svg#logo-text-no_color"></use>
+            <use href="./img/stack.svg#logo-text-no_color"></use>
           </svg>
         </a>
 
@@ -513,7 +561,7 @@
 
             <!-- <svg class="main-footer__htmlacademy-img" width="27"
             height="34">
-              <use href="./img/stek.svg#htmlacademy-logo"></use>
+              <use href="./img/stack.svg#htmlacademy-logo"></use>
             </svg> -->
           </a>
         </div>

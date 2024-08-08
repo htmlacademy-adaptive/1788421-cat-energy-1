@@ -55,6 +55,15 @@
     padding-bottom: 0;
     margin: 0;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__logo-text {
@@ -127,33 +136,34 @@
   height: 362px;
 
   &.no-js {
-    background-image: url("../../img/tmp/location.jpg");
+    background-image: url("../../img/map/location-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/location-mob-@2x.jpg");
+      background-image: url("../../img/map/location-mob-@2x.jpg");
     }
 
     @include media-tablet {
-      background-image: url("../../img/tmp/location-tabl.jpg");
+      background-image: url("../../img/map/location-tabl.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/location-tabl-@2x.jpg");
+        background-image: url("../../img/map/location-tabl-@2x.jpg");
       }
     }
 
     @include media-desktop {
-      background-image: url("../../img/tmp/location-desk.jpg");
+      background-image: url("../../img/map/location-desk.jpg");
+
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/map/location-desk-@2x.jpg");
+      }
     }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/location-desk-@2x.jpg");
+    @include media-tablet {
+      height: 400px;
     }
-  }
-
-  @include media-tablet {
-    height: 400px;
   }
 }

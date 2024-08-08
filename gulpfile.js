@@ -69,6 +69,8 @@ export function serverSrc(done) {
 // Reload
 
 export function reload(done) {
+    // .pipe(notify('ПЕРЕЗАБГУЗКА БРАУЗЕРА'))
+
   browser.reload();
   done();
 }
@@ -77,7 +79,7 @@ export function reload(done) {
 
 export function watcher() {
 
-  gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss, cssMinif));
+  gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss, cssMinif, reload));
   gulp.watch('source/*.html', gulp.series(htmlMinif, reload));
 
   gulp.watch('source/js/*.js', gulp.series(jsMinif));
@@ -153,21 +155,21 @@ export function cssMinif() {
 
 export function jsMinif() {
   return gulp.src('source/js/*.js')
-    // .pipe(terser())
-    // .pipe(concat('index.js')) // Конкатенируем в один файл
+    .pipe(terser())
+    .pipe(concat('index.js')) // Конкатенируем в один файл
 
-    // .pipe(rename({
-    //   suffix: '-min'
-    // }))
+    .pipe(rename({
+      suffix: '-min'
+    }))
 
     .pipe(notify('MinJs'))
-    // .pipe(size(
-    //   {
-    //     uncompressed: true,
-    //     showFiles: true,
-    //     pretty: true
-    //   }
-    // ))
+    .pipe(size(
+      {
+        uncompressed: true,
+        showFiles: true,
+        pretty: true
+      }
+    ))
 
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream())
@@ -184,7 +186,7 @@ export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
 // оптимизация jpg, png, svg
 
 export function imgOpt() {
-  return gulp.src('source/**/*.{png,jpg,svg}')
+  return gulp.src(['source/**/*.{png,jpg,svg}', '!source/img/favicons'])
     // return gulp.src('source/img/img_test/**/*.{png,jpg,svg}')
 
     .pipe(never('TMP'))
@@ -241,7 +243,7 @@ export function imgOpt() {
 export function retinaWebp() {
   return gulp.src('TMP/**/*.{png,jpg}')
 
-    .pipe(never('build/')) // ????????? почему не работает!
+    .pipe(never('build')) // ????????? почему не работает!
 
     .pipe(sharp({
       includeOriginalFile: true,
@@ -263,13 +265,13 @@ export function retinaWebp() {
         format: "webp"
       },]
     }))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build'))
 
-    .pipe(notify('оптимизация!'))
+    .pipe(notify('WEBP + -@2x'))
 }
 
 export function imgCopySvg() {
-  return gulp.src(['TMP/img/*.svg', '!TMP/img/icons/*.svg'])
+  return gulp.src(['TMP/img/**/*.svg', '!TMP/img/icons/*.svg'])
     .pipe(never('build/img'))  // ????????? почему не работает!
 
     .pipe(notify('копируем svg'))
@@ -279,7 +281,7 @@ export function imgCopySvg() {
 export function createStack() {
   return gulp.src('TMP/img/icons/*.svg')
 
-    .pipe(stacksvg())
+    .pipe(stacksvg(''))
 
     .pipe(notify('стек!'))
 
@@ -300,14 +302,17 @@ export function lintBem() {
 // del
 
 export const clean = () => {
-  return delet(['build', '!build/img']);
+  // return delet(['build', '!build/img']);
+  return delet(['build', 'source/css', 'TMP']);
 };
 
 // copy - копирую в BUILD всё, что не изменяетя (шрифты, фавиконки)
 
 export function copy() {
   return gulp.src(['source/fonts/**/*.{woff2,woff}',
-    'source/*.ico',
+    'source/favicon.ico',
+    'source/img/favicons/',
+    'source/manifest.webmanifest'
   ], {
     base: 'source'
   }
@@ -337,6 +342,7 @@ export function server(done) {
 export const build = gulp.series(
   clean,
   copy,
+  scssToCss,
   minif,
   imgOpt,
   imgCopySvg,
