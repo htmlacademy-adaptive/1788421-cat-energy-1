@@ -23,6 +23,9 @@
     "imgOpt": "gulp imgOpt",
     "build": "gulp build",
     "start": "gulp",
+    "go": "gulp go",
+    "product": "gulp product",
+
     "bemlint": "gulp lintBem --silent",
     "w3cvalidator": "html-validator --quiet",
     "editorconfig": "editorconfig-cli",

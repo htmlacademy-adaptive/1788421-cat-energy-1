@@ -45,7 +45,7 @@ export function scssToCss() { //переводит синтаксис SASS в с
 
         .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
         .pipe(browser.stream())
-        // .pipe(notify('scss ===> css'));
+    // .pipe(notify('scss ===> css'));
 }
 
 // =============== минимизация ============
@@ -220,7 +220,7 @@ export function retinaWebp() {
         }))
         .pipe(gulp.dest('source/img-tmp'))
 
-        // .pipe(notify('WEBP + -@2x'))
+    // .pipe(notify('WEBP + -@2x'))
 }
 
 export function imgCopySvg() {
@@ -317,10 +317,25 @@ export const build = gulp.series(
     scssToCss,
     gulp.parallel(
         minif, copyImg, createStack
-    )
+    ),
+    server,
+    watcher
 )
 
 export default gulp.series(
-    build,
+    // build,
     server,
-    watcher);
+    watcher)
+
+
+export const go = gulp.series(
+    server,
+    watcher
+)
+
+export const product = gulp.series(
+    imgOpt,
+   build,
+    server,
+    watcher
+)
