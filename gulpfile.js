@@ -317,13 +317,11 @@ export const build = gulp.series(
     scssToCss,
     gulp.parallel(
         minif, copyImg, createStack
-    ),
-    server,
-    watcher
+    )
 )
 
 export default gulp.series(
-    // build,
+    build,
     server,
     watcher)
 
@@ -335,7 +333,7 @@ export const go = gulp.series(
 
 export const product = gulp.series(
     imgOpt,
-   build,
+    build,
     server,
     watcher
 )
