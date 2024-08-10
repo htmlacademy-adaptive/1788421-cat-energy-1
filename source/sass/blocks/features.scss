@@ -4,7 +4,12 @@
 
   @include media-tablet {
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 45px;
+  }
+
+  @include media-desktop {
+    padding-bottom: 66px;
+
   }
 }
 
@@ -72,4 +77,10 @@
 .features__item-txt {
   margin-top: 2px;
   // padding-right: 75px;
+
+  @include media-tablet {
+    display: block;
+width: 245px;
+  }
+
 }

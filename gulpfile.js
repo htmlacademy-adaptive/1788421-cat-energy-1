@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
-import notify from 'gulp-notify';
+// import notify from 'gulp-notify';
 import browser from 'browser-sync';
 
 import htmlmin from 'gulp-htmlmin';
@@ -26,12 +26,12 @@ import size from 'gulp-size';
 import delet from 'del';
 
 import imagemin, {
-  mozjpeg,
-  optipng,
-  svgo
+    mozjpeg,
+    optipng,
+    svgo
 } from 'gulp-imagemin';
 
-import never from 'gulp-newer';
+// import never from 'gulp-newer';
 
 import bemlinter from 'gulp-html-bemlinter';
 
@@ -39,140 +39,94 @@ import bemlinter from 'gulp-html-bemlinter';
 // Sass to css
 
 export function scssToCss() { //переводит синтаксис SASS в стандартный CSS;
-  return gulp.src('source/sass/style.scss', { sourcemaps: true }) //обращается к исходному файлу style.scss;
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError)) //показывает в терминале информацию о наличии ошибок в исходном файле;
+    return gulp.src('source/sass/style.scss', { sourcemaps: true }) //обращается к исходному файлу style.scss;
+        .pipe(plumber())
+        .pipe(sass().on('error', sass.logError)) //показывает в терминале информацию о наличии ошибок в исходном файле;
 
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream())
-    .pipe(notify('scss ===> css'));
+        .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+        .pipe(browser.stream())
+        // .pipe(notify('scss ===> css'));
 }
-
-// Server
-
-export function serverSrc(done) {
-  browser.init({ //инициализируем веб-сервер;
-    server: {
-      baseDir: './source', // указываем рабочую папку;
-      serveStaticOptions: { // упрощаем ввод в браузере адреса страницы — без расширения .html;
-        extensions: ['html'],
-      },
-    },
-    cors: true,
-    notify: false,
-    ui: false, //назначаем номер порта для пользовательского интерфейса веб-сервера;
-    open: true, //открываем в браузере главную страницу сайта.
-  });
-  done();
-}
-
-// Reload
-
-export function reload(done) {
-    // .pipe(notify('ПЕРЕЗАБГУЗКА БРАУЗЕРА'))
-
-  browser.reload();
-  done();
-}
-
-// Watcher
-
-export function watcher() {
-
-  gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss, cssMinif, reload));
-  gulp.watch('source/*.html', gulp.series(htmlMinif, reload));
-
-  gulp.watch('source/js/*.js', gulp.series(jsMinif));
-  gulp.watch('source/icons/**/*.svg', gulp.series(createStack));
-}
-
-export function watcherSrc() {
-
-  gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss));
-  gulp.watch('source/*.html', gulp.series(reload));
-}
-
-export default gulp.series(scssToCss, serverSrc, watcherSrc);
 
 // =============== минимизация ============
 
 // html-MIN
 
 export function htmlMinif() {
-  return gulp.src('source/*.html')
-    .pipe(plumber())
-    .pipe(htmlmin({
-      removeComments: true,
-      collapseWhitespace: true
-    }))
-    .pipe(notify('MinHtml'))
+    return gulp.src('source/*.html')
+        .pipe(plumber())
+        .pipe(htmlmin({
+            removeComments: true,
+            collapseWhitespace: true
+        }))
+        // .pipe(notify('MinHtml'))
 
-    .pipe(size(
-      {
-        uncompressed: true,
-        showFiles: true,
-        pretty: true
-      }
-    ))
+        .pipe(size(
+            {
+                uncompressed: true,
+                showFiles: true,
+                pretty: true
+            }
+        ))
 
-    .pipe(gulp.dest('build'))
-    .pipe(browser.stream());
+        .pipe(gulp.dest('build'))
+        .pipe(browser.stream());
 }
 
 
 // css-MIN
 
 export function cssMinif() {
-  return gulp.src('source/css/*.css', { sourcemaps: true })
-    .pipe(plumber())  //Надо?
-    .pipe(gcssmq()) // группирует вместе все медиавыражения и размещает их в конце файла;
-    // важен порядок ! gcssmq до postcss
-    .pipe(postcss([
-      autoprefixer(), //добавляет вендорные префиксы CSS
-      csso()
-    ]))
-    // .pipe(rename('style-min.css'))
+    return gulp.src('source/css/*.css', { sourcemaps: true })
+        .pipe(plumber())  //Надо?
+        .pipe(gcssmq()) // группирует вместе все медиавыражения и размещает их в конце файла;
+        // важен порядок ! gcssmq до postcss
+        .pipe(postcss([
+            autoprefixer(), //добавляет вендорные префиксы CSS
+            csso()
+        ]))
+        // .pipe(rename('style-min.css'))
 
-    // .pipe(rename({
-    //  basename: 'style',
-    //  suffix: '-min'
-    // }))
+        // .pipe(rename({
+        //  basename: 'style',
+        //  suffix: '-min'
+        // }))
 
-    .pipe(notify('MinCss'))
-    .pipe(size(
-      {
-        uncompressed: true,
-        showFiles: true,
-        pretty: true
-      }
-    ))
+        // .pipe(notify('MinCss'))
+        .pipe(size(
+            {
+                uncompressed: true,
+                showFiles: true,
+                pretty: true
+            }
+        ))
 
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))  //сохраняет итоговый файл в папку /build/css/
-    .pipe(browser.stream())
+        .pipe(gulp.dest('build/css', { sourcemaps: '.' }))  //сохраняет итоговый файл в папку /build/css/
+        .pipe(browser.stream())
 }
 
 // jsMin
 
 export function jsMinif() {
-  return gulp.src('source/js/*.js')
-    .pipe(terser())
-    .pipe(concat('index.js')) // Конкатенируем в один файл
+    return gulp.src('source/js/*.js')
+        .pipe(terser())
+        // .pipe(concat('index.js')) // Конкатенируем в один файл
 
-    .pipe(rename({
-      suffix: '-min'
-    }))
+        .pipe(rename({
+            suffix: '-min'
+        }))
 
-    .pipe(notify('MinJs'))
-    .pipe(size(
-      {
-        uncompressed: true,
-        showFiles: true,
-        pretty: true
-      }
-    ))
+        // .pipe(notify('MinJs'))
+        .pipe(size(
+            {
+                uncompressed: true,
+                showFiles: true,
+                pretty: true
+            }
+        ))
 
-    .pipe(gulp.dest('build/js'))
-    .pipe(browser.stream())
+        .pipe(gulp.dest('build/js'))
+        .pipe(browser.stream())
 
 }
 
@@ -185,167 +139,188 @@ export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
 
 // оптимизация jpg, png, svg
 
-export function imgOpt() {
-  return gulp.src(['source/**/*.{png,jpg,svg}', '!source/img/favicons'])
-    // return gulp.src('source/img/img_test/**/*.{png,jpg,svg}')
+export function imgMin() {
+    return gulp.src(['source/img/**/*.{png,jpg,svg}', '!source/img/favicons'])
 
-    .pipe(never('TMP'))
+        // .pipe(never('TMP'))
 
-    .pipe(cache(imagemin([
-      mozjpeg({ //для jpg
+        .pipe(cache(imagemin([
+            mozjpeg({ //для jpg
 
-        quality: 75, //Качество сжатия в диапазоне от 0 (наихудшее) до 100 (идеальное).
-        progressive: true  //прогрессивность, false создает базовый файл JPEG
-      }),
+                quality: 75, //Качество сжатия в диапазоне от 0 (наихудшее) до 100 (идеальное).
+                progressive: true  //прогрессивность, false создает базовый файл JPEG
+            }),
 
-      optipng({
-        optimizationLevel: 3//уровень оптимизации от 0 до 7.
-      }
-      ),
+            optipng({
+                optimizationLevel: 3//уровень оптимизации от 0 до 7.
+            }
+            ),
 
-      svgo({
-        plugins: [{
-          name: 'cleanupIDs',
-          active: false
-        }, {
-          name: 'preset-default', // предустановленные настройки по умолчанию
-          params: {
-            overrides: {
-              // настройка параметров:
-              convertPathData: {
-                floatPrecision: 2,
-                forceAbsolutePath: false,
-                utilizeAbsolute: false,
-              },
-              // отключить плагин
-              removeViewBox: false,
-            },
-          },
-        }]
-      })
-    ])))
+            svgo({
+                plugins: [{
+                    name: 'cleanupIDs',
+                    active: false
+                }, {
+                    name: 'preset-default', // предустановленные настройки по умолчанию
+                    params: {
+                        overrides: {
+                            // настройка параметров:
+                            convertPathData: {
+                                floatPrecision: 2,
+                                forceAbsolutePath: false,
+                                utilizeAbsolute: false,
+                            },
+                            // отключить плагин
+                            removeViewBox: false,
+                        },
+                    },
+                }]
+            })
+        ])))
 
-    .pipe(size(
-      {
-        uncompressed: true,
-        showFiles: true,
-        pretty: true
+        .pipe(size(
+            {
+                uncompressed: true,
+                showFiles: true,
+                pretty: true
 
-      }
-    ))
+            }
+        ))
 
-    .pipe(notify('imgOpt'))
-    .pipe(gulp.dest('TMP'));
+        // .pipe(notify('imgOpt'))
+        .pipe(gulp.dest('source/img-opt/'));
 }
 
 // ретинизация + webp +webp@2x
 
 export function retinaWebp() {
-  return gulp.src('TMP/**/*.{png,jpg}')
+    return gulp.src('source/img-opt/**/*.{png,jpg}')
 
-    .pipe(never('build')) // ????????? почему не работает!
+        // .pipe(never('build')) // ????????? почему не работает!
 
-    .pipe(sharp({
-      includeOriginalFile: true,
-      formats: [{
-        width: (metadata) => metadata.width * 2,
-        rename: {
-          suffix: "-@2x"
-        },
-        jpegOptions: {
-          progressive: true
-        },
-      }, {
-        width: (metadata) => metadata.width * 2,
-        format: "webp",
-        rename: {
-          suffix: "-@2x"
-        }
-      }, {
-        format: "webp"
-      },]
-    }))
-    .pipe(gulp.dest('build'))
+        .pipe(sharp({
+            includeOriginalFile: true,
+            formats: [{
+                width: (metadata) => metadata.width * 2,
+                rename: {
+                    suffix: "-@2x"
+                },
+                jpegOptions: {
+                    progressive: true
+                },
+            }, {
+                width: (metadata) => metadata.width * 2,
+                format: "webp",
+                rename: {
+                    suffix: "-@2x"
+                }
+            }, {
+                format: "webp"
+            },]
+        }))
+        .pipe(gulp.dest('source/img-tmp'))
 
-    .pipe(notify('WEBP + -@2x'))
+        // .pipe(notify('WEBP + -@2x'))
 }
 
 export function imgCopySvg() {
-  return gulp.src(['TMP/img/**/*.svg', '!TMP/img/icons/*.svg'])
-    .pipe(never('build/img'))  // ????????? почему не работает!
+    return gulp.src(['source/img-opt/**/*.svg', 'source/img-opt/icons/*.svg'])
+        // .pipe(never('build/img'))  // ????????? почему не работает!
 
-    .pipe(notify('копируем svg'))
-    .pipe(gulp.dest('build/img'))
+        // .pipe(notify('копируем svg'))
+        .pipe(gulp.dest('source/img-tmp/'))
 }
 
 export function createStack() {
-  return gulp.src('TMP/img/icons/*.svg')
+    return gulp.src('source/img-opt/icons/*.svg')
 
-    .pipe(stacksvg(''))
+        .pipe(stacksvg(''))
 
-    .pipe(notify('стек!'))
+        // .pipe(notify('стек!'))
 
-    .pipe(gulp.dest('build/img'));
+        .pipe(gulp.dest('build/img/'));
 }
 
-export const optim = gulp.series(imgOpt, createStack, retinaWebp);
+export const imgOpt = gulp.series(imgMin,
+    gulp.parallel(imgCopySvg, retinaWebp));
 
 // Линты
 // Линты из требований Д19 и Д20 в package.json, проверка валидации там же
 export function lintBem() {
-  return gulp.src('source/**/*.html')
-    .pipe(bemlinter());
+    return gulp.src('source/**/*.html')
+        .pipe(bemlinter());
 }
 
 // конечная сборка. BUILD
 
-// del
+// Reload
+export function reload(done) {
+    // .pipe(notify('ПЕРЕЗАБГУЗКА БРАУЗЕРА'))
+    browser.reload();
+    done();
+}
 
+// Watcher
+export function watcher() {
+    gulp.watch('source/sass/**/*.scss', gulp.series(scssToCss, cssMinif));
+    gulp.watch('source/*.html', gulp.series(htmlMinif, reload));
+    gulp.watch('source/js/*.js', gulp.series(jsMinif));
+    gulp.watch('source/icons/**/*.svg', gulp.series(createStack));
+}
+
+// del
 export const clean = () => {
-  // return delet(['build', '!build/img']);
-  return delet(['build', 'source/css', 'TMP']);
+    // return delet(['build', '!build/img']);
+    return delet('build/');
 };
 
 // copy - копирую в BUILD всё, что не изменяетя (шрифты, фавиконки)
-
 export function copy() {
-  return gulp.src(['source/fonts/**/*.{woff2,woff}',
-    'source/favicon.ico',
-    'source/img/favicons/',
-    'source/manifest.webmanifest'
-  ], {
-    base: 'source'
-  }
-  )
-    .pipe(notify('копируем шрифты'))
-    .pipe(gulp.dest('build'))
+    return gulp.src(['source/fonts/**/*.{woff2,woff}',
+        'source/favicon.ico',
+        'source/img/favicons/**',
+        'source/manifest.webmanifest'
+    ], {
+        base: 'source'
+    }
+    )
+        // .pipe(notify('копируем шрифты'))
+        .pipe(gulp.dest('build'))
 }
 
-// Build
+export function copyImg() {
+    return gulp.src('source/img-tmp/**')
+        // .pipe(notify('копируем img'))
+        .pipe(gulp.dest('build/img/'))
+}
 
+// server
 export function server(done) {
-  browser.init({ //инициализируем веб-сервер;
-    server: {
-      baseDir: './build', // указываем рабочую папку;
-      serveStaticOptions: { // упрощаем ввод в браузере адреса страницы — без расширения .html;
-        extensions: ['html'],
-      },
-    },
-    cors: true,
-    notify: false,
-    ui: false, //назначаем номер порта для пользовательского интерфейса веб-сервера;
-    open: true, //открываем в браузере главную страницу сайта.
-  });
-  done();
+    browser.init({ //инициализируем веб-сервер;
+        server: {
+            baseDir: './build', // указываем рабочую папку;
+            serveStaticOptions: { // упрощаем ввод в браузере адреса страницы — без расширения .html;
+                extensions: ['html'],
+            },
+        },
+        cors: true,
+        notify: false,
+        ui: false, //назначаем номер порта для пользовательского интерфейса веб-сервера;
+        open: true, //открываем в браузере главную страницу сайта.
+    });
+    done();
 }
 
 export const build = gulp.series(
-  clean,
-  copy,
-  scssToCss,
-  minif,
-  imgOpt,
-  imgCopySvg,
-  gulp.parallel(retinaWebp, createStack),
-  server,
-  watcher)
+    clean,
+    copy,
+    scssToCss,
+    gulp.parallel(
+        minif, copyImg, createStack
+    )
+)
+
+export default gulp.series(
+    build,
+    server,
+    watcher);

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="mask-icon" href="./img/favicons/favicon-svg.svg" type="image/svg+xml" color="#5bbad5">
   <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
@@ -33,6 +33,7 @@
             <use class="logo-link__txt-use" href="./img/stack.svg#logo-text"></use>
           </svg> -->
           <picture class="logo-link__txt">
+            <source media="(min-width:1440px)" srcset="./img/logo/logo-text.svg" width="118" height="21">
             <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
             <img src="./img/logo/logo-text-no_color.svg" alt="логотип-текст" width="101" height="18">
           </picture>
@@ -569,10 +570,10 @@
     </div>
   </footer>
 
-  <script src="./js/app.js"></script>
-  <script src="./js/map.js"></script>
+  <script src="./js/app-min.js"></script>
+  <script src="./js/map-min.js"></script>
 
-  <script src="./js/index.js"></script>
+  <!-- <script src="./js/index.js"></script> -->
 
 </body>
 

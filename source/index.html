@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
 
-  <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="mask-icon" href="./img/favicons/favicon-svg.svg" type="image/svg+xml" color="#5bbad5">
   <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
@@ -35,6 +35,8 @@
           </svg> -->
 
           <picture class="logo-link__txt">
+            <source media="(min-width:1440px)" srcset="./img/logo/logo-text.svg" width="118" height="21">
+
             <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
             <img src="./img/logo/logo-text-no_color.svg" alt="логотип-текст" width="101" height="18">
           </picture>
@@ -155,8 +157,14 @@
 
           <li class="features__item features__icon icon icon--square icon--bowl">
             <span class="features__item-txt">
-              Выпускается в&nbsp;виде порошка, который нужно залить кипятком и&nbsp;готово.
+              Выпускается&nbsp;в&nbsp;виде&nbsp;порошка,
+              который нужно лишь залить
+              кипятком и готово.
             </span>
+
+            <!-- <span class="features__item-txt">
+              Выпускается в&nbsp;виде порошка, который нужно залить кипятком и&nbsp;готово.
+            </span> -->
           </li>
 
           <li class="features__item features__icon icon icon--square icon--eat">
@@ -167,7 +175,7 @@
 
           <li class="features__item features__icon icon icon--square icon--time">
             <span class="features__item-txt">
-              Уже через месяц наслаждайтесь измене-ниями к лучшему питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </span>
           </li>
         </ul>
@@ -244,16 +252,14 @@
               <input class="slider__range" type="range" min="0" max="100" value="50"
                 aria-label="процентное соотношение к показанному до-после фото">
 
-              <button type="button" class="slider__line">
-                <span class="visually-hidden">потяните вправо-влево, чтобы посмотреть котика до и после</span>
-
+              <div class="slider__line">
                 <span class="slider__button" aria-hidden="true">
 
                   <svg width="24" height="18">
-                    <use href="./img/stack.svg#slider-buttun"></use>
+                    <use href="./img/stack.svg#icon-slider-arr"></use>
                   </svg>
                 </span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -334,11 +340,11 @@
     </div>
   </footer>
 
-  <script src="./js/app.js"></script>
-  <script src="./js/map.js"></script>
-  <script src="./js/slider.js"></script>
+  <script src="./js/app-min.js"></script>
+  <script src="./js/map-min.js"></script>
+  <script src="./js/slider-min.js"></script>
 
-  <script src="./js/index-min.js"></script>
+  <!-- <script src="./js/index-min.js"></script> -->
 
 
 </body>

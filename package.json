@@ -20,10 +20,9 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "minif": "gulp minif",
-    "optim": "gulp optim",
+    "imgOpt": "gulp imgOpt",
     "build": "gulp build",
+    "start": "gulp",
     "bemlint": "gulp lintBem --silent",
     "w3cvalidator": "html-validator --quiet",
     "editorconfig": "editorconfig-cli",

@@ -55,11 +55,11 @@
 
   @include media-tablet {
     margin-right: 0;
+    text-align: center;
   }
 
   @include media-desktop {
     margin-bottom: 23px;
-
     flex-grow: 1;
   }
 }
@@ -67,7 +67,11 @@
 .product-card__list {
   display: flex;
   flex-direction: column;
+  // gap: 4px;
+
+  @include media-tablet {
   gap: 4px;
+}
 
   @include media-desktop {
     gap: 3px;
