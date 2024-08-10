@@ -29,7 +29,7 @@ ymaps.ready(function () {
             iconLayout: 'default#image',
 
             // Своё изображение иконки метки.
-            iconImageHref: '../img/map-pin.png',
+            iconImageHref: '../img/map/map-pin.png',
 
     // Размеры метки в зависимости от размера экрана
             iconImageSize: window.innerWidth <= 500 ? sizePlacemark[0] : sizePlacemark[1],

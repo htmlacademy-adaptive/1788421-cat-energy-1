@@ -1,4 +1,0 @@
-var a,w=document.createTreeWalker(document,NodeFilter.SHOW_TEXT);while(a=w.nextNode()){if(a.textContent.trim().length)a.textContent='Одиннадцатиклассница пошла посмотреть на достопримечательность, она шла долго, несколько строчек, пока не пришла'}
-
-
-javascript:(function(){var%20a,w=document.createTreeWalker(document,NodeFilter.SHOW_TEXT);while(a=w.nextNode()){if(a.textContent.trim().length)a.textContent='Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit.%20Fusce%20congue%20semper%20sodales.%20Sed%20ultricies%20eget%20neque%20eu%20semper.%20Nam%20ut%20diam%20vitae%20orci%20blandit%20eleifend%20a%20eget%20sapien.%20';}})()

@@ -7,20 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
 
-  <link rel="icon" href="./img/favicon.ico"> <!-- 32×32 -->
-  <link rel="mask-icon" href="./img/fav2/safari-pinned-tab.svg" type="image/svg+xml" color="#5bbad5">
-  <link rel="apple-touch-icon" href="./img/fav2/apple-touch-icon.png"> <!-- 180×180 -->
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="mask-icon" href="./img/favicons/favicon-svg.svg" type="image/svg+xml" color="#5bbad5">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="./manifest.webmanifest">
 
-
-
-  <!-- <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff"> -->
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ce5ae139-a744-4115-8799-62072c511524&lang=ru_RU">
   </script>
@@ -39,14 +30,15 @@
             <img class="logo-link__img" src="./img/logo/logo-mobile.svg" alt="логотип-картинка" width="33" height="38">
           </picture>
 
-          <svg class="logo-link__txt" width="101" height="18">
-            <use class="logo-link__txt-use" href="./img/stek.svg#logo-text"></use>
-          </svg>
+          <!-- <svg class="logo-link__txt" width="101" height="18">
+            <use class="logo-link__txt-use" href="./img/stack.svg#logo-text"></use>
+          </svg> -->
 
-          <!-- <picture>
+          <picture class="logo-link__txt">
+            <source media="(min-width:1440px)" srcset="./img/logo/logo-text.svg" width="118" height="21">
             <source media="(min-width:768px)" srcset="./img/logo/logo-text.svg" width="101" height="18">
-            <img class="logo-link__txt" src="./img/logo/logo-footer.svg" alt="логотип-текст" width="101" height="18">
-          </picture> -->
+            <img src="./img/logo/logo-text-no_color.svg" alt="логотип-текст" width="101" height="18">
+          </picture>
         </a>
 
         <button class="hamburger hamburger--open" type="button" aria-label="открыть меню">
@@ -82,22 +74,43 @@
 
         <picture class="hero__img">
 
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="./img/hero-desk-@11x.webp 1x, ./img/hero-desk-@22x.webp 2x" width="552" height="499">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/hero-desk.webp 1x,
+            ./img/hero/hero-desk-@2x.webp 2x" width="552" height="499">
 
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/hero-tabl-@11x.webp 1x, ./img/hero-tabl-@22x.webp 2x" width="709" height="609">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/hero-tabl.webp 1x,
+            ./img/hero/hero-tabl-@2x.webp 2x" width="709" height="609">
 
-          <source type="image/webp" srcset="./img/hero-mob-@11x.webp 1x, ./img/hero-mob-@22x.webp 2x" width="280"
-            height="270">
+          <source type="image/webp" srcset="./img/hero/hero-mob.webp 1x,
+          ./img/hero/hero-mob-@2x.webp 2x" width="280" height="270">
 
-          <source media="(min-width:1440px)" srcset="./img/hero-desk-@1x.png 1x, ./img/hero-desk-@2x.png 2x" width="552"
-            height="499">
-          <source media="(min-width:768px)" srcset="./img/hero-tabl-@1x.png 1x, ./img/hero-tabl-@2x.png 2x" width="709"
-            height="609">
-          <img class="hero__img-" src="./img/hero-mob-@1x.png" srcset="./img/hero-mob-@2x.png 2x"
+          <source type="image/png" media="(min-width:1440px)" srcset="./img/hero/hero-desk.png 1x,
+          ./img/hero/hero-desk-@2x.png 2x" width="552" height="499">
+
+          <source type="image/png" media="(min-width:768px)" srcset="./img/hero/hero-tabl.png 1x,
+          ./img/hero/hero-tabl-@2x.png 2x" width="709" height="609">
+
+          <img class="hero__img-" src="./img/hero/hero-mob.png" srcset="/img/hero/hero-mob-@2x.png 2x"
             alt="вкусная еда для котика" width="280" height="270">
         </picture>
+
+        <!-- <picture class="hero__img">
+
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./img/test_retina/hero-desk-@11x.webp 1x, ./img/test_retina/hero-desk-@22x.webp 2x" width="552" height="499">
+
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/test_retina/hero-tabl-@11x.webp 1x, ./img/test_retina/hero-tabl-@22x.webp 2x" width="709" height="609">
+
+          <source type="image/webp" srcset="./img/test_retina/hero-mob-@11x.webp 1x, ./img/test_retina/hero-mob-@22x.webp 2x" width="280"
+            height="270">
+
+          <source media="(min-width:1440px)" srcset="./img/test_retina/hero-desk-@1x.png 1x, ./img/test_retina/hero-desk-@2x.png 2x" width="552"
+            height="499">
+          <source media="(min-width:768px)" srcset="./img/test_retina/hero-tabl-@1x.png 1x, ./img/test_retina/hero-tabl-@2x.png 2x" width="709"
+            height="609">
+          <img class="hero__img-" src="./img/test_retina/hero-mob-@1x.png" srcset="./img/test_retina/hero-mob-@2x.png 2x"
+            alt="вкусная еда для котика" width="280" height="270">
+        </picture> -->
 
         <a class="hero__button button-text button-text--big  button button--big" href="./form.html">
           подобрать программу
@@ -143,8 +156,14 @@
 
           <li class="features__item features__icon icon icon--square icon--bowl">
             <span class="features__item-txt">
-              Выпускается в&nbsp;виде порошка, который нужно  залить кипятком и&nbsp;готово.
+              Выпускается&nbsp;в&nbsp;виде&nbsp;порошка,
+              который нужно лишь залить
+              кипятком и готово.
             </span>
+
+            <!-- <span class="features__item-txt">
+              Выпускается в&nbsp;виде порошка, который нужно залить кипятком и&nbsp;готово.
+            </span> -->
           </li>
 
           <li class="features__item features__icon icon icon--square icon--eat">
@@ -155,7 +174,7 @@
 
           <li class="features__item features__icon icon icon--square icon--time">
             <span class="features__item-txt">
-              Уже через месяц наслаждайтесь измене-ниями к лучшему питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </span>
           </li>
         </ul>
@@ -174,9 +193,7 @@
             <p class="examples__description">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
               Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
-              по 16
-              часов в
-              день.
+              по 16 часов в день.
             </p>
 
             <div class="examples__packing">
@@ -202,42 +219,46 @@
             <div class="slider">
 
               <picture class="slider__image-before- slider__image-">
-                <source class="slider__image-before- slider__image-" media="(min-width:768px)"
-                  srcset="./img/kat-fat-mob-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/kat-fat-tabl.webp 1x,
+                                ./img/slider/kat-fat-tabl-@2x.webp 2x" width="560" height="512">
+
+                <source type="image/webp" srcset="./img/slider/kat-fat-mob.webp 1x,
+              ./img/slider/kat-fat-mob-@2x.webp 2x" width="280" height="256">
 
 
-                <!-- <source class="slider__image-before- slider__image-" media="(min-width:768px)"
-                  srcset="./img/kat-fat-tabl-@1x.png 1x, ./imgkat-fat-tabl-@2x.png 2x" width="560" height="512"> -->
+                <source class="slider__image-before- slider__image-" type="image/png" media="(min-width:768px)" srcset="./img/slider/kat-fat-tabl.png 1x,
+                  ./img/slider/kat-fat-tabl-@2x.png 2x" width="560" height="512">
 
-                <img class="slider__image-before slider__image" src="./img/kat-fat-mob-@1x.png"
-                  srcset="./img/kat-fat-mob-@2x.png 2x" alt="толстый кот" width="280" height="256">
+                <img class="slider__image-before slider__image" src="./img/slider/kat-fat-mob.png"
+                  srcset="./img/slider/kat-fat-mob-@2x.png 2x" alt="толстый кот" width="280" height="256">
               </picture>
 
               <picture class="slider__image-after- slider__image">
-                <source class="slider__image-after- slider__image-" media="(min-width:768px)"
-                  srcset="./img/kat-slim-mob-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/kat-slim-tabl.webp 1x,
+                ./img/slider/kat-slim-tabl-@2x.webp 2x" width="560" height="512">
 
-                <!-- <source
-									class="slider__image-after- slider__image-" media="(min-width:768px)"
-									srcset="./img/kat-slim-tabl-@1x.png 1x, ./imgkat-slim-tabl-@2x.png 2x" width="560" height="512"> -->
+                <source type="image/webp" srcset="./img/slider/kat-slim-mob.webp 1x,
+                ./img/slider/kat-slim-mob-@2x.webp 2x" width="280" height="256">
 
-                <img class="slider__image-after slider__image-" src="./img/kat-slim-mob-@1x.png"
-                  srcset="./img/kat-slim-mob-@2x.png 2x" alt="отощал, бедняжка" width="280" height="256">
+                <source class="slider__image-after- slider__image-" type="image/png" media="(min-width:768px)"
+                  srcset="./img/slider/kat-slim-tabl.png 1x, ./img/slider/kat-slim-tabl-@2x.png 2x" width="560"
+                  height="512">
+
+                <img class="slider__image-after slider__image-" src="./img/slider/kat-slim-mob.png"
+                  srcset="./img/slider/kat-slim-mob-@2x.png 2x" alt="отощал, бедняжка" width="280" height="256">
               </picture>
 
               <input class="slider__range" type="range" min="0" max="100" value="50"
                 aria-label="процентное соотношение к показанному до-после фото">
 
-              <button type="button" class="slider__line">
-                <span class="visually-hidden">потяните вправо-влево, чтобы посмотреть котика до и после</span>
-
+              <div class="slider__line">
                 <span class="slider__button" aria-hidden="true">
 
                   <svg width="24" height="18">
-                    <use href="./img/stek.svg#slider-buttun"></use>
+                    <use href="./img/stack.svg#icon-slider-arr"></use>
                   </svg>
                 </span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -273,7 +294,7 @@
         <a class="main-footer__logo" href="./index.html" aria-current="page">
 
           <svg class="main-footer__logo-text" width="128" height="24">
-            <use href="./img/stek.svg#logo-text-no_color"></use>
+            <use href="./img/stack.svg#logo-text-no_color"></use>
           </svg>
         </a>
 
@@ -310,7 +331,7 @@
 
             <!-- <svg class="main-footer__htmlacademy-img" width="27"
             height="34">
-              <use href="./img/stek.svg#htmlacademy-logo"></use>
+              <use href="./img/stack.svg#htmlacademy-logo"></use>
             </svg> -->
           </a>
         </div>
@@ -318,11 +339,13 @@
     </div>
   </footer>
 
-  <script src="./js/app.js"></script>
-  <script src="./js/map.js"></script>
-  <script src="./js/slider.js"></script>
+  <script src="./js/app-min.js"></script>
+  <script src="./js/map-min.js"></script>
+  <script src="./js/slider-min.js"></script>
 
-  <!-- <script src="./js/test.js"></script> -->
+  <!-- <script src="./js/index-min.js"></script> -->
+
+
 </body>
 
 </html>

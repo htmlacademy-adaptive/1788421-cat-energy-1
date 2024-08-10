@@ -2,6 +2,14 @@
   position: relative;
   overflow: hidden;
   --position: 50%;
+
+  width: 280px;
+  height: 256px;
+
+  @include media-tablet {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .slider:hover .slider__line {
@@ -9,8 +17,11 @@
 }
 
 .slider:hover .slider__button {
-  // border: 2px solid $color-bg-base;
   border-color: $color-bg-base;
+}
+
+.slider:hover .slider__button svg {
+  fill: $color-bg-base;
 }
 
 .slider:active .slider__line {
@@ -22,32 +33,26 @@
   inset: 0;
   /*растягивает элемент на весь экран */
 
-  width: 280px;
-  height: 256px;
-
   object-fit: cover;
 
-  @include media-tablet {
-    width: 560px;
-    height: 512px;
-  }
+  
 }
 
 .slider__image-before {
   position: absolute;
-  left: -16px;
+  left: 0;
   //для совпаденеия с макетом
 
-  width: calc(var(--position) + 16px);
+  width: var(--position);
   object-position: left;
 }
 
 .slider__image-after {
   position: absolute;
-  right: -15px;
+  right: 0;
   left: auto;
 
-  width: calc(100% - var(--position) + 14px);
+  width: calc(100% - var(--position));
 
   object-fit: cover; //ОООчень важное свойство! без него не работает!
   object-position: right;
@@ -71,7 +76,7 @@
 
 .slider__line {
   position: absolute;
-  inset: 0;
+  // inset: 0;
   width: 4px;
   height: 100%;
   background-color: $color-footer-icons;
@@ -79,6 +84,7 @@
   padding: 0;
   border-radius: 2px;
   z-index: 10;
+  top: 0;
 
   left: var(--position);
   transform: translateX(-50%);
@@ -109,4 +115,9 @@
   border: 2px solid $color-footer-icons;
 
   transition: border 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  // mask-image: url("../../img/stack.svg#icon-slider-arr");
+  // mask-repeat: no-repeat;
+  // mask-position: center;
+  // mask-size: 24px 18px;
 }
