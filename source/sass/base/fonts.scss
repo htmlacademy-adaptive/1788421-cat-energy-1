@@ -97,6 +97,20 @@
   @include font ($size: 16px, $line-height: 20px, $color: $color-second-text);
 
   @include media-tablet {
+    @include font ($size: 20px, $line-height: 24px, $color: $color-second-text);
+  }
+
+  @include media-desktop {
+    @include font ($size: 20px, $line-height: 24px, $color: $color-second-text);
+  }
+}
+
+.slogan-3 {
+  /* слоган в карте */
+
+  @include font ($size: 16px, $line-height: 20px, $color: $color-second-text);
+
+  @include media-tablet {
     @include font ($size: 20px, $line-height: 26px, $color: $color-second-text);
   }
 
@@ -168,7 +182,7 @@
 
     width: fit-content;
     margin-left: 0;
-    padding-left: 40px;
+    padding-left: 0;
     padding-right: 40px;
 
     &::before {
@@ -178,7 +192,7 @@
 
   @include media-desktop {
 
-    margin-left: -40px;
+    // margin-left: -40px;
 
     // padding-left: 150px;
     // padding-right: 40px;

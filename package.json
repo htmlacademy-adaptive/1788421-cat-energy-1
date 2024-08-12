@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "imgOpt": "gulp imgOpt",
+    "imgopt": "gulp imgOpt",
     "build": "gulp build",
     "start": "gulp",
     "go": "gulp go",
