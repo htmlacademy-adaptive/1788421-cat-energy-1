@@ -83,6 +83,12 @@
   text-align: start;
 }
 
+// .additional-products__title-card--add {
+//   @include media-tablet {
+// line-height: 20px;
+//   }
+// }
+
 .additional-products__description {
   text-align: left;
   grid-area: descr;
