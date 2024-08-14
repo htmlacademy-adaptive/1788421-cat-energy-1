@@ -140,7 +140,7 @@ export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
 // оптимизация jpg, png, svg
 
 export function imgMin() {
-    return gulp.src(['source/img/**/*.{png,jpg,svg}', '!source/img/favicons'])
+    return gulp.src('source/img/**/*.{png,jpg,svg}')
 
         // .pipe(never('TMP'))
 
@@ -194,7 +194,7 @@ export function imgMin() {
 // ретинизация + webp +webp@2x
 
 export function retinaWebp() {
-    return gulp.src('source/img-opt/**/*.{png,jpg}')
+    return gulp.src(['source/img-opt/**/*.{png,jpg}' , '!source/img-opt/favicons'])
 
         // .pipe(never('build')) // ????????? почему не работает!
 

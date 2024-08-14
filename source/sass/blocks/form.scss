@@ -84,6 +84,14 @@
 }
 
 .form__wrapp-cont {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @include media-tablet {
+    gap: 21px;
+  }
+
   @include media-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
