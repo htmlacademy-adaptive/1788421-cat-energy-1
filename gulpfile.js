@@ -41,7 +41,7 @@ export function htmlMinif() {
         .pipe(htmlmin({
             removeComments: true,
             collapseWhitespace: true
-        }))   
+        }))
         .pipe(gulp.dest('build'))
         .pipe(browser.stream());
 }
@@ -149,7 +149,7 @@ export function retinaWebp() {
             },]
         }))
         .pipe(gulp.dest('source/img-tmp'))
-    }
+}
 
 // export function imgCopySvg() {
 //     return gulp.src(['source/img-opt/**/*.svg', '!source/img-opt/icons/*.svg'])
@@ -240,5 +240,3 @@ export default gulp.series(
     build,
     server,
     watcher)
-
-

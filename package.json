@@ -22,7 +22,6 @@
         "imgOpt": "gulp imgOpt",
         "build": "gulp build",
         "start": "gulp",
-       
         "bemlint": "gulp lintBem --silent",
         "w3cvalidator": "html-validator --quiet",
         "editorconfig": "editorconfig-cli",
