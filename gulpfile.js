@@ -151,11 +151,6 @@ export function retinaWebp() {
         .pipe(gulp.dest('source/img-tmp'))
 }
 
-// export function imgCopySvg() {
-//     return gulp.src(['source/img-opt/**/*.svg', '!source/img-opt/icons/*.svg'])
-//         .pipe(gulp.dest('source/img-tmp/'))
-// }
-
 export function createStack() {
     return gulp.src('source/img-tmp/icons/*.svg')
         .pipe(stacksvg(''))
