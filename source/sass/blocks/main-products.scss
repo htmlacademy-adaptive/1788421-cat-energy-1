@@ -72,7 +72,7 @@
 
   @include media-tablet {
     grid-template-columns: repeat(auto-fit, minmax(323px, 1fr));
-    gap:59px 60px;
+    gap: 60px;
   }
 
   @include media-desktop {

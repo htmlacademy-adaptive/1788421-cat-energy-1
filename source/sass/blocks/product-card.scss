@@ -60,7 +60,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
     flex-grow: 1;
   }
 }
@@ -71,11 +71,11 @@
   // gap: 4px;
 
   @include media-tablet {
-  gap: 6px;
-}
+    gap: 1px;
+  }
 
   @include media-desktop {
-    gap: 8px;
+    gap: 3px;
   }
 }
 
@@ -88,10 +88,10 @@
   }
 
   @include media-tablet {
-    // padding-top: 1px;
-    padding-bottom: 5px;
+    padding-top: 1px;
+    padding-bottom: 8px;
     border-bottom: 1px solid $color-border-3;
-    // gap: 10px;
+    gap: 10px;
   }
 }
 
