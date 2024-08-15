@@ -21,13 +21,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  
-  background-image: image-set(
-    url(../../img/hero/hero-bg-mob.webp) 1x type("image/webp"),
-    url(../../img/hero/hero-bg-mob.jpg) 1x,
-    url(../../img/hero/hero-bg-mob-@2x.webp) 2x type("image/webp"),
-    url(../../img/hero/hero-bg-mob-@2x.jpg) 2x
-  );
+  background-image: image-set(url("../../img/hero/hero-bg-mob.webp") 1x type("image/webp"),
+      url("../../img/hero/hero-bg-mob.jpg") 1x,
+      url("../../img/hero/hero-bg-mob-@2x.webp") 2x type("image/webp"),
+      url("../../img/hero/hero-bg-mob-@2x.jpg") 2x);
 
 
   // @media (min-resolution: 2dppx) {
@@ -51,14 +48,10 @@
     background-color: $color-base-text;
     background-size: cover;
 
-    background-image: image-set(
-    url(../../img/hero/hero-bg-desktop.webp) 1x type("image/webp"),
-    url(../../img/hero/hero-bg-desktop.jpg) 1x,
-    url(../../img/hero/hero-bg-desktop-@2x.webp) 2x type("image/webp"),
-    url(../../img/hero/hero-bg-desktop-@2x.jpg) 2x
-  );
-
-
+    background-image: image-set(url("../../img/hero/hero-bg-desktop.webp") 1x type("image/webp"),
+        url("../../img/hero/hero-bg-desktop.jpg") 1x,
+        url("../../img/hero/hero-bg-desktop-@2x.webp") 2x type("image/webp"),
+        url("../../img/hero/hero-bg-desktop-@2x.jpg") 2x);
     // @media (min-resolution: 2dppx) {
     //   background-image: url("../../img/hero/hero-bg-desktop-@2x.jpg");
     // }

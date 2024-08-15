@@ -1,40 +1,24 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
-// import notify from 'gulp-notify';
 import browser from 'browser-sync';
-
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
-
 import cache from 'gulp-cache';
-
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import gcssmq from 'gulp-group-css-media-queries';
-
 import terser from 'gulp-terser';
-import concat from 'gulp-concat';
-
 import sharp from 'gulp-sharp-responsive';
-
 import { stacksvg } from 'gulp-stacksvg';
-
-import size from 'gulp-size';
-
 import delet from 'del';
-
 import imagemin, {
     mozjpeg,
     optipng,
     svgo
 } from 'gulp-imagemin';
-
-// import never from 'gulp-newer';
-
 import bemlinter from 'gulp-html-bemlinter';
-
 
 // Sass to css
 
@@ -45,7 +29,6 @@ export function scssToCss() { //переводит синтаксис SASS в с
 
         .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
         .pipe(browser.stream())
-    // .pipe(notify('scss ===> css'));
 }
 
 // =============== минимизация ============
@@ -58,17 +41,7 @@ export function htmlMinif() {
         .pipe(htmlmin({
             removeComments: true,
             collapseWhitespace: true
-        }))
-        // .pipe(notify('MinHtml'))
-
-        .pipe(size(
-            {
-                uncompressed: true,
-                showFiles: true,
-                pretty: true
-            }
-        ))
-
+        }))   
         .pipe(gulp.dest('build'))
         .pipe(browser.stream());
 }
@@ -78,28 +51,12 @@ export function htmlMinif() {
 
 export function cssMinif() {
     return gulp.src('source/css/*.css', { sourcemaps: true })
-        .pipe(plumber())  //Надо?
+        .pipe(plumber())
         .pipe(gcssmq()) // группирует вместе все медиавыражения и размещает их в конце файла;
-        // важен порядок ! gcssmq до postcss
         .pipe(postcss([
             autoprefixer(), //добавляет вендорные префиксы CSS
             csso()
         ]))
-        // .pipe(rename('style-min.css'))
-
-        // .pipe(rename({
-        //  basename: 'style',
-        //  suffix: '-min'
-        // }))
-
-        // .pipe(notify('MinCss'))
-        .pipe(size(
-            {
-                uncompressed: true,
-                showFiles: true,
-                pretty: true
-            }
-        ))
 
         .pipe(gulp.dest('build/css', { sourcemaps: '.' }))  //сохраняет итоговый файл в папку /build/css/
         .pipe(browser.stream())
@@ -110,24 +67,11 @@ export function cssMinif() {
 export function jsMinif() {
     return gulp.src('source/js/*.js')
         .pipe(terser())
-        // .pipe(concat('index.js')) // Конкатенируем в один файл
-
         .pipe(rename({
             suffix: '-min'
         }))
-
-        // .pipe(notify('MinJs'))
-        .pipe(size(
-            {
-                uncompressed: true,
-                showFiles: true,
-                pretty: true
-            }
-        ))
-
         .pipe(gulp.dest('build/js'))
         .pipe(browser.stream())
-
 }
 
 export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
@@ -140,9 +84,7 @@ export const minif = gulp.parallel(htmlMinif, cssMinif, jsMinif);
 // оптимизация jpg, png, svg
 
 export function imgMin() {
-    return gulp.src('source/img/**/*.{png,jpg,svg}')
-
-        // .pipe(never('TMP'))
+    return gulp.src(['source/img/**/*.{png,jpg,svg}', '!source/img/favicons'])
 
         .pipe(cache(imagemin([
             mozjpeg({ //для jpg
@@ -152,7 +94,7 @@ export function imgMin() {
             }),
 
             optipng({
-                optimizationLevel: 3//уровень оптимизации от 0 до 7.
+                optimizationLevel: 3   //уровень оптимизации от 0 до 7.
             }
             ),
 
@@ -178,25 +120,13 @@ export function imgMin() {
             })
         ])))
 
-        .pipe(size(
-            {
-                uncompressed: true,
-                showFiles: true,
-                pretty: true
-
-            }
-        ))
-
-        // .pipe(notify('imgOpt'))
-        .pipe(gulp.dest('source/img-opt/'));
+        .pipe(gulp.dest('source/img-tmp/'));
 }
 
 // ретинизация + webp +webp@2x
 
 export function retinaWebp() {
-    return gulp.src(['source/img-opt/**/*.{png,jpg}' , '!source/img-opt/favicons'])
-
-        // .pipe(never('build')) // ????????? почему не работает!
+    return gulp.src(['source/img-tmp/**/*.{png,jpg}', '!source/img-tmp/favicons'])
 
         .pipe(sharp({
             includeOriginalFile: true,
@@ -219,33 +149,23 @@ export function retinaWebp() {
             },]
         }))
         .pipe(gulp.dest('source/img-tmp'))
+    }
 
-    // .pipe(notify('WEBP + -@2x'))
-}
-
-export function imgCopySvg() {
-    return gulp.src(['source/img-opt/**/*.svg', 'source/img-opt/icons/*.svg'])
-        // .pipe(never('build/img'))  // ????????? почему не работает!
-
-        // .pipe(notify('копируем svg'))
-        .pipe(gulp.dest('source/img-tmp/'))
-}
+// export function imgCopySvg() {
+//     return gulp.src(['source/img-opt/**/*.svg', '!source/img-opt/icons/*.svg'])
+//         .pipe(gulp.dest('source/img-tmp/'))
+// }
 
 export function createStack() {
-    return gulp.src('source/img-opt/icons/*.svg')
-
+    return gulp.src('source/img-tmp/icons/*.svg')
         .pipe(stacksvg(''))
-
-        // .pipe(notify('стек!'))
-
         .pipe(gulp.dest('build/img/'));
 }
 
-export const imgOpt = gulp.series(imgMin,
-    gulp.parallel(imgCopySvg, retinaWebp));
+export const imgOpt = gulp.series(imgMin, retinaWebp);
 
 // Линты
-// Линты из требований Д19 и Д20 в package.json, проверка валидации там же
+
 export function lintBem() {
     return gulp.src('source/**/*.html')
         .pipe(bemlinter());
@@ -255,7 +175,6 @@ export function lintBem() {
 
 // Reload
 export function reload(done) {
-    // .pipe(notify('ПЕРЕЗАБГУЗКА БРАУЗЕРА'))
     browser.reload();
     done();
 }
@@ -270,7 +189,6 @@ export function watcher() {
 
 // del
 export const clean = () => {
-    // return delet(['build', '!build/img']);
     return delet('build/');
 };
 
@@ -284,13 +202,11 @@ export function copy() {
         base: 'source'
     }
     )
-        // .pipe(notify('копируем шрифты'))
         .pipe(gulp.dest('build'))
 }
 
 export function copyImg() {
-    return gulp.src('source/img-tmp/**')
-        // .pipe(notify('копируем img'))
+    return gulp.src(['source/img-tmp/**', '!source/img-opt/icons/*.svg'])
         .pipe(gulp.dest('build/img/'))
 }
 
@@ -326,14 +242,3 @@ export default gulp.series(
     watcher)
 
 
-export const go = gulp.series(
-    server,
-    watcher
-)
-
-export const product = gulp.series(
-    imgOpt,
-    build,
-    server,
-    watcher
-)
