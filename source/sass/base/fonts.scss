@@ -182,7 +182,7 @@
 
     width: fit-content;
     margin-left: 0;
-    padding-left: 40px;
+    padding-left: 0;
     padding-right: 40px;
 
     &::before {
@@ -192,7 +192,7 @@
 
   @include media-desktop {
 
-    margin-left: -40px;
+    // margin-left: -40px;
 
     // padding-left: 150px;
     // padding-right: 40px;
