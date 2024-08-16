@@ -86,6 +86,7 @@
   @include media-tablet {
     margin-bottom: 32px;
     border-bottom: none;
+    color: $color-black;
   }
 
   @include media-desktop {

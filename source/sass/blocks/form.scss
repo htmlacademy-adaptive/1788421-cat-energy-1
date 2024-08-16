@@ -86,7 +86,7 @@
 .form__wrapp-cont {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 13px;
 
   @include media-tablet {
     gap: 21px;
@@ -136,6 +136,10 @@
   &:not(:disabled):focus {
     outline: none;
     border-color: $color-base-text;
+  }
+
+  &:not(:disabled):focus .icon--email::after {  //как сделать чтобы цвет менялся?
+    background-color: $color-bg-base;
   }
 
   &:disabled {
@@ -300,6 +304,7 @@
   margin-top: 20px;
   margin-bottom: 0;
   text-align: center;
+  color: $color-black;
 
   @include media-tablet {
     margin-top: 0;

@@ -1,5 +1,9 @@
 .main-footer {
-  background-color: #f2f2f2;
+  background-color: $color-bg-grey;
+
+  &--index {
+    background-color: $color-white;
+  }
 }
 
 .main-footer__container {

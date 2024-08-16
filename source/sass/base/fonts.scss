@@ -21,8 +21,9 @@
 .basic-text {
   @include font ($family: $font-base, $size: 14px, $line-height: 18px, $color: $color-base-text, $upper: none);
 
+
   @include media-tablet {
-    @include font ($family: $font-base, $size: 16px, $line-height: 24px, $color: $color-black, $upper: none);
+    @include font ($family: $font-base, $size: 16px, $line-height: 24px, $color: $color-base-text, $upper: none);
   }
 }
 
@@ -182,8 +183,13 @@
 
     width: fit-content;
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 40px;
     padding-right: 40px;
+
+    &--form {
+      margin-left: 0;
+      padding-left: 0;
+    }
 
     &::before {
       top: 23px;
@@ -192,9 +198,15 @@
 
   @include media-desktop {
 
-    // margin-left: -40px;
+    margin-left: -40px;
 
-    // padding-left: 150px;
+
+    &--form {
+      margin-left: -40px;
+      padding-left: 40px;
+    }
+
+    // padding-left: 40px;
     // padding-right: 40px;
     // &::before {
     //   top: 25px;

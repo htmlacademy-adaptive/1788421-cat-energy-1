@@ -45,6 +45,10 @@
     // display: block;
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 29px;
+  }
+
+  @include media-desktop {
     margin-bottom: 32px;
   }
 }
