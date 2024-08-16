@@ -54,12 +54,6 @@
   gap: 20px;
   align-items: center;
 
-  // &::after {
-  //   position: absolute;
-  //   top: -3px;
-  //   left: -10px;
-  // }
-
   @include media-tablet {
     gap: 62px;
 

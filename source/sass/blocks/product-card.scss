@@ -42,7 +42,6 @@
   flex-grow: 1;
 
   @include media-tablet {
-    // display: block;
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 29px;
@@ -54,7 +53,6 @@
 }
 
 .product-card__title {
-  // margin-right: 20px;
   margin-bottom: 14px;
 
   @include media-tablet {
@@ -72,7 +70,6 @@
 .product-card__list {
   display: flex;
   flex-direction: column;
-  // gap: 4px;
 
   @include media-tablet {
     gap: 1px;

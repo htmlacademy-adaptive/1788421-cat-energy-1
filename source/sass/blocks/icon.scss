@@ -69,7 +69,7 @@
 
   position: absolute;
   top: -3px;
-  right: 181px;
+left: -9px;
 
   background-size: 36px 50px;
   background-image: url("../../img/stack.svg#cat-slim");
@@ -79,6 +79,8 @@
 
     top: 4px;
     right: -287px;
+    left: auto;
+
   }
 
   @include media-desktop {
@@ -92,23 +94,18 @@
 
   position: absolute;
   top: 0;
-  right: 181px;
-
-  // background-size: 167px 28px;
+  left: -9px;
 
   background-image: url("../../img/stack.svg#cat-pro");
 
-  // background-color: #b891e4;
-
   @include media-tablet {
-    //   background-size: 268px 112px;
     top: 16px;
     right: -287px;
+    left: auto;
+
   }
 
   @include media-desktop {
-    //   background-size: 134px 56px;
-
     top: 0;
     right: 342px;
   }

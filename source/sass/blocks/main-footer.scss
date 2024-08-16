@@ -102,8 +102,6 @@
   text-decoration: none;
 
   &:hover {
-    // background-color: #7fffd4;
-
     .main-footer__htmlacademy-img {
       fill: $color-bg-base;
     }
@@ -117,7 +115,6 @@
     display: flex;
     gap: 23px;
     align-items: center;
-    // width: 100%;
   }
 }
 
