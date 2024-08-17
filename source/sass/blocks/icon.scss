@@ -23,6 +23,8 @@
   width: 50px;
   height: 50px;
 
+  flex-shrink: 0;
+
   @include media-tablet {
     width: 200px;
     height: 200px;
@@ -40,7 +42,6 @@
   background-color: $color-bg-base;
   box-sizing: border-box;
   flex-shrink: 0;
-
 
   @include media-tablet {
     width: 80px;
@@ -134,13 +135,15 @@ left: -9px;
 .icon--arrow::after {
   width: 32px;
   height: 12px;
-  background-image: url("../../img/stack.svg#icon_arrow");
-  background-position: -7px;
+  background-image: url("../../img/stack.svg#icon_arrow-32px");
+  background-position: -8px;
   transition: background-position 0.3s ease-in-out;
+
+  flex-shrink: 0;
 }
 
 .icon--arrow:hover::after {
-  background-position: right;
+  background-position: 0;
 }
 
 .icon--social {

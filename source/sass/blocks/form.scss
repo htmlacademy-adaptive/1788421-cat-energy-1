@@ -136,10 +136,7 @@
   &:not(:disabled):focus {
     outline: none;
     border-color: $color-base-text;
-  }
-
-  &:not(:disabled):focus .icon--email::after {  //как сделать чтобы цвет менялся?
-    background-color: $color-bg-base;
+   outline: 2px solid $color-base-text;
   }
 
   &:disabled {
@@ -148,6 +145,7 @@
 
   &:not(:placeholder-shown):invalid {
     border-color: $color-error;
+    outline: 2px solid $color-error;
   }
 
   @include media-tablet {
@@ -183,6 +181,16 @@
   @include media-desktop {
     right: 16px;
   }
+}
+
+.icon--email:has(.form__field:not(:disabled):focus)::after,
+.icon--phone:has(.form__field:not(:disabled):focus)::after {  //цвет менялся
+  background-color: $color-bg-base;
+}
+
+.icon--email:has(.form__field:not(:placeholder-shown):invalid)::after,
+.icon--phone:has(.form__field:not(:placeholder-shown):invalid)::after {
+  background-color:$color-error;
 }
 
 .form__title {
@@ -245,6 +253,7 @@
   &:not(:disabled):focus {
     outline: none;
     border-color: $color-base-text;
+    outline: 2px solid $color-base-text;
   }
 
   &:disabled {
