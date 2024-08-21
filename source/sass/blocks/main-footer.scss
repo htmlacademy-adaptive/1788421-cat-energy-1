@@ -140,7 +140,6 @@
   }
 
   &.no-js {
-    // background-image: url("../../img/map/location-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -151,37 +150,19 @@
         url("../../img/map/location-mob-@2x.webp") 2x type("image/webp"),
         url("../../img/map/location-mob-@2x.jpg") 2x);
 
-
-    // @media (min-resolution: 2dppx) {
-    //   background-image: url("../../img/map/location-mob-@2x.jpg");
-    // }
-
     @include media-tablet {
-
-      // background-image: url("../../img/map/location-tabl.jpg");
 
       background-image: image-set(url("../../img/map/location-tabl.webp") 1x type("image/webp"),
           url("../../map/location-tabl.jpg") 1x,
           url("../../img/map/location-tabl-@2x.webp") 2x type("image/webp"),
           url("../../img/map/location-tabl-@2x.jpg") 2x);
-
-
-      // @media (min-resolution: 2dppx) {
-      //   background-image: url("../../img/map/location-tabl-@2x.jpg");
-      // }
     }
 
     @include media-desktop {
-      // background-image: url("../../img/map/location-desk.jpg");
-
       background-image: image-set(url("../../img/map/location-desk.webp") 1x type("image/webp"),
           url("../../map/location-desk.jpg") 1x,
           url("../../img/map/location-desk-@2x.webp") 2x type("image/webp"),
           url("/../../img/map/location-desk-@2x.jpg") 2x);
-
-      // @media (min-resolution: 2dppx) {
-      //   background-image: url("../../img/map/location-desk-@2x.jpg");
-      // }
     }
 
     @include media-tablet {

@@ -114,7 +114,9 @@
 .form__name {
   box-sizing: border-box;
   text-align: left;
-  max-width: 70px;
+  max-width: 63px;
+
+  flex-shrink: 0;
 
   @include media-tablet {
     max-width: 250px;

@@ -65,13 +65,17 @@
   height: 100%;
 }
 
-.slider:focus~.slider-button {
+// .slider:focus .slider-line {
+//   outline: 5px solid #8a2be2;
+//   background-color: #ff0073;
+// }
+
+.slider:focus~.slider-line {
   outline: auto;
 }
 
 .slider__line {
   position: absolute;
-  // inset: 0;
   width: 4px;
   height: 100%;
   background-color: $color-footer-icons;
