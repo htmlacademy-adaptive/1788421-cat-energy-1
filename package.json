@@ -60,6 +60,7 @@
         "w3c-html-validator": "^1.8.1"
     },
     "dependencies": {
+        "lighthouse": "^12.2.0",
         "npm-check-updates": "^17.0.3"
     }
 }
