@@ -1,3 +1,4 @@
+
 .hamburger {
   display: block;
   width: 24px;
@@ -14,6 +15,8 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
 
 .hamburger--open {
   &::before {
@@ -44,4 +47,5 @@
   &::before {
     transform: rotate(45deg);
   }
+}
 }
