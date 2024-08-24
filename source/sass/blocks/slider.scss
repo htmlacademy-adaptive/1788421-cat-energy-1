@@ -65,10 +65,10 @@
   height: 100%;
 }
 
-// .slider:focus .slider-line {
-//   outline: 5px solid #8a2be2;
-//   background-color: #ff0073;
-// }
+.slider__range:focus + .slider__line,
+.slider__range:focus + .slider__line .slider__button {
+  outline: auto;
+}
 
 .slider:focus~.slider-line {
   outline: auto;
