@@ -1,8 +1,10 @@
-.visible {
-  display: block;
+@media (max-width: 767px) {
+  .visible {
+    display: block;
 
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  background-color: $color-white;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: $color-white;
+  }
 }

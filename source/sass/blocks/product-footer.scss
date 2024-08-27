@@ -25,11 +25,9 @@
     left: 0;
     z-index: -5;
 
-    // background-image: url("../../img/catalog/catalog_bg-present.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280px 290px;
-    // background-size: cover;
 
     background-image: image-set(url("../../img/catalog/catalog_bg-present.webp") 1x type("image/webp"),
         url("../../img/catalog/catalog_bg-present.jpg") 1x,
@@ -39,8 +37,6 @@
     @include media-tablet {
       height: 200px;
       background-size: 707px 200px;
-
-      // background-image: url("../../img/catalog/catalog_bg-present-tabl.jpg");
 
       background-image: image-set(url("../../img/catalog/catalog_bg-present-tabl.webp") 1x type("image/webp"),
           url("../../img/catalog/catalog_bg-present-tabl.jpg") 1x,
@@ -52,34 +48,11 @@
       height: 288px;
       background-size: 245px 288px;
 
-      // background-image: url("../../img/catalog/catalog_bg-present.jpg");
-
       background-image: image-set(url("../../img/catalog/catalog_bg-present.webp") 1x type("image/webp"),
           url("../../img/catalog/catalog_bg-present.jpg") 1x,
           url("../../img/catalog/catalog_bg-present-@2x.webp") 2x type("image/webp"),
           url("../../img/catalog/catalog_bg-present-@2x.jpg") 2x);
     }
-
-    //   @media (min-resolution: 2dppx) {
-    //     // background-image: url("../../img/catalog/catalog_bg-present-@2x.jpg");
-    //     background-image: none;
-
-    //     background-color: #ff0000;
-
-    //     @include media-tablet {
-    //       // background-image: url("../../img/catalog/catalog_bg-present-tabl-@2x.jpg");
-    //       background-image: none;
-
-    //       background-color: #0040ff;
-    //     }
-
-    //     @include media-desktop {
-    //       // background-image: url("../../img/catalog/catalog_bg-present-@2x.jpg");
-    //       background-image: none;
-
-    //       background-color: #ff00ff;
-    //     }
-    //   }
   }
 
   &::after {
@@ -115,7 +88,6 @@
   }
 
   @include media-desktop {
-    // display: block;
     flex-direction: column;
     text-align: center;
     padding-top: 0;

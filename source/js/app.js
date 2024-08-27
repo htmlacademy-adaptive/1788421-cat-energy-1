@@ -7,7 +7,6 @@ btnHamburger.addEventListener('click', function () {
   ulMainNavList.classList.toggle('visible');
   btnHamburger.classList.toggle('hamburger--open');
   btnHamburger.classList.toggle('hamburger--closed');
-
 })
 
 console.log('Hi!');

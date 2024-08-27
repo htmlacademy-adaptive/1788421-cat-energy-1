@@ -2,7 +2,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  width: fit-content;
+  // width: fit-content;
   cursor: pointer;
 
   @include media-tablet {
@@ -13,7 +13,9 @@
 .control__mark-radio,
 .control__mark-check {
   position: relative;
-  display: inline-block;
+  display: block;
+
+  flex-shrink: 0;
 
   width: 28px;
   height: 28px;
@@ -77,4 +79,9 @@
 .control__input:not(:disabled):hover + .control__mark-radio,
 .control__input:not(:disabled):hover + .control__mark-check {
   border-color: $color-border-hover;
+}
+
+.control__input:not(:disabled):focus + .control__mark-radio,
+.control__input:not(:disabled):focus + .control__mark-check {
+  outline: auto;
 }

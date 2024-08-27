@@ -52,13 +52,7 @@
   position: relative;
   display: flex;
   gap: 20px;
-  align-items: center;
-
-  // &::after {
-  //   position: absolute;
-  //   top: -3px;
-  //   left: -10px;
-  // }
+  align-items: start;
 
   @include media-tablet {
     gap: 62px;
@@ -86,6 +80,7 @@
   @include media-tablet {
     margin-bottom: 32px;
     border-bottom: none;
+    color: $color-black;
   }
 
   @include media-desktop {

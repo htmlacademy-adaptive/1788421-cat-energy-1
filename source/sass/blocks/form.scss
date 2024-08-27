@@ -78,7 +78,6 @@
   flex-direction: column;
 
   @include media-tablet {
-    // margin-top: 19px;
     gap: 20px;
   }
 }
@@ -86,7 +85,7 @@
 .form__wrapp-cont {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 13px;
 
   @include media-tablet {
     gap: 21px;
@@ -113,8 +112,15 @@
 }
 
 .form__name {
-  min-width: fit-content;
+  box-sizing: border-box;
   text-align: left;
+  max-width: 95px;
+
+  flex-shrink: 0;
+
+  @include media-tablet {
+    max-width: 250px;
+  }
 }
 
 .form__field {
@@ -134,8 +140,9 @@
   }
 
   &:not(:disabled):focus {
-    outline: none;
+    // outline: none;
     border-color: $color-base-text;
+    outline: 2px solid $color-base-text;
   }
 
   &:disabled {
@@ -144,6 +151,7 @@
 
   &:not(:placeholder-shown):invalid {
     border-color: $color-error;
+    outline: 2px solid $color-error;
   }
 
   @include media-tablet {
@@ -181,6 +189,17 @@
   }
 }
 
+.icon--email:has(.form__field:not(:disabled):focus)::after,
+.icon--phone:has(.form__field:not(:disabled):focus)::after {
+  //цвет менялся
+  background-color: $color-bg-base;
+}
+
+.icon--email:has(.form__field:not(:placeholder-shown):invalid)::after,
+.icon--phone:has(.form__field:not(:placeholder-shown):invalid)::after {
+  background-color: $color-error;
+}
+
 .form__title {
   margin-bottom: 36px;
 
@@ -204,7 +223,6 @@
     &--crutch-2 {
       margin-bottom: 76px;
       width: fit-content;
-      // padding-left: 0;
     }
 
     &--crutch-3 {
@@ -240,8 +258,9 @@
   }
 
   &:not(:disabled):focus {
-    outline: none;
+    // outline: none;
     border-color: $color-base-text;
+    outline: 2px solid $color-base-text;
   }
 
   &:disabled {
@@ -253,7 +272,6 @@
   }
 
   @include media-tablet {
-    // margin-top: 30px;
     padding: 12px 20px 5px;
     min-height: 175px;
   }
@@ -269,7 +287,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    // margin-bottom: 66px;
   }
 }
 
@@ -300,6 +317,7 @@
   margin-top: 20px;
   margin-bottom: 0;
   text-align: center;
+  color: $color-black;
 
   @include media-tablet {
     margin-top: 0;
@@ -323,7 +341,6 @@
 
   @include media-desktop {
     gap: 95px;
-    // flex-wrap: nowrap;
   }
 }
 
