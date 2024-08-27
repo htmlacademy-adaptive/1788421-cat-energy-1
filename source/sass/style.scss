@@ -1,19 +1,14 @@
-// Начните писать стили здесь
-
-
 //BASE
 @import "./base/variables.scss";
 @import "./base/mixins.scss";
 @import "./base/fonts.scss";
-// @import "./base/base.scss";
+@import "./base/fonts-styles.scss";
 @import "./base/no-js.scss";
 @import "./base/visible.scss";
 @import "./base/visually-hidden";
 @import "./base/page";
 @import "./base/container.scss";
 @import "./base/button.scss";
-@import "./base/transfer-block.scss";
-@import "./base/outlines.scss";
 
 
 // BLOCKS

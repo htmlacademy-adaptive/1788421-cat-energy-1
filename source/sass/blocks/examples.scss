@@ -2,10 +2,9 @@
   background-color: $color-bg-examples;
 
   @include media-tablet {
-    // background-color: $color-white;
     border-top: 1px solid $color-border;
     background-image: linear-gradient($color-white 619px, $color-bg-examples 619px);
-    padding-bottom: 99px;
+    padding-bottom: 101px;
   }
 
   @include media-desktop {
@@ -50,8 +49,6 @@
 
 .examples__content-wrapp {
   @include media-desktop {
-    // margin-top: 70px;
-    // margin-bottom: 75px;
     width: 436px;
   }
 }
@@ -92,12 +89,10 @@
 
   @include media-tablet {
     gap: 43px;
-    // max-width: 384px;
     margin-bottom: 0;
   }
 
   @include media-desktop {
-    // max-width: 366px;
     gap: 42px;
     margin-bottom: 60px;
   }
@@ -130,7 +125,6 @@
   place-items: center;
   width: 280px;
   height: 256px;
-  // outline: 2px solid #ff6347;
 
   @include media-tablet {
     width: 560px;

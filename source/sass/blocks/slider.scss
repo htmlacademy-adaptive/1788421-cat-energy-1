@@ -20,8 +20,8 @@
   border-color: $color-bg-base;
 }
 
-.slider:hover .slider__button svg {
-  fill: $color-bg-base;
+.slider:hover .slider__button::after {
+  background-color: $color-bg-base;
 }
 
 .slider:active .slider__line {
@@ -39,7 +39,6 @@
 .slider__image-before {
   position: absolute;
   left: 0;
-  //для совпаденеия с макетом
 
   width: var(--position);
   object-position: left;
@@ -54,7 +53,6 @@
 
   object-fit: cover; //ОООчень важное свойство! без него не работает!
   object-position: right;
-  // clip-path: inset(0 0 0 calc(var(--position) - 14px));
 }
 
 .slider__range {
@@ -67,14 +65,17 @@
   height: 100%;
 }
 
-.slider:focus-visible ~ .slider-button {
+.slider__range:focus + .slider__line,
+.slider__range:focus + .slider__line .slider__button {
   outline: auto;
-  outline-offset: 2px;
+}
+
+.slider:focus ~ .slider-line {
+  outline: auto;
 }
 
 .slider__line {
   position: absolute;
-  // inset: 0;
   width: 4px;
   height: 100%;
   background-color: $color-footer-icons;
@@ -107,15 +108,24 @@
   height: 40px;
 
   background-color: #ffffff;
-  color: #000000;
-  padding: 5px;
   border-radius: 50%;
   border: 2px solid $color-footer-icons;
 
   transition: border 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
-  // mask-image: url("../../img/stack.svg#icon-slider-arr");
-  // mask-repeat: no-repeat;
-  // mask-position: center;
-  // mask-size: 24px 18px;
+  &::after {
+    content: "";
+    width: 36px;
+    height: 36px;
+    display: block;
+
+    mask-image: url("../../img/stack.svg#icon-slider-arr");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 18px;
+
+    background-color: $color-footer-icons;
+
+    transition: background-color 0.3s ease-in-out;
+  }
 }

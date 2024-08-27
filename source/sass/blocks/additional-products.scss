@@ -57,6 +57,10 @@
   padding-bottom: 18px;
   border-bottom: 1px solid $color-border-3;
 
+  &--1 {
+    gap: 11px;
+  }
+
   @include media-tablet {
     padding: 25px 38px 27px;
     align-items: baseline;
@@ -116,7 +120,7 @@
 }
 
 .additional-products__lid {
-  margin-top: 37px;
+  margin-top: 35px;
 
   @include media-tablet {
     margin-top: 70px;

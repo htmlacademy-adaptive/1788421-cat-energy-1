@@ -4,7 +4,7 @@
 
   @include media-tablet {
     padding-top: 0;
-    padding-bottom: 45px;
+    padding-bottom: 47px;
   }
 
   @include media-desktop {
@@ -27,7 +27,6 @@
 
   display: grid;
   gap: 20px;
-  // grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
 
   @include media-tablet {
     grid-template-columns: repeat(auto-fit, minmax(249px, 1fr));
@@ -75,7 +74,6 @@
 
 .features__item-txt {
   margin-top: 2px;
-  // padding-right: 75px;
 
   @include media-tablet {
     display: block;
