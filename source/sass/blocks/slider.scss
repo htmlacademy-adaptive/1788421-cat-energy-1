@@ -70,7 +70,7 @@
   outline: auto;
 }
 
-.slider:focus~.slider-line {
+.slider:focus ~ .slider-line {
   outline: auto;
 }
 
@@ -108,13 +108,13 @@
   height: 40px;
 
   background-color: #ffffff;
-   border-radius: 50%;
+  border-radius: 50%;
   border: 2px solid $color-footer-icons;
 
   transition: border 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   &::after {
-    content: '';
+    content: "";
     width: 36px;
     height: 36px;
     display: block;

@@ -70,12 +70,12 @@
 }
 
 .product-card__title:hover {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .product-card__title:active {
   opacity: 0.3;
-  }
+}
 
 .product-card__list {
   display: flex;
@@ -140,11 +140,11 @@ opacity: 0.6;
 
 .product-card__img:hover {
   opacity: 0.6;
-  }
+}
 
-  .product-card__img:active {
-    opacity: 0.3;
-    }
+.product-card__img:active {
+  opacity: 0.3;
+}
 
 .product-card__button {
   @include media-tablet {

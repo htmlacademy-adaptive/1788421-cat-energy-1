@@ -140,9 +140,9 @@
   }
 
   &:not(:disabled):focus {
-    outline: none;
+    // outline: none;
     border-color: $color-base-text;
-   outline: 2px solid $color-base-text;
+    outline: 2px solid $color-base-text;
   }
 
   &:disabled {
@@ -190,13 +190,14 @@
 }
 
 .icon--email:has(.form__field:not(:disabled):focus)::after,
-.icon--phone:has(.form__field:not(:disabled):focus)::after {  //цвет менялся
+.icon--phone:has(.form__field:not(:disabled):focus)::after {
+  //цвет менялся
   background-color: $color-bg-base;
 }
 
 .icon--email:has(.form__field:not(:placeholder-shown):invalid)::after,
 .icon--phone:has(.form__field:not(:placeholder-shown):invalid)::after {
-  background-color:$color-error;
+  background-color: $color-error;
 }
 
 .form__title {
@@ -257,7 +258,7 @@
   }
 
   &:not(:disabled):focus {
-    outline: none;
+    // outline: none;
     border-color: $color-base-text;
     outline: 2px solid $color-base-text;
   }

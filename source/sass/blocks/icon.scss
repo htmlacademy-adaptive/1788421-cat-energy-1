@@ -70,7 +70,7 @@
 
   position: absolute;
   top: -3px;
-left: -9px;
+  left: -9px;
 
   background-size: 36px 50px;
   background-image: url("../../img/stack.svg#cat-slim");
@@ -81,7 +81,6 @@ left: -9px;
     top: 4px;
     right: -287px;
     left: auto;
-
   }
 
   @include media-desktop {
@@ -103,7 +102,6 @@ left: -9px;
     top: 16px;
     right: -287px;
     left: auto;
-
   }
 
   @include media-desktop {
