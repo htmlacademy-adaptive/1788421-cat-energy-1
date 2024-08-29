@@ -1,8 +1,11 @@
 .main-nav {
   position: relative;
   padding-top: 13px;
+  border-bottom: 1px solid #d9d9d9;
+
 
   @include media-tablet {
+    border-bottom: none;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -21,6 +24,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 14px;
+
 
   position: relative;
 
