@@ -1,0 +1,8 @@
+
+.transfer-block-mob {
+  display: block;
+
+  @include media-tablet {
+    display: inline;
+  }
+}
