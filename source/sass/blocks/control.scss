@@ -68,6 +68,12 @@
   background-position: center;
   background-size: 26px 26px;
   background-repeat: no-repeat;
+
+  @include media-tablet {
+    width: 24px;
+    height: 19px;
+    background-size: 34px 34px;
+  }
 }
 
 .control__input:disabled + .control__mark-radio,
